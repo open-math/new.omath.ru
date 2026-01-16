@@ -22,7 +22,7 @@ jobs:
             - name: Install and Build 🔧
               run: |
                   bun install
-                  bun run generate
+                  bun generate -- --preset github-pages
 
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4

@@ -1,0 +1,20 @@
+{
+    "files": [],
+    "references": [
+        {
+            "path": "E:/code/open-math/new.omath.ru/.erudit/tsconfig.erudit.json"
+        },
+        {
+            "path": "E:/code/open-math/new.omath.ru/.erudit/tsconfig.nuxt.app.json"
+        },
+        {
+            "path": "E:/code/open-math/new.omath.ru/.erudit/tsconfig.nuxt.server.json"
+        },
+        {
+            "path": "E:/code/open-math/new.omath.ru/.erudit/tsconfig.nuxt.shared.json"
+        },
+        {
+            "path": "E:/code/open-math/new.omath.ru/.erudit/tsconfig.nuxt.node.json"
+        }
+    ]
+}

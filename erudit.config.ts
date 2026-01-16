@@ -1,6 +1,6 @@
 export default defineEruditConfig({
     site: {
-        originUrl: 'https://new.omath.ru/',
+        originUrl: 'https://new.omath.net/',
         baseUrl: '/',
     },
     //contentTargets: ['test', 'zet'],

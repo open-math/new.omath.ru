@@ -10,8 +10,8 @@
         "preview": "bun erudit preview"
     },
     "dependencies": {
-        "@erudit-js/prose": "3.0.0-dev.28",
-        "erudit": "3.0.0-dev.28"
+        "@erudit-js/prose": "3.0.0-dev.29",
+        "erudit": "3.0.0-dev.29"
     },
     "devDependencies": {
         "prettier": "^3.8.0"

@@ -5,8 +5,8 @@
     "": {
       "name": "@open-math/new.omath.ru",
       "dependencies": {
-        "@erudit-js/prose": "3.0.0-dev.28",
-        "erudit": "3.0.0-dev.28",
+        "@erudit-js/prose": "3.0.0-dev.29",
+        "erudit": "3.0.0-dev.29",
       },
       "devDependencies": {
         "prettier": "^3.8.0",
@@ -100,11 +100,11 @@
 
     "@emnapi/wasi-threads": ["@emnapi/wasi-threads@1.1.0", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-WI0DdZ8xFSbgMjR1sFsKABJ/C5OnRrjT06JXbZKexJGrDuPTzZdDYfFlsgcCXCyf+suG5QU2e/y1Wo2V/OapLQ=="],
 
-    "@erudit-js/cli": ["@erudit-js/cli@3.0.0-dev.28", "", { "dependencies": { "@erudit-js/core": "3.0.0-dev.28", "chalk": "^5.6.2", "citty": "^0.1.6", "consola": "^3.4.2" }, "bin": { "erudit-cli": "bin/erudit-cli.js", "erudit": "bin/erudit-cli.js" } }, "sha512-SNG/8ZSN6rReo8yhvqxFEPmlaxhn4FJC6dyW0jlGYku40NK0ZH9rzzGV9BdwL7YHBTQeABUQgSRFZ9EJXVEImw=="],
+    "@erudit-js/cli": ["@erudit-js/cli@3.0.0-dev.29", "", { "dependencies": { "@erudit-js/core": "3.0.0-dev.29", "chalk": "^5.6.2", "citty": "^0.1.6", "consola": "^3.4.2" }, "bin": { "erudit-cli": "bin/erudit-cli.js", "erudit": "bin/erudit-cli.js" } }, "sha512-xCVyR/rT5xPDx7SXoTqfPPPwIxHshUVFFJMnBA85btxXsS9Ef2S5xWPsqoU+8eqOS7ItTCDG5AdvES5vNBbEGA=="],
 
-    "@erudit-js/core": ["@erudit-js/core@3.0.0-dev.28", "", { "dependencies": { "@jsprose/core": "^1.0.0", "gradient-string": "^3.0.0" } }, "sha512-RPFLDEi8ovle9HShk7pjZG4AW4WT82af0quqVF0fHJb4Cys9oBTGCXX4Pm3j2fT1zGW12PaZC4QtI1Tg9SCTBw=="],
+    "@erudit-js/core": ["@erudit-js/core@3.0.0-dev.29", "", { "dependencies": { "@jsprose/core": "^1.0.0", "gradient-string": "^3.0.0" } }, "sha512-UTLQWv5bOA0M3rBlwu1pq1Qu/hqxJ6m488cWPwJeuPZIWeAfg9vujk++cv/KBZepByCfXicjMdQkwSQW6MAyeQ=="],
 
-    "@erudit-js/prose": ["@erudit-js/prose@3.0.0-dev.28", "", { "dependencies": { "@erudit-js/core": "3.0.0-dev.28", "@floating-ui/vue": "^1.1.9", "@jsprose/core": "^1.0.0", "image-size": "^2.0.2", "katex": "^0.16.25", "mermaid": "^11.12.1", "photoswipe": "^5.4.4", "vue": "latest" } }, "sha512-yyupnYJ0vHbvTn1TdlcL6xyKfWOFlIQCJtklGh+l/xG1W+20K3+FxH9iW+TdP+lV/QvSdIAQEm1ZjprZ1sAOIQ=="],
+    "@erudit-js/prose": ["@erudit-js/prose@3.0.0-dev.29", "", { "dependencies": { "@erudit-js/core": "3.0.0-dev.29", "@floating-ui/vue": "^1.1.9", "@jsprose/core": "^1.0.0", "image-size": "^2.0.2", "katex": "^0.16.25", "mermaid": "^11.12.1", "photoswipe": "^5.4.4", "vue": "latest" } }, "sha512-ti7pypPxpveJGTrQu/SFlD6tuHwLbqvvPsimA16xoFOnm7eAGt2u0T7TmfaomE+QKsZe5F/ki8656N8mKkcYQQ=="],
 
     "@esbuild-kit/core-utils": ["@esbuild-kit/core-utils@3.3.2", "", { "dependencies": { "esbuild": "~0.18.20", "source-map-support": "^0.5.21" } }, "sha512-sPRAnw9CdSsRmEtnsl2WXWdyquogVpB3yZ3dgwJfe8zrOzTsV7cJvmwrKVa+0ma5BoiGJ+BoqkMvawbayKUsqQ=="],
 
@@ -894,7 +894,7 @@
 
     "errx": ["errx@0.1.0", "", {}, "sha512-fZmsRiDNv07K6s2KkKFTiD2aIvECa7++PKyD5NC32tpRw46qZA3sOz+aM+/V9V0GDHxVTKLziveV4JhzBHDp9Q=="],
 
-    "erudit": ["erudit@3.0.0-dev.28", "", { "dependencies": { "@erudit-js/cli": "3.0.0-dev.28", "@erudit-js/core": "3.0.0-dev.28", "@erudit-js/prose": "3.0.0-dev.28", "@floating-ui/vue": "^1.1.9", "@jsprose/core": "^1.0.0", "@tailwindcss/vite": "^4.1.17", "better-sqlite3": "^12.4.1", "chalk": "^5.6.2", "chokidar": "^4.0.3", "consola": "^3.4.2", "defu": "^6.1.4", "drizzle-kit": "^0.31.7", "drizzle-orm": "^0.44.7", "esbuild": "^0.25.12", "flexsearch": "^0.8.212", "glob": "^11.1.0", "image-size": "^2.0.2", "jiti": "^2.6.1", "nuxt": "4.2.2", "nuxt-my-icons": "1.2.2", "perfect-debounce": "^2.0.0", "tailwindcss": "^4.1.17", "vue": "latest", "vue-router": "latest" }, "bin": { "erudit-cli": "bin/erudit.mjs", "erudit": "bin/erudit.mjs" } }, "sha512-+mZbAi8MF/nazNsy8qWK1QX4jdK6CbdeN4lIVOGTabl9ew0BUTd2bYtFh5JD985yrFgJ2mz8Qdapx9YsPiDPjA=="],
+    "erudit": ["erudit@3.0.0-dev.29", "", { "dependencies": { "@erudit-js/cli": "3.0.0-dev.29", "@erudit-js/core": "3.0.0-dev.29", "@erudit-js/prose": "3.0.0-dev.29", "@floating-ui/vue": "^1.1.9", "@jsprose/core": "^1.0.0", "@tailwindcss/vite": "^4.1.17", "better-sqlite3": "^12.4.1", "chalk": "^5.6.2", "chokidar": "^4.0.3", "consola": "^3.4.2", "defu": "^6.1.4", "drizzle-kit": "^0.31.7", "drizzle-orm": "^0.44.7", "esbuild": "^0.25.12", "flexsearch": "^0.8.212", "glob": "^11.1.0", "image-size": "^2.0.2", "jiti": "^2.6.1", "nuxt": "4.2.2", "nuxt-my-icons": "1.2.2", "perfect-debounce": "^2.0.0", "tailwindcss": "^4.1.17", "vue": "latest", "vue-router": "latest" }, "bin": { "erudit-cli": "bin/erudit.mjs", "erudit": "bin/erudit.mjs" } }, "sha512-rwUd9LqhIULDkuWz7UR2A4JoEjNAW0hcL7fwmq9MRToY68Bl3oWB/IZkrGCg9xYyQqmGzVuZGBFJlIcxTtmk0w=="],
 
     "es-module-lexer": ["es-module-lexer@1.7.0", "", {}, "sha512-jEQoCwk8hyb2AZziIOLhDqpm5+2ww5uIE6lkO/6jcOCusfk6LhMHpXXfBLXTZ7Ydyt0j4VoUQv6uGNYbdW+kBA=="],
 

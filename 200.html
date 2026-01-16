@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"><link rel="stylesheet" href="/_nuxt/entry.BryCXEIP.css" crossorigin><link rel="modulepreload" as="script" crossorigin href="/_nuxt/D2eihLR_.js"><script type="module" src="/_nuxt/D2eihLR_.js" crossorigin></script>
+            <style>
+:root {
+    
+    --duration-multiplier: 1;
+}
+            </style>
+        <script>/**
+ * Setup theme on client side as early as possible to prevent blinking.
+ * Script is injected in html <head> via Nitro plugin.
+ */
+(() => {
+    const w = window;
+    const d = document;
+    const s = localStorage;
+    const key = 'theme';
+
+    const getLocalTheme = () => {
+        const _localTheme = s.getItem(key) || 'system';
+        s.setItem(key, _localTheme);
+        return _localTheme;
+    };
+
+    const getBinaryTheme = (theme) => {
+        switch (theme) {
+            case 'dark':
+            case 'light':
+                return theme;
+            case 'system':
+                return w.matchMedia('(prefers-color-scheme: dark)').matches
+                    ? 'dark'
+                    : 'light';
+        }
+    };
+
+    d.documentElement.setAttribute(
+        'data-theme',
+        getBinaryTheme(getLocalTheme()),
+    );
+})();
+</script></head><body><div id="__nuxt"></div><div id="teleports"></div><script>window.__NUXT__={};window.__NUXT__.config={public:{erudit:{mode:"generate",version:"3.0.0-dev.28",project:{language:{current:"en"},originUrl:"https://new.omath.ru/",baseUrl:"/",siteInfo:{title:"",short:"",logotype:"",favicon:""},seo:"",debug:{ads:false,log:false,slowTransition:false,fakeApi:{repository:false},analytics:""},style:{brandColor:""},repository:"",customLinks:"",contributors:"",sponsors:"",ads:"",analytics:""}},buildTimestamp:1768574188910},app:{baseURL:"/",buildId:"70db3ca4-9acf-4184-8036-7312190bbba4",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script><script type="application/json" data-nuxt-data="nuxt-app" data-ssr="false" id="__NUXT_DATA__">[{"prerenderedAt":1,"serverRendered":2},1768574208388,false]</script></body></html>

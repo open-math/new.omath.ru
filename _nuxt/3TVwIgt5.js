@@ -1,0 +1,1 @@
+import{aC as r,P as a}from"./D2eihLR_.js";const p=Symbol();function s(){return r(p)}function m(t){let e;typeof t=="string"?e=t:e=t.schemaName;const{appElements:n}=s(),o=n[e];if(!o)throw new a(`No AppElement found for schema "${e}"!`);return o}function u(){const{formatText:t}=s();return t}export{s as a,m as b,p,u};

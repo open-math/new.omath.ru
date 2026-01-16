@@ -1,0 +1,1 @@
+import{_ as s,H as t,I as n,af as o}from"./D2eihLR_.js";const _={},a={class:"absolute top-0 left-0 h-full w-full"};function c(e,r){return n(),t("div",a,[o(e.$slots,"default")])}const f=Object.assign(s(_,[["render",c]]),{__name:"AsideMinorPane"});export{f as _};

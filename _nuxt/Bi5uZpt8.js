@@ -1,0 +1,1 @@
+import{_ as r,e,k as o}from"./Co3pHHec.js";const t={},n={class:"border-border mx-(--proseAsideWidth) mt-(--proseGap) rounded border-0 border-b transition-[background]"};function s(c,a){return o(),e("hr",n)}const _=r(t,[["render",s]]);export{_ as default};

@@ -1,1 +1,1 @@
-{"m":"function m(number, one, few, includeNumber = true) {\n  const text = number === 1 ? one : few;\n  return includeNumber ? `${number} ${text}` : text;\n}"}
+{"m":"function m(number, one, two, five, includeNumber = true) {\n  const text = [five, one, two, two, two, five][number % 100 > 10 && number % 100 < 20 ? 0 : Math.min(number % 10, 5)];\n  return includeNumber ? `${number} ${text}` : text;\n}"}

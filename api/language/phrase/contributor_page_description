@@ -1,1 +1,1 @@
-{"type":"function","value":"(name) => `Personal page of contributor \"${name}\" with information about their contributions to the project.`"}
+{"type":"function","value":"(name) => `Персональная страница автора \"${name}\" с данными о вкладе в проект.`"}

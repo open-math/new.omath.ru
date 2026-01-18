@@ -1,1 +1,1 @@
-{"type":"function","value":"(contentTitle) => `Various problems with hints and answers on the topic \"${contentTitle}\". Interesting conditions, hints and detailed solutions. Turn knowledge into a skill!`"}
+{"type":"function","value":"(contentTitle) => `Разнообразные задачи с подсказками и ответами по теме «${contentTitle}». Интересные условия, подсказки и подробные решения. Превратите знания в навык!`"}

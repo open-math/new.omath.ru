@@ -1,1 +1,1 @@
-{"type":"function","value":"(count) => m(count, \"Sponsor\", \"Sponsors\")"}
+{"type":"function","value":"(count) => m(count, \"Спонсор\", \"Спонсора\", \"Спонсоров\")"}

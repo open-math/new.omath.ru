@@ -1,1 +1,1 @@
-{"type":"function","value":"(count) => m(count, \"Contributor\", \"Contributors\")"}
+{"type":"function","value":"(count) => m(count, \"Автор\", \"Автора\", \"Авторов\")"}

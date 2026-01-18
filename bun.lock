@@ -5,11 +5,8 @@
     "": {
       "name": "@open-math/new.omath.ru",
       "dependencies": {
-        "@erudit-js/prose": "3.0.0-dev.29",
-        "erudit": "3.0.0-dev.29",
-      },
-      "devDependencies": {
-        "prettier": "^3.8.0",
+        "@erudit-js/prose": "4.0.0-dev.1",
+        "erudit": "4.0.0-dev.1",
       },
     },
   },
@@ -100,11 +97,11 @@
 
     "@emnapi/wasi-threads": ["@emnapi/wasi-threads@1.1.0", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-WI0DdZ8xFSbgMjR1sFsKABJ/C5OnRrjT06JXbZKexJGrDuPTzZdDYfFlsgcCXCyf+suG5QU2e/y1Wo2V/OapLQ=="],
 
-    "@erudit-js/cli": ["@erudit-js/cli@3.0.0-dev.29", "", { "dependencies": { "@erudit-js/core": "3.0.0-dev.29", "chalk": "^5.6.2", "citty": "^0.1.6", "consola": "^3.4.2" }, "bin": { "erudit-cli": "bin/erudit-cli.js", "erudit": "bin/erudit-cli.js" } }, "sha512-xCVyR/rT5xPDx7SXoTqfPPPwIxHshUVFFJMnBA85btxXsS9Ef2S5xWPsqoU+8eqOS7ItTCDG5AdvES5vNBbEGA=="],
+    "@erudit-js/cli": ["@erudit-js/cli@4.0.0-dev.1", "", { "dependencies": { "@erudit-js/core": "4.0.0-dev.1", "chalk": "^5.6.2", "citty": "^0.1.6", "consola": "^3.4.2" }, "bin": { "erudit-cli": "bin/erudit-cli.js", "erudit": "bin/erudit-cli.js" } }, "sha512-yxBYB9UfYtgp1+ivLVWOpjh9zPjzGlFX+xa0OMIz+fi9vktgZE39Yl1TFHjz20UoJnPYtHFeA59ImOAq3kNeTw=="],
 
-    "@erudit-js/core": ["@erudit-js/core@3.0.0-dev.29", "", { "dependencies": { "@jsprose/core": "^1.0.0", "gradient-string": "^3.0.0" } }, "sha512-UTLQWv5bOA0M3rBlwu1pq1Qu/hqxJ6m488cWPwJeuPZIWeAfg9vujk++cv/KBZepByCfXicjMdQkwSQW6MAyeQ=="],
+    "@erudit-js/core": ["@erudit-js/core@4.0.0-dev.1", "", { "dependencies": { "@jsprose/core": "^1.0.0", "gradient-string": "^3.0.0" } }, "sha512-K2PnhoazOdmGrE7dzCYU87x6CFfgVlhj96M5MQDxH3YNxfc7sD45YWE4HsSVV1vM9iqmh4DKS/uumygq69/VtQ=="],
 
-    "@erudit-js/prose": ["@erudit-js/prose@3.0.0-dev.29", "", { "dependencies": { "@erudit-js/core": "3.0.0-dev.29", "@floating-ui/vue": "^1.1.9", "@jsprose/core": "^1.0.0", "image-size": "^2.0.2", "katex": "^0.16.25", "mermaid": "^11.12.1", "photoswipe": "^5.4.4", "vue": "latest" } }, "sha512-ti7pypPxpveJGTrQu/SFlD6tuHwLbqvvPsimA16xoFOnm7eAGt2u0T7TmfaomE+QKsZe5F/ki8656N8mKkcYQQ=="],
+    "@erudit-js/prose": ["@erudit-js/prose@4.0.0-dev.1", "", { "dependencies": { "@erudit-js/core": "4.0.0-dev.1", "@floating-ui/vue": "^1.1.9", "@jsprose/core": "^1.0.0", "image-size": "^2.0.2", "katex": "^0.16.25", "mermaid": "^11.12.1", "photoswipe": "^5.4.4", "vue": "latest" } }, "sha512-aUES4Xi1aE1delXO78IFrQ/d0x5+cT3cuKomnlVKq0OAwhaeXTvGbFjwdhPALZhOV06Dng1EUsmifdcOgVm0XA=="],
 
     "@esbuild-kit/core-utils": ["@esbuild-kit/core-utils@3.3.2", "", { "dependencies": { "esbuild": "~0.18.20", "source-map-support": "^0.5.21" } }, "sha512-sPRAnw9CdSsRmEtnsl2WXWdyquogVpB3yZ3dgwJfe8zrOzTsV7cJvmwrKVa+0ma5BoiGJ+BoqkMvawbayKUsqQ=="],
 
@@ -638,7 +635,7 @@
 
     "baseline-browser-mapping": ["baseline-browser-mapping@2.9.15", "", { "bin": { "baseline-browser-mapping": "dist/cli.js" } }, "sha512-kX8h7K2srmDyYnXRIppo4AH/wYgzWVCs+eKr3RusRSQ5PvRYoEFmR/I0PbdTjKFAoKqp5+kbxnNTFO9jOfSVJg=="],
 
-    "better-sqlite3": ["better-sqlite3@12.6.0", "", { "dependencies": { "bindings": "^1.5.0", "prebuild-install": "^7.1.1" } }, "sha512-FXI191x+D6UPWSze5IzZjhz+i9MK9nsuHsmTX9bXVl52k06AfZ2xql0lrgIUuzsMsJ7Vgl5kIptvDgBLIV3ZSQ=="],
+    "better-sqlite3": ["better-sqlite3@12.6.2", "", { "dependencies": { "bindings": "^1.5.0", "prebuild-install": "^7.1.1" } }, "sha512-8VYKM3MjCa9WcaSAI3hzwhmyHVlH8tiGFwf0RlTsZPWJ1I5MkzjiudCo4KC4DxOaL/53A5B1sI/IbldNFDbsKA=="],
 
     "bindings": ["bindings@1.5.0", "", { "dependencies": { "file-uri-to-path": "1.0.0" } }, "sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ=="],
 
@@ -894,9 +891,9 @@
 
     "errx": ["errx@0.1.0", "", {}, "sha512-fZmsRiDNv07K6s2KkKFTiD2aIvECa7++PKyD5NC32tpRw46qZA3sOz+aM+/V9V0GDHxVTKLziveV4JhzBHDp9Q=="],
 
-    "erudit": ["erudit@3.0.0-dev.29", "", { "dependencies": { "@erudit-js/cli": "3.0.0-dev.29", "@erudit-js/core": "3.0.0-dev.29", "@erudit-js/prose": "3.0.0-dev.29", "@floating-ui/vue": "^1.1.9", "@jsprose/core": "^1.0.0", "@tailwindcss/vite": "^4.1.17", "better-sqlite3": "^12.4.1", "chalk": "^5.6.2", "chokidar": "^4.0.3", "consola": "^3.4.2", "defu": "^6.1.4", "drizzle-kit": "^0.31.7", "drizzle-orm": "^0.44.7", "esbuild": "^0.25.12", "flexsearch": "^0.8.212", "glob": "^11.1.0", "image-size": "^2.0.2", "jiti": "^2.6.1", "nuxt": "4.2.2", "nuxt-my-icons": "1.2.2", "perfect-debounce": "^2.0.0", "tailwindcss": "^4.1.17", "vue": "latest", "vue-router": "latest" }, "bin": { "erudit-cli": "bin/erudit.mjs", "erudit": "bin/erudit.mjs" } }, "sha512-rwUd9LqhIULDkuWz7UR2A4JoEjNAW0hcL7fwmq9MRToY68Bl3oWB/IZkrGCg9xYyQqmGzVuZGBFJlIcxTtmk0w=="],
+    "erudit": ["erudit@4.0.0-dev.1", "", { "dependencies": { "@erudit-js/cli": "4.0.0-dev.1", "@erudit-js/core": "4.0.0-dev.1", "@erudit-js/prose": "4.0.0-dev.1", "@floating-ui/vue": "^1.1.9", "@jsprose/core": "^1.0.0", "@tailwindcss/vite": "^4.1.17", "better-sqlite3": "^12.4.1", "chalk": "^5.6.2", "chokidar": "^4.0.3", "consola": "^3.4.2", "defu": "^6.1.4", "drizzle-kit": "^0.31.7", "drizzle-orm": "^0.44.7", "esbuild": "^0.25.12", "flexsearch": "^0.8.212", "glob": "^11.1.0", "image-size": "^2.0.2", "jiti": "^2.6.1", "nuxt": "4.2.2", "nuxt-my-icons": "1.2.2", "perfect-debounce": "^2.0.0", "tailwindcss": "^4.1.17", "vue": "latest", "vue-router": "latest" }, "bin": { "erudit-cli": "bin/erudit.mjs", "erudit": "bin/erudit.mjs" } }, "sha512-zjSvv3kI1Z5Nan/YYYbu1joAMzQtus8B5O85qvLZ1c+8PMLeDcXIO8U0Jr/PPsvOTeCT4MbNiaWhzJ4fVs4LiA=="],
 
-    "es-module-lexer": ["es-module-lexer@1.7.0", "", {}, "sha512-jEQoCwk8hyb2AZziIOLhDqpm5+2ww5uIE6lkO/6jcOCusfk6LhMHpXXfBLXTZ7Ydyt0j4VoUQv6uGNYbdW+kBA=="],
+    "es-module-lexer": ["es-module-lexer@2.0.0", "", {}, "sha512-5POEcUuZybH7IdmGsD8wlf0AI55wMecM9rVBTI/qEAy2c1kTOm3DjFYjrBdI2K3BaJjJYfYFeRtM0t9ssnRuxw=="],
 
     "esbuild": ["esbuild@0.25.12", "", { "optionalDependencies": { "@esbuild/aix-ppc64": "0.25.12", "@esbuild/android-arm": "0.25.12", "@esbuild/android-arm64": "0.25.12", "@esbuild/android-x64": "0.25.12", "@esbuild/darwin-arm64": "0.25.12", "@esbuild/darwin-x64": "0.25.12", "@esbuild/freebsd-arm64": "0.25.12", "@esbuild/freebsd-x64": "0.25.12", "@esbuild/linux-arm": "0.25.12", "@esbuild/linux-arm64": "0.25.12", "@esbuild/linux-ia32": "0.25.12", "@esbuild/linux-loong64": "0.25.12", "@esbuild/linux-mips64el": "0.25.12", "@esbuild/linux-ppc64": "0.25.12", "@esbuild/linux-riscv64": "0.25.12", "@esbuild/linux-s390x": "0.25.12", "@esbuild/linux-x64": "0.25.12", "@esbuild/netbsd-arm64": "0.25.12", "@esbuild/netbsd-x64": "0.25.12", "@esbuild/openbsd-arm64": "0.25.12", "@esbuild/openbsd-x64": "0.25.12", "@esbuild/openharmony-arm64": "0.25.12", "@esbuild/sunos-x64": "0.25.12", "@esbuild/win32-arm64": "0.25.12", "@esbuild/win32-ia32": "0.25.12", "@esbuild/win32-x64": "0.25.12" }, "bin": { "esbuild": "bin/esbuild" } }, "sha512-bbPBYYrtZbkt6Os6FiTLCTFxvq4tt3JKall1vRwshA3fdVztsLAatFaZobhkBC8/BrPetoa0oksYoKXoG4ryJg=="],
 
@@ -1346,8 +1343,6 @@
 
     "prebuild-install": ["prebuild-install@7.1.3", "", { "dependencies": { "detect-libc": "^2.0.0", "expand-template": "^2.0.3", "github-from-package": "0.0.0", "minimist": "^1.2.3", "mkdirp-classic": "^0.5.3", "napi-build-utils": "^2.0.0", "node-abi": "^3.3.0", "pump": "^3.0.0", "rc": "^1.2.7", "simple-get": "^4.0.0", "tar-fs": "^2.0.0", "tunnel-agent": "^0.6.0" }, "bin": { "prebuild-install": "bin.js" } }, "sha512-8Mf2cbV7x1cXPUILADGI3wuhfqWvtiLA1iclTDbFRZkgRQS0NqsPZphna9V+HyTEadheuPmjaJMsbzKQFOzLug=="],
 
-    "prettier": ["prettier@3.8.0", "", { "bin": { "prettier": "bin/prettier.cjs" } }, "sha512-yEPsovQfpxYfgWNhCfECjG5AQaO+K3dp6XERmOepyPDVqcJm+bjyCVO3pmU+nAPe0N5dDvekfGezt/EIiRe1TA=="],
-
     "pretty-bytes": ["pretty-bytes@7.1.0", "", {}, "sha512-nODzvTiYVRGRqAOvE84Vk5JDPyyxsVk0/fbA/bq7RqlnhksGpset09XTxbpvLTIjoaF7K8Z8DG8yHtKGTPSYRw=="],
 
     "process": ["process@0.11.10", "", {}, "sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A=="],
@@ -1512,7 +1507,7 @@
 
     "tapable": ["tapable@2.3.0", "", {}, "sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg=="],
 
-    "tar": ["tar@7.5.2", "", { "dependencies": { "@isaacs/fs-minipass": "^4.0.0", "chownr": "^3.0.0", "minipass": "^7.1.2", "minizlib": "^3.1.0", "yallist": "^5.0.0" } }, "sha512-7NyxrTE4Anh8km8iEy7o0QYPs+0JKBTj5ZaqHg6B39erLg0qYXN3BijtShwbsNSvQ+LN75+KV+C4QR/f6Gwnpg=="],
+    "tar": ["tar@7.5.3", "", { "dependencies": { "@isaacs/fs-minipass": "^4.0.0", "chownr": "^3.0.0", "minipass": "^7.1.2", "minizlib": "^3.1.0", "yallist": "^5.0.0" } }, "sha512-ENg5JUHUm2rDD7IvKNFGzyElLXNjachNLp6RaGf4+JOgxXHkqA+gq81ZAMCUmtMtqBsoU62lcp6S27g1LCYGGQ=="],
 
     "tar-fs": ["tar-fs@2.1.4", "", { "dependencies": { "chownr": "^1.1.1", "mkdirp-classic": "^0.5.2", "pump": "^3.0.0", "tar-stream": "^2.1.4" } }, "sha512-mDAjwmZdh7LTT6pNleZ05Yt65HC3E+NiQzl672vQG38jIrehtJk/J3mNwIg+vShQPcLF/LV7CMnDW6vjj6sfYQ=="],
 
@@ -1594,7 +1589,7 @@
 
     "vite-hot-client": ["vite-hot-client@2.1.0", "", { "peerDependencies": { "vite": "^2.6.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-0 || ^6.0.0-0 || ^7.0.0-0" } }, "sha512-7SpgZmU7R+dDnSmvXE1mfDtnHLHQSisdySVR7lO8ceAXvM0otZeuQQ6C8LrS5d/aYyP/QZ0hI0L+dIPrm4YlFQ=="],
 
-    "vite-node": ["vite-node@5.2.0", "", { "dependencies": { "cac": "^6.7.14", "es-module-lexer": "^1.7.0", "obug": "^2.0.0", "pathe": "^2.0.3", "vite": "^7.2.2" }, "bin": { "vite-node": "dist/cli.mjs" } }, "sha512-7UT39YxUukIA97zWPXUGb0SGSiLexEGlavMwU3HDE6+d/HJhKLjLqu4eX2qv6SQiocdhKLRcusroDwXHQ6CnRQ=="],
+    "vite-node": ["vite-node@5.3.0", "", { "dependencies": { "cac": "^6.7.14", "es-module-lexer": "^2.0.0", "obug": "^2.1.1", "pathe": "^2.0.3", "vite": "^7.3.1" }, "bin": { "vite-node": "dist/cli.mjs" } }, "sha512-8f20COPYJujc3OKPX6OuyBy3ZIv2det4eRRU4GY1y2MjbeGSUmPjedxg1b72KnTagCofwvZ65ThzjxDW2AtQFQ=="],
 
     "vite-plugin-checker": ["vite-plugin-checker@0.12.0", "", { "dependencies": { "@babel/code-frame": "^7.27.1", "chokidar": "^4.0.3", "npm-run-path": "^6.0.0", "picocolors": "^1.1.1", "picomatch": "^4.0.3", "tiny-invariant": "^1.3.3", "tinyglobby": "^0.2.15", "vscode-uri": "^3.1.0" }, "peerDependencies": { "@biomejs/biome": ">=1.7", "eslint": ">=9.39.1", "meow": "^13.2.0", "optionator": "^0.9.4", "oxlint": ">=1", "stylelint": ">=16", "typescript": "*", "vite": ">=5.4.21", "vls": "*", "vti": "*", "vue-tsc": "~2.2.10 || ^3.0.0" }, "optionalPeers": ["@biomejs/biome", "eslint", "meow", "optionator", "oxlint", "stylelint", "typescript", "vls", "vti", "vue-tsc"] }, "sha512-CmdZdDOGss7kdQwv73UyVgLPv0FVYe5czAgnmRX2oKljgEvSrODGuClaV3PDR2+3ou7N/OKGauDDBjy2MB07Rg=="],
 

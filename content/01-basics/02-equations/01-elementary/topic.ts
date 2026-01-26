@@ -1,7 +1,4 @@
-import {
-    authorContribution,
-    expertContribution,
-} from '#project/utils/contributions';
+import { authorContribution, expertContribution } from '#project/utils/contributions';
 
 export default defineTopic({
     title: 'Элементарные уравнения',
@@ -21,8 +18,7 @@ export default defineTopic({
         },
         {
             contributor: $CONTRIBUTOR.igorRadko,
-            description:
-                'Красивое сравнение, что числа не перелетные птицы и не летают через знак равно.',
+            description: 'Красивое сравнение, что числа не перелетные птицы и не летают через знак равно.',
         },
     ],
 });

@@ -14,7 +14,7 @@
 Предложить свои правки можно двумя способами:
 
 1. Напрямую отредактировать материал на GitHub и создать Pull Request
-2. Связаться со мной через Телеграм ([@math_head](https://t.me/math_head)) или по почте ([newpetya@inbox.ru](mailto:newpetya@inbox.ru))
+2. Связаться со мной через Телеграм ([@gwynerva](https://t.me/gwynerva)) или по почте ([newpetya@inbox.ru](mailto:newpetya@inbox.ru))
 
 # Правила использования ссылок
 

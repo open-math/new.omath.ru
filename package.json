@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "@open-math/new.omath.ru",
+    "name": "@open-math/new.omath.net",
     "version": "0.0.1",
     "scripts": {
         "dev": "bun erudit dev",
@@ -10,7 +10,7 @@
         "preview": "bun erudit preview"
     },
     "dependencies": {
-        "erudit": "4.0.0-dev.1",
-        "@erudit-js/prose": "4.0.0-dev.1"
+        "erudit": "4.0.0-dev.4",
+        "@erudit-js/prose": "4.0.0-dev.4"
     }
 }

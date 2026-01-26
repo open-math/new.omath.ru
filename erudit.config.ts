@@ -1,54 +1,26 @@
+import { translations, defaultAssets, defaultElements, defaultCountElements } from '@open-math/shared/index';
+
 export default defineEruditConfig({
     language: {
         current: 'ru',
-        // TODO: Replace with shared
-        translations: {
-            ru: {
-                name: 'Русский',
-                link: 'https://ru.omath.net',
-            },
-            en: {
-                name: 'English',
-                link: 'https://en.omath.net',
-            },
-        },
+        translations,
     },
     site: {
         originUrl: 'https://new.omath.net/',
         baseUrl: '/',
         title: 'Математика',
         short: 'Понятно и интересно',
-        logotype: projectPublic('logotype.svg'), // TODO: Replace with shared
+        logotype: defaultAssets.logotype,
         style: {
             brandColor: 'light-dark(#1879d9, #4e94d9)',
         },
-        // TODO: Replace with shared
-        favicon: {
-            default: projectPublic('favicons/default.svg'),
-            group: projectPublic('favicons/group.svg'),
-            book: projectPublic('favicons/book.svg'),
-            page: projectPublic('favicons/page-article.svg'),
-            article: projectPublic('favicons/page-article.svg'),
-            summary: projectPublic('favicons/summary.svg'),
-            practice: projectPublic('favicons/practice.svg'),
-        },
-        loadingSvg: `
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;"  viewBox="10 10 80 80" preserveAspectRatio="xMidYMid">
-                <path fill="none" stroke="currentColor" stroke-width="10" stroke-dasharray="230.93003540039064 25.658892822265614" d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z" stroke-linecap="round" style="transform:scale(0.8);transform-origin:50px 50px">
-                    <animate attributeName="stroke-dashoffset" repeatCount="indefinite" dur="1.25s" keyTimes="0;1" values="0;256.58892822265625"></animate>
-                </path>
-            </svg>
-        `,
+        favicon: defaultAssets.favicon,
+        loadingSvg: defaultAssets.loadingSvg,
     },
     seo: {
         siteTitle: 'Математика',
         useBookSiteTitle: true,
-        // TODO: Replace with shared
-        image: {
-            src: projectPublic('og.png'),
-            width: 500,
-            height: 500,
-        },
+        image: defaultAssets.ogImage,
     },
     indexPage: {
         title: 'Открытая Математика',
@@ -60,12 +32,7 @@ export default defineEruditConfig({
             Только повествовательный подход с большим количеством примеров и задач на закрепление.
             Внести свой вклад в материалы может любой желающий!
         `,
-        // TODO: Replace with shared
-        topImage: {
-            src: projectPublic('index-page-banner.png'),
-            maxWidth: '100%',
-            invert: 'dark',
-        },
+        topImage: defaultAssets.indexPageBanner,
         seo: {
             description: `
                 Современный учебник по математике — понятный, интересный, подробный.
@@ -78,6 +45,8 @@ export default defineEruditConfig({
         enabled: true,
         becomeContributorLink: 'https://github.com/open-math/ru.omath.net/blob/main/CONTRIBUTION.md',
         howToImproveLink: 'https://github.com/open-math/ru.omath.net/blob/main/CONTRIBUTION.md',
+        editLinkPrefix: 'https://github.com/open-math/ru.omath.net/blob/main/content/',
+        reportIssueLink: 'https://github.com/open-math/ru.omath.net/issues/',
     },
     sponsors: {
         enabled: true,
@@ -116,13 +85,6 @@ export default defineEruditConfig({
             blockId: 'R-A-2185026-1',
         },
     },
-    elements: [
-        '@erudit-js/prose/elements/math',
-        '@erudit-js/prose/elements/diagram',
-        // TODO: Replace with shared
-        './elements/term',
-        './elements/statement',
-        './elements/important',
-    ],
-    countElements: ['accent_term', 'accent_statement', 'accent_important', ['problem', 'problems']],
+    elements: defaultElements,
+    countElements: defaultCountElements,
 });

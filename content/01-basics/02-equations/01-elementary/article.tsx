@@ -1852,7 +1852,7 @@ export default defineProse({
             использовать уже расписанные выше правила и методы. Вот вам наглядная демонстрация:
         </P>
 
-        <Problems $={uniques.realLifeApplications} title="Применение уравнений в жизни" level="easy">
+        <Problems $={uniques.realLifeApplications} title="Применение уравнений в жизни" level="easy" applied>
             <P>Какую сферу деятельности человека ни возьми, везде можно встретить уравнения!</P>
 
             <SubProblem label="Финансы">

@@ -1,3 +1,3 @@
 export default defineContributor({
-    displayName: 'Анна Кириченко',
+  displayName: 'Анна Кириченко',
 });

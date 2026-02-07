@@ -164,7 +164,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>x^2 + 5x = 0</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} set={[0, -5]} />
+        <ProblemCheck label={rootsLabel} answers={[0, -5]} />
         <ProblemHint>
           Вынесите <M>x</M> за скобки.
         </ProblemHint>
@@ -198,7 +198,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>8x=x^2</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} set={[0, 8]} />
+        <ProblemCheck label={rootsLabel} answers={[0, 8]} />
         <ProblemHint>
           Сгруппируйте иксы в одной части уравнения при помощи{' '}
           <Dep to={sameActionRule}>правила одинакового действия</Dep>.
@@ -225,7 +225,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>2x^2 - 7x = 0</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} set={[0, [3.5, '7/2']]} />
+        <ProblemCheck label={rootsLabel} answers={[0, [3.5, '7/2']]} />
         <ProblemAnswer>
           <M>{math`x_1 = 0, \quad x_2 = \dfrac{7}{2}`}</M>
         </ProblemAnswer>
@@ -252,7 +252,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{2}{7}x - \frac{1}{35}x^2 = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} set={[0, -10]} />
+        <ProblemCheck label={rootsLabel} answers={[0, -10]} />
         <ProblemAnswer>
           <M>{math`x_1 = 0, \quad x_2 = -10`}</M>
         </ProblemAnswer>
@@ -353,8 +353,8 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>2x^2 - 18 = 0</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} hint="Да/Нет" answer={/^да$/iu}>
-          <ProblemCheck label={rootsLabel} set={[-3, 3]} />
+        <ProblemCheck label={hasRootsLabel} yes>
+          <ProblemCheck label={rootsLabel} answers={[-3, 3]} />
         </ProblemCheck>
         <ProblemHint>
           Изолируйте <M>x^2</M> в левой части уравнения. Затем воспользуйтесь пониманием того, что такое квадратный
@@ -386,7 +386,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`5=-\frac{1}{20}x^2`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} hint="Да/Нет" answer={/^нет$/iu} />
+        <ProblemCheck label={hasRootsLabel} no />
         <ProblemHint>
           Чтобы оставить <M>x^2</M> в одиночестве в правой части, умножим обе части уравнения на <M>-20</M>.
         </ProblemHint>
@@ -414,8 +414,8 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{x^2}{4} - 9 = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} hint="Да/Нет" answer={/^да$/iu}>
-          <ProblemCheck label={rootsLabel} set={[-6, 6]} />
+        <ProblemCheck label={hasRootsLabel} yes>
+          <ProblemCheck label={rootsLabel} answers={[-6, 6]} />
         </ProblemCheck>
         <ProblemHint>
           Умножьте обе части уравнения на <M>4</M>, чтобы избавиться от дроби. Затем изолируйте <M>x^2</M> и извлеките
@@ -448,7 +448,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`0 = - 3x^2 - 12`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} hint="Да/Нет" answer={/^нет$/iu} />
+        <ProblemCheck label={hasRootsLabel} no />
         <ProblemAnswer>
           <M>x_1 = -2, \quad x_2 = 2</M>
         </ProblemAnswer>
@@ -479,7 +479,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`x^2 = 3`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} hint="Да/Нет" answer={/^да$/iu} />
+        <ProblemCheck label={hasRootsLabel} yes />
         <ProblemHint>Не всегда ответ получается красивым...</ProblemHint>
         <ProblemAnswer>
           <M>{math`x_1 = -\sqrt{3}, \quad x_2 = \sqrt{3}`}</M>

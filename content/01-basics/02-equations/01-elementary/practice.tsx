@@ -1313,7 +1313,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`x^2 - 121 = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck set={[11, -11]} hint="Через запятую" />
+        <ProblemCheck answers={[11, -11]} />
         <ProblemHint>Это уравнение имеет два решения.</ProblemHint>
         <ProblemAnswer>
           Уравнение имеет два корня: <M>11</M> и <M>-11</M>.
@@ -1457,7 +1457,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{6}{x^2 - 19} = 1`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" hint="Через запятую" set={[5, -5]} />
+        <ProblemCheck label="Корни уравнения" answers={[5, -5]} />
         <ProblemHint>
           Подумайте, как одним действием избавиться от <M>x^2 - 19</M> в знаменателе. На что умножить обе части
           уравнения?
@@ -1977,7 +1977,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`(x + 3)(x - 2) = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" hint="Через запятую" set={[2, -3]} />
+        <ProblemCheck label="Корни уравнения" answers={[2, -3]} />
         <ProblemHint>
           Если получится сделать равным нулю хотя бы один из множителей, то всё произведение станет равно нулю.
         </ProblemHint>
@@ -2046,7 +2046,7 @@ export default defineProse({
           <P>Решите уравнение:</P>
           <BlockMath>{math`x(x + 7)(x - 11) = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" hint="Через запятую" set={[0, -7, 11]} />
+        <ProblemCheck label="Корни уравнения" answers={[0, -7, 11]} />
         <ProblemHint>
           Здесь множителя уже три и получается три под-уравнения, а значит и три решения у исходного уравнения.
         </ProblemHint>
@@ -2074,7 +2074,7 @@ export default defineProse({
           <P>Решите уравнение:</P>
           <BlockMath>{math`10(x+3)(2x-8)(8x+1) = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" hint="Через запятую" set={[-3, 4, [-0.125, '-1/8']]} />
+        <ProblemCheck label="Корни уравнения" answers={[-3, 4, [-0.125, '-1/8']]} />
         <ProblemHint>
           Избавьтесь от <M>10</M>, затем решите под-уравнения для каждого множителя.
         </ProblemHint>
@@ -2152,7 +2152,7 @@ export default defineProse({
           <P>Решите уравнение:</P>
           <BlockMath>{math`0 = (x^2 - 4)(x + 1)`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" hint="Через запятую" set={[-2, 2, -1]} />
+        <ProblemCheck label="Корни уравнения" answers={[-2, 2, -1]} />
         <ProblemHint>Два множителя в правой части приводят к двум под-уравнениям.</ProblemHint>
         <ProblemHint>Первое под-уравнение имеет два корня.</ProblemHint>
         <ProblemAnswer>
@@ -2188,7 +2188,7 @@ export default defineProse({
           <P>Решите уравнение:</P>
           <BlockMath>{math`\frac{\left(x + \frac{1}{2}\right)x}{17} = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" hint="Через запятую" set={[0, [-0.5, '-1/2']]} />
+        <ProblemCheck label="Корни уравнения" hint="Через запятую" answers={[0, [-0.5, '-1/2']]} />
         <ProblemHint>
           Сначала избавьтесь от знаменателя <M>17</M>. Затем решите под-уравнения для каждого множителя.
         </ProblemHint>
@@ -2227,7 +2227,7 @@ export default defineProse({
           <P>Решите уравнение:</P>
           <BlockMath>{math`(x+11)(x-1) + 12 = 12`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" hint="Через запятую" set={[-11, 1]} />
+        <ProblemCheck label="Корни уравнения" answers={[-11, 1]} />
         <ProblemHint>
           Подумайте, как можно одним действием избавиться от <M>12</M> в обеих частях уравнения.
         </ProblemHint>
@@ -2262,7 +2262,7 @@ export default defineProse({
           <P>Решите уравнение:</P>
           <BlockMath>{math`7x^2 = 42x`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" hint="Через запятую" set={[0, 6]} />
+        <ProblemCheck label="Корни уравнения" answers={[0, 6]} />
         <ProblemHint>Упростите уравнение.</ProblemHint>
         <ProblemHint>Сгруппируйте иксы в одной части, например, в левой.</ProblemHint>
         <ProblemHint>Вынесите общий множитель за скобки.</ProblemHint>
@@ -3122,7 +3122,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`-\frac{5}{7}x^2 + 35 = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck set={[7, -7]} />
+        <ProblemCheck answers={[7, -7]} />
         <ProblemHint>
           Изолируйте (оставьте в одиночестве) <M>x^2</M>.
         </ProblemHint>
@@ -3331,7 +3331,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{x^2}{x-3} = 4x`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck set={[0, 4]} />
+        <ProblemCheck answers={[0, 4]} />
         <ProblemHint>
           Сгруппируйте все <M>x</M> в одной части уравнения и вынесите общие множители за скобки.
         </ProblemHint>

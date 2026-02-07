@@ -37,7 +37,7 @@ export default defineProblemScript({
             ${firstFactor}${secondFactor} = 0
           `}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" hint="Через запятую" set={[solution1, solution2]} />
+        <ProblemCheck label="Корни уравнения" answers={[solution1, solution2]} />
         <ProblemAnswer>
           <M>{solution1}</M> и <M>{solution2}</M>
         </ProblemAnswer>

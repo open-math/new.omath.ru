@@ -32,22 +32,17 @@ export function quadraticOrNot(
   B?: CoefficientAnswer,
   C?: CoefficientAnswer,
 ): AnyProseElement {
-  return (
-    <ProblemCheck
-      label="Квадратное"
-      hint="Да/Нет"
-      answer={quadratic ? /^да$/iu : /^нет$/iu}
-      children={
-        quadratic
-          ? [
-              <ProblemCheck label="Коэффициент A" answers={Array.isArray(A) ? A : [A]} />,
-              <ProblemCheck label="Коэффициент B" answers={Array.isArray(B) ? B : [B]} />,
-              <ProblemCheck label="Коэффициент C" answers={Array.isArray(C) ? C : [C]} />,
-            ]
-          : undefined
-      }
-    />
-  );
+  if (quadratic) {
+    return (
+      <ProblemCheck label="Квадратное?" yes>
+        <ProblemCheck label="Коэффициент A" answers={Array.isArray(A) ? A : [A!]} />
+        <ProblemCheck label="Коэффициент B" answers={Array.isArray(B) ? B : [B!]} />
+        <ProblemCheck label="Коэффициент C" answers={Array.isArray(C) ? C : [C!]} />
+      </ProblemCheck>
+    );
+  } else {
+    return <ProblemCheck label="Квадратное?" no />;
+  }
 }
 
 export default defineProse({

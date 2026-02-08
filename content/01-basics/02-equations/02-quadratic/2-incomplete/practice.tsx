@@ -34,7 +34,7 @@ export default defineProse()(() => (
         <P>Максиму нужно решить у доски следующее уравнение:</P>
         <BlockMath>4x^2 = 80x</BlockMath>
         <P>
-          Он запомнил <Dep to={article.uniques.c0Roots}>общую формулу</Dep> решения неполных квадратных уравнений при{' '}
+          Он запомнил <Dep on={article.uniques.c0Roots}>общую формулу</Dep> решения неполных квадратных уравнений при{' '}
           <M>C = 0</M> и использовал её:
         </P>
         <BlockMath>{math`
@@ -46,7 +46,7 @@ export default defineProse()(() => (
         </P>
       </ProblemDescription>
       <ProblemHint>
-        Это как-то связано с <Dep to={quadraticEquation}>общим видом</Dep> квадратного уравнения.
+        Это как-то связано с <Dep on={quadraticEquation}>общим видом</Dep> квадратного уравнения.
       </ProblemHint>
       <ProblemAnswer>
         <P>
@@ -54,7 +54,7 @@ export default defineProse()(() => (
         </P>
         <P>
           Ошибка Максима состояла в том, что он не привел квадратное уравнение к{' '}
-          <Dep to={quadraticEquation}>общему виду</Dep> (трехчлен с одной стороны, ноль с другой), а потому коэффициент{' '}
+          <Dep on={quadraticEquation}>общему виду</Dep> (трехчлен с одной стороны, ноль с другой), а потому коэффициент{' '}
           <M>B</M> он взял со знаком плюса, вместо минуса!
         </P>
       </ProblemAnswer>
@@ -85,7 +85,7 @@ export default defineProse()(() => (
           <P>
             Максим использовал общую формулу, но совершенно забыл <B>форму</B> квадратного уравнения, для которого она
             была выведена. А выведена она была для формы <M>Ax^2 + Bx = 0</M>, то есть для{' '}
-            <Dep to={quadraticEquation}>общего вида</Dep> квадратного уравнения!
+            <Dep on={quadraticEquation}>общего вида</Dep> квадратного уравнения!
           </P>
           <P>
             А в задаче уравнение было в форме <M>4x^2 = 80x</M>, то есть не приведено к общему виду. Поэтому он взял
@@ -111,7 +111,7 @@ export default defineProse()(() => (
     >
       <P>
         Сначала решите неполное квадратное уравнение вручную. После этого обязательно найдите корни по{' '}
-        <Dep to={summary.uniques.allFormulas}>общим формулам</Dep> и сверьте результаты.
+        <Dep on={summary.uniques.allFormulas}>общим формулам</Dep> и сверьте результаты.
       </P>
       <SubProblem>
         <ProblemDescription>
@@ -427,7 +427,7 @@ export default defineProse()(() => (
       <ProblemCheck label="Уравнение 3. Есть решения?" no />
       <ProblemCheck label="Уравнение 4. Есть решения?" yes />
       <ProblemHint>
-        Используйте <Dep to={article.uniques.b0Roots}>общую формулу корней</Dep> неполного квадратного уравнения при{' '}
+        Используйте <Dep on={article.uniques.b0Roots}>общую формулу корней</Dep> неполного квадратного уравнения при{' '}
         <M>B=0</M>.
       </ProblemHint>
       <ProblemAnswer>
@@ -436,7 +436,7 @@ export default defineProse()(() => (
       <ProblemSolution>
         <ProblemSection title="Доказательство">
           <P>
-            Вспоминаем <Dep to={article.uniques.b0Roots}>общую формулу корней</Dep> неполного квадратного уравнения при{' '}
+            Вспоминаем <Dep on={article.uniques.b0Roots}>общую формулу корней</Dep> неполного квадратного уравнения при{' '}
             <M>B=0</M>:
           </P>
           <BlockMath>{math`x_{1,2} = \pm\sqrt{-\frac{C}{A}}`}</BlockMath>
@@ -551,7 +551,7 @@ export default defineProse()(() => (
         </P>
         <BlockMath>2x^2 + 3x = 0</BlockMath>
         <P>
-          Она решила использовать <Dep to={sameActionRule}>правило одинакового действия</Dep> и поделила обе части
+          Она решила использовать <Dep on={sameActionRule}>правило одинакового действия</Dep> и поделила обе части
           уравнения на <M>x</M>:
         </P>
         <BlockMath>2x + 3 = 0</BlockMath>
@@ -569,7 +569,7 @@ export default defineProse()(() => (
         </P>
         <P>
           Так как был найден только один корень, то по определению она уравнение{' '}
-          <Dep to={equationSolution}>не решила!</Dep>
+          <Dep on={equationSolution}>не решила!</Dep>
         </P>
       </ProblemAnswer>
       <ProblemSolution>

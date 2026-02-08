@@ -23,7 +23,7 @@ export default defineProse()(() => (
   <>
     <Problems title="Игра с трёхчленами" level="easy">
       <P>
-        Приведите выражение к виду <Dep to={quadraticPolynomial}>квадратного трёхчлена</Dep>, если это возможно.
+        Приведите выражение к виду <Dep on={quadraticPolynomial}>квадратного трёхчлена</Dep>, если это возможно.
         Определите, чему равны его коэффициенты <M>A</M>, <M>B</M> и <M>C</M>.
       </P>
 
@@ -80,7 +80,7 @@ export default defineProse()(() => (
         <ProblemSolution>
           <P>
             Чтобы привести его к такому виду, нам потребуется приравнять коэффициент <M>A</M> к <M>0</M>, что
-            противоречит <Dep to={quadraticPolynomial}>определению</Dep> квадратного трёхчлена:
+            противоречит <Dep on={quadraticPolynomial}>определению</Dep> квадратного трёхчлена:
           </P>
           <BlockMath>{math`\underbrace{0\cdot z^2}_{\text{Нельзя!}} + 99z - 5`}</BlockMath>
         </ProblemSolution>
@@ -157,7 +157,7 @@ export default defineProse()(() => (
           <P>Выражение не может быть приведено к виду квадратного трёхчлена. Чтобы привести его к такому виду,</P>
           <P>
             нам потребуется приравнять коэффициент <M>A</M> к <M>0</M>, что противоречит{' '}
-            <Dep to={quadraticPolynomial}>определению</Dep> квадратного трёхчлена:
+            <Dep on={quadraticPolynomial}>определению</Dep> квадратного трёхчлена:
           </P>
           <BlockMath>{math`\underbrace{0\cdot y^2}_{\text{Нельзя!}} - 6y + 1`}</BlockMath>
         </ProblemSolution>
@@ -235,7 +235,7 @@ export default defineProse()(() => (
 
     <Problems title="Точно квадратное уравнение?" level="easy">
       <P>
-        Определите, является ли данное уравнение <Dep to={quadraticEquation}>квадратным</Dep>. Если да, приведите его к{' '}
+        Определите, является ли данное уравнение <Dep on={quadraticEquation}>квадратным</Dep>. Если да, приведите его к{' '}
         <B>общему виду</B> квадратного уравнения. Определите, чему равны его коэффициенты <M>A</M>, <M>B</M> и <M>C</M>.
       </P>
 
@@ -263,7 +263,7 @@ export default defineProse()(() => (
         </ProblemAnswer>
         <ProblemSolution>
           <P>
-            По <Dep to={sameActionRule}>правилу одинакового действия</Dep> вычитаем <M>y</M> из обеих частей:
+            По <Dep on={sameActionRule}>правилу одинакового действия</Dep> вычитаем <M>y</M> из обеих частей:
           </P>
           <BlockMath>{math`0 = y^2 - y + 10`}</BlockMath>
           <P>Определяем коэффициенты:</P>
@@ -279,7 +279,7 @@ export default defineProse()(() => (
         <ProblemAnswer>Уравнение не является квадратным.</ProblemAnswer>
         <ProblemSolution>
           <P>
-            По <Dep to={sameActionRule}>правилу одинакового действия</Dep> вычитаем <M>{math`\frac{6}{2}z^2`}</M> из
+            По <Dep on={sameActionRule}>правилу одинакового действия</Dep> вычитаем <M>{math`\frac{6}{2}z^2`}</M> из
             обеих частей:
           </P>
           <BlockMath>{math`3z^2 - \frac{6}{2}z^2 + 1 = -999z`}</BlockMath>
@@ -292,7 +292,7 @@ export default defineProse()(() => (
           `}</BlockMath>
           <P>
             Это уравнение не является квадратным, так как в нём нет слагаемого с <M>z^2</M>. А добавить его с нулевым
-            коэффициентом мы не можем, потому что это противоречит <Dep to={quadraticPolynomial}>определению</Dep>{' '}
+            коэффициентом мы не можем, потому что это противоречит <Dep on={quadraticPolynomial}>определению</Dep>{' '}
             квадратного трёхчлена:
           </P>
           <BlockMath>{math`\underbrace{0\cdot z^2}_{\text{Нельзя!}} + 1 = -999z`}</BlockMath>
@@ -312,7 +312,7 @@ export default defineProse()(() => (
         </ProblemAnswer>
         <ProblemSolution>
           <P>
-            По <Dep to={sameActionRule}>правилу одинакового действия</Dep> "вытаскиваем" <M>t</M> из знаменателя,
+            По <Dep on={sameActionRule}>правилу одинакового действия</Dep> "вытаскиваем" <M>t</M> из знаменателя,
             умножая обе части на <M>t</M>:
           </P>
           <BlockMath>{math`1 = t^2`}</BlockMath>
@@ -341,8 +341,8 @@ export default defineProse()(() => (
         <ProblemSolution>
           <P>
             Видим с обеих сторон дробь с <M>x^2</M> в знаменателе. Можем одним действием избавиться от дробей, умножив
-            по <Dep to={sameActionRule}>правилу одинакового действия</Dep> обе части на <M>x^2</M>, не забывая про{' '}
-            <Dep to={alwaysGlobal}>глобальность</Dep> этого действия:
+            по <Dep on={sameActionRule}>правилу одинакового действия</Dep> обе части на <M>x^2</M>, не забывая про{' '}
+            <Dep on={alwaysGlobal}>глобальность</Dep> этого действия:
           </P>
           <BlockMath>{math`x^2\left(\frac{11}{x^2} + x + 2\right) = x^2\left(\frac{x^3 - 10}{x^2}\right)`}</BlockMath>
           <P>Раскрываем скобки и сокращаем:</P>

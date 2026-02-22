@@ -4,7 +4,7 @@ import {
   defaultElements,
   defaultCountElements,
   sharedPublicAugmentation,
-} from '@open-math/shared/index';
+} from '@open-math/shared/config';
 
 export default defineEruditConfig({
   language: {
@@ -68,7 +68,7 @@ export default defineEruditConfig({
   },
   repository: {
     type: 'github',
-    name: 'open-math/ru.omath.net',
+    name: 'open-math/new.omath.ru',
     branch: 'main',
   },
   analytics: {

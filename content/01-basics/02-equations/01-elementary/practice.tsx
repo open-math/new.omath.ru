@@ -1,6 +1,8 @@
-import { QED } from '#project/utils/qed';
+import { QED } from '@open-math/shared/utils';
+import { mathRegexp } from '@open-math/shared/utils';
+import { RootsCheck } from '#project/utils/roots';
 
-// #region Media
+// #region Assets
 //
 
 import firstPrintedEquation from './assets/first-printed-equation.png';
@@ -94,7 +96,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`x + 100 = 1`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={-99} />
+        <RootsCheck root={-99} />
         <ProblemAnswer>
           <M>-99</M>
         </ProblemAnswer>
@@ -117,7 +119,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`76 = 3 + x`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={73} />
+        <RootsCheck root={73} />
         <ProblemAnswer>
           <M>73</M>
         </ProblemAnswer>
@@ -239,7 +241,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`x+3 = -9x`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answers={['-0.3', '-3/10']} />
+        <ProblemCheck answer={['-0.3', '-3/10']} />
         <ProblemAnswer>
           <M>{math`-\frac{3}{10}`}</M>
         </ProblemAnswer>
@@ -348,7 +350,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`2 + 3x = -7x - 5`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answers={['-0.7', '-7/10']} />
+        <ProblemCheck answer={['-0.7', '-7/10']} />
         <ProblemAnswer>
           <M>{math`-\frac{7}{10}`}</M>
         </ProblemAnswer>
@@ -431,7 +433,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`10(x+2) = -7`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answers={['-2.7', '-27/10']} />
+        <ProblemCheck answer={['-2.7', '-27/10']} />
         <ProblemAnswer>
           <M>{math`-\frac{27}{10}`}</M>
         </ProblemAnswer>
@@ -466,7 +468,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`8 -5(2x-3) = 13 - 6x`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answers={['2.5', '5/2']} />
+        <ProblemCheck answer={['2.5', '5/2']} />
         <ProblemAnswer>
           <M>{math`\frac{5}{2}`}</M>
         </ProblemAnswer>
@@ -1457,7 +1459,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{6}{x^2 - 19} = 1`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" answers={[5, -5]} />
+        <RootsCheck roots={[5, -5]} />
         <ProblemHint>
           Подумайте, как одним действием избавиться от <M>x^2 - 19</M> в знаменателе. На что умножить обе части
           уравнения?
@@ -1496,7 +1498,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{9x+6}{7} + 3 = \frac{7x}{6}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={-32.4} />
+        <ProblemCheck answer={[-32.4, '-324/10']} />
         <ProblemHint>
           Подумайте, как одним действием избавиться от <M>7</M> и <M>6</M> в знаменателях.
         </ProblemHint>
@@ -1654,7 +1656,7 @@ export default defineProse({
       title="Формула линейных уравнений"
       level="medium"
       snippet={{
-        quick: true,
+        key: true,
         search: true,
         description: `
           Формула, по которой можно очень быстро найти корень любого уравнения вида Ax + B = 0.
@@ -1726,7 +1728,7 @@ export default defineProse({
             Получается интересная ситуация. Переменная <M>x</M> полностью "уходит" из уравнения и мы получаем просто
             равенство <M>B = 0</M>. И тут есть два варианта:
           </P>
-          <List type="ol">
+          <List ordered>
             <Li>
               <P>
                 Если <M>B</M> действительно равно <M>0</M>, то получается верное равенство <M>0 = 0</M> вне зависимости
@@ -1755,7 +1757,7 @@ export default defineProse({
         <BlockMath>{math`ax^2 + bx + c = y^3 - t`}</BlockMath>
         <P>Теперь возьмем и просто поменяем местами левые и правые части равенства:</P>
         <BlockMath>{math`y^3 - t = ax^2 + bx + c`}</BlockMath>
-        <List type="ol">
+        <List ordered>
           <Li>Строго докажите, что любое равенство можно развернуть и оно останется верным.</Li>
           <Li>
             Строго докажите, что любое равенство можно развернуть при помощи{' '}
@@ -1785,7 +1787,7 @@ export default defineProse({
             равенства, у нас по-прежнему слева и справа от знака "равно" будут стоять выражения, которые обозначают один
             и тот же объект. Ничего не поменялось. Новое и старое равенства <B>абсолютно</B> одинаковые.
           </P>
-          <P>{QED}</P>
+          <QED />
         </ProblemSection>
         <ProblemSection title="Разворот вручную">
           <P>
@@ -1823,7 +1825,7 @@ export default defineProse({
             Вуаля, мы вручную добились такого же эффекта, как если бы развернули весы! Причем проделать это можно с
             любым равенством! Значит, любое равенство можно развернуть! Вот она, мощь абстракций!
           </P>
-          <P>{QED}</P>
+          <QED />
         </ProblemSection>
       </ProblemSolution>
     </Problem>
@@ -1977,7 +1979,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`(x + 3)(x - 2) = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" answers={[2, -3]} />
+        <RootsCheck roots={[2, -3]} />
         <ProblemHint>
           Если получится сделать равным нулю хотя бы один из множителей, то всё произведение станет равно нулю.
         </ProblemHint>
@@ -2046,7 +2048,7 @@ export default defineProse({
           <P>Решите уравнение:</P>
           <BlockMath>{math`x(x + 7)(x - 11) = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" answers={[0, -7, 11]} />
+        <RootsCheck roots={[0, -7, 11]} />
         <ProblemHint>
           Здесь множителя уже три и получается три под-уравнения, а значит и три решения у исходного уравнения.
         </ProblemHint>
@@ -2074,7 +2076,7 @@ export default defineProse({
           <P>Решите уравнение:</P>
           <BlockMath>{math`10(x+3)(2x-8)(8x+1) = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" answers={[-3, 4, [-0.125, '-1/8']]} />
+        <RootsCheck roots={[-3, 4, [-0.125, '-1/8']]} />
         <ProblemHint>
           Избавьтесь от <M>10</M>, затем решите под-уравнения для каждого множителя.
         </ProblemHint>
@@ -2152,7 +2154,7 @@ export default defineProse({
           <P>Решите уравнение:</P>
           <BlockMath>{math`0 = (x^2 - 4)(x + 1)`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" answers={[-2, 2, -1]} />
+        <RootsCheck roots={[-2, 2, -1]} />
         <ProblemHint>Два множителя в правой части приводят к двум под-уравнениям.</ProblemHint>
         <ProblemHint>Первое под-уравнение имеет два корня.</ProblemHint>
         <ProblemAnswer>
@@ -2188,7 +2190,7 @@ export default defineProse({
           <P>Решите уравнение:</P>
           <BlockMath>{math`\frac{\left(x + \frac{1}{2}\right)x}{17} = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" hint="Через запятую" answers={[0, [-0.5, '-1/2']]} />
+        <RootsCheck roots={[0, [-0.5, '-1/2']]} />
         <ProblemHint>
           Сначала избавьтесь от знаменателя <M>17</M>. Затем решите под-уравнения для каждого множителя.
         </ProblemHint>
@@ -2227,7 +2229,7 @@ export default defineProse({
           <P>Решите уравнение:</P>
           <BlockMath>{math`(x+11)(x-1) + 12 = 12`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" answers={[-11, 1]} />
+        <RootsCheck roots={[-11, 1]} />
         <ProblemHint>
           Подумайте, как можно одним действием избавиться от <M>12</M> в обеих частях уравнения.
         </ProblemHint>
@@ -2262,7 +2264,7 @@ export default defineProse({
           <P>Решите уравнение:</P>
           <BlockMath>{math`7x^2 = 42x`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label="Корни уравнения" answers={[0, 6]} />
+        <RootsCheck roots={[0, 6]} />
         <ProblemHint>Упростите уравнение.</ProblemHint>
         <ProblemHint>Сгруппируйте иксы в одной части, например, в левой.</ProblemHint>
         <ProblemHint>Вынесите общий множитель за скобки.</ProblemHint>
@@ -2365,7 +2367,10 @@ export default defineProse({
           </P>
           <BlockMath>{math`\frac{1}{x+1} = \frac{2}{3}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answers={['0.5', '1/2']} />
+        <ProblemCheck answer={['0.5', '1/2']} />
+        <ProblemAnswer>
+          <M>{math`\frac{1}{2}`}</M>
+        </ProblemAnswer>
         <ProblemSolution>
           <P>
             <B>Решение элементарными действиями:</B>
@@ -2761,7 +2766,7 @@ export default defineProse({
           эти противоположные числа.
         </P>
       </ProblemDescription>
-      <ProblemCheck answers={['-3', '-10', '10']} />
+      <ProblemCheck label="Все три числа" answers={['-3', '-10', '10']} />
       <ProblemHint>
         Противоположные числа -- числа, отличающиеся только знаком. Значит из одного можно получить другое, просто
         умножив его на <M>-1</M>.
@@ -2881,7 +2886,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`3x + 2 = x`}</BlockMath>
           <P>Действия:</P>
-          <List type="ol">
+          <List ordered>
             <Li>
               Сгруппировать <M>x</M> в левой части уравнения.
             </Li>
@@ -2937,7 +2942,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`7x - 2 = 5x + 10`}</BlockMath>
           <P>Действия:</P>
-          <List type="ol">
+          <List ordered>
             <Li>
               Сгруппировать <M>x</M> в левой части уравнения.
             </Li>
@@ -2993,7 +2998,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`x = 8x - 3`}</BlockMath>
           <P>Действия:</P>
-          <List type="ol">
+          <List ordered>
             <Li>
               Сгруппировать <M>x</M> в левой части уравнения.
             </Li>
@@ -3012,7 +3017,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`11 + 9x = 20x`}</BlockMath>
           <P>Действия:</P>
-          <List type="ol">
+          <List ordered>
             <Li>
               Сгруппировать <M>x</M> в левой части уравнения.
             </Li>
@@ -3031,7 +3036,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`3x + 2 = 5x - 10`}</BlockMath>
           <P>Действия:</P>
-          <List type="ol">
+          <List ordered>
             <Li>
               Сгруппировать <M>x</M> в левой части уравнения.
             </Li>
@@ -3050,7 +3055,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`76x + 10 = 46x - 12`}</BlockMath>
           <P>Действия:</P>
-          <List type="ol">
+          <List ordered>
             <Li>
               Сгруппировать <M>x</M> в левой части уравнения.
             </Li>
@@ -3126,6 +3131,9 @@ export default defineProse({
         <ProblemHint>
           Изолируйте (оставьте в одиночестве) <M>x^2</M>.
         </ProblemHint>
+        <ProblemAnswer>
+          <M>x = \pm 7</M>
+        </ProblemAnswer>
         <ProblemSolution>
           <P>
             Будем постепенно изолировать <M>x^2</M>. Для начала по <Dep on={sameActionRule}>правилу</Dep> одинакового
@@ -3228,11 +3236,14 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{7}{3x + 8} - \frac{2}{4x - 1} = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answers={['23/22']} />
+        <ProblemCheck answer={'23/22'} />
         <ProblemHint>
           Одним действием сделайте так, чтобы дроби были по обе части уравнения. Затем используйте{' '}
           <Dep on={uniques.fractionsFlip}>переворот дробей</Dep>.
         </ProblemHint>
+        <ProblemAnswer>
+          <M>{math`x = \frac{23}{22}`}</M>
+        </ProblemAnswer>
         <ProblemSolution>
           <P>
             Сделаем так, чтобы дроби были по обе части уравнения. Для этого по <Dep on={sameActionRule}>правилу</Dep>{' '}
@@ -3290,8 +3301,11 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`(2x-5)^2 = 4x^2`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answers={['5/4', '1.25']} />
+        <ProblemCheck answer={['5/4', '1.25']} />
         <ProblemHint>В левой части раскройте скобки по формуле квадрата разности.</ProblemHint>
+        <ProblemAnswer>
+          <M>{math`x = \frac{5}{4}`}</M>
+        </ProblemAnswer>
         <ProblemSolution>
           <P>Раскрываем скобки слева по формуле квадрата разности:</P>
           <BlockMath>{math`
@@ -3338,6 +3352,9 @@ export default defineProse({
         <ProblemHint>
           Воспользуйтесь приёмом из задачи <Dep on={uniques.zeroFactors}>Нулевые множители</Dep>.
         </ProblemHint>
+        <ProblemAnswer>
+          Уравнение имеет два решения: <M>0</M> и <M>4</M>.
+        </ProblemAnswer>
         <ProblemSolution>
           <P>
             Вытащим <M>x-3</M> из знаменателя. Для этого по <Dep on={sameActionRule}>правилу</Dep> одинакового действия,
@@ -3385,11 +3402,14 @@ export default defineProse({
         <P>Решите уравнение:</P>
         <BlockMath>{math`\frac{3z + 9}{6} + \frac{8z - 2}{4} = \frac{5 + 4z}{3}`}</BlockMath>
       </ProblemDescription>
-      <ProblemCheck answers={['4/7']} />
+      <ProblemCheck answer={mathRegexp('4/7')} />
       <ProblemHint>
         Наименьший общий знаменатель у этих дроблей равен <M>12</M>. Умножив обще части на <M>12</M>, все знаменатели
         сократятся.
       </ProblemHint>
+      <ProblemAnswer>
+        <M>{math`z = \frac{4}{7}`}</M>
+      </ProblemAnswer>
       <ProblemSolution>
         <P>
           Работать с дробями неудобно. Надо подумать, на что умножить обе части уравнения, чтобы разом избавиться от
@@ -3567,7 +3587,7 @@ export default defineProse({
             линейных уравнений с одинаковыми корнями.
           </P>
           <P>Все линейные уравнения с одинаковыми корнями отличаются друг от друга только общим множителем!</P>
-          <P>{QED}</P>
+          <QED />
         </ProblemSection>
         <ProblemSection title="Прямой способ">
           <P>
@@ -3615,7 +3635,7 @@ export default defineProse({
             <B>не существует</B> двух несводимых друг к другу линейных уравнений с одинаковыми корнями.
           </P>
           <P>Все линейные уравнения с одинаковыми корнями отличаются друг от друга только общим множителем!</P>
-          <P>{QED}</P>
+          <QED />
         </ProblemSection>
       </ProblemSolution>
       <ProblemNote>
@@ -3690,7 +3710,7 @@ export default defineProse({
           <B>истинное</B> равенство после каждого шага преобразований.
         </P>
         <P>Если в результате преобразований мы пришли к ложному равенству, то это может значить две вещи:</P>
-        <List type="ol">
+        <List ordered>
           <Li>Мы совершили ошибку в цепочке преобразований.</Li>
           <Li>
             Наше исходное предположение о том, что уравнение имеет решение, было неверным, и на самом деле никаких
@@ -3701,7 +3721,7 @@ export default defineProse({
           Так как в цепочке преобразований мы не совершали ошибок, то мы можем с уверенностью утверждать, что уравнение
           не имеет решений. Красивый пример применения "доказательства от противного".
         </P>
-        <P>{QED}</P>
+        <QED />
       </ProblemSolution>
     </Problem>
 
@@ -3738,7 +3758,7 @@ export default defineProse({
           Получается, что при решении уравнения при помощи <Dep on={sameActionRule}>правила</Dep> одинакового действия
           мы одновременно и находим корни уравнения, и доказываем, что других корней нет.
         </P>
-        <P>{QED}</P>
+        <QED />
       </ProblemSolution>
     </Problem>
 
@@ -3780,7 +3800,7 @@ export default defineProse({
           одинакового действия после прибавления <M>3</M> получаем новое истинное равенство. А это по определению
           значит, что <M>x</M> -- решение уравнения.
         </P>
-        <P>{QED}</P>
+        <QED />
       </ProblemSolution>
     </Problem>
   </>

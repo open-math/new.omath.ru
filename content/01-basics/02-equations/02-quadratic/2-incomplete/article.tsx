@@ -1,4 +1,5 @@
-import { QED } from '#project/utils/qed';
+import { QED } from '@open-math/shared/utils';
+import { RootsCheck } from '#project/utils/roots';
 
 // #region Links
 //
@@ -21,9 +22,6 @@ const zeroFactors = $CONTENT.basics.equations.elementary.practice.$zeroFactors;
 
 //
 // #endregion
-
-export const hasRootsLabel = 'Есть решения?';
-export const rootsLabel = 'Корни уравнения';
 
 export default defineProse({
   uniques: {
@@ -48,7 +46,7 @@ export default defineProse({
       title="Неполное квадратное уравнение"
       snippet={{
         search: true,
-        quick: true,
+        key: true,
         seo: 'Что такое неполное квадратное уравнение?',
         description: `
           Квадратное уравнение, у которого равен нулю коэффициент B или C или оба сразу.
@@ -86,7 +84,7 @@ export default defineProse({
 
     <H1
       snippet={{
-        quick: true,
+        key: true,
         seo: 'Как решать неполные квадратные уравнения?',
         title: 'Решение таких уравнений',
         description: `
@@ -146,7 +144,7 @@ export default defineProse({
           и получится верное равенство <M>0 = 0</M>. Значит <M>x = 0</M> -- это единственное{' '}
           <Dep on={equationSolution}>решение уравнения</Dep>.
         </P>
-        <P>{QED}</P>
+        <QED />
       </StatementProof>
     </Statement>
 
@@ -164,7 +162,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>x^2 + 5x = 0</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} answers={[0, -5]} />
+        <RootsCheck roots={[0, -5]} />
         <ProblemHint>
           Вынесите <M>x</M> за скобки.
         </ProblemHint>
@@ -198,7 +196,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>8x=x^2</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} answers={[0, 8]} />
+        <RootsCheck roots={[0, 8]} />
         <ProblemHint>
           Сгруппируйте иксы в одной части уравнения при помощи{' '}
           <Dep on={sameActionRule}>правила одинакового действия</Dep>.
@@ -225,7 +223,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>2x^2 - 7x = 0</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} answers={[0, [3.5, '7/2']]} />
+        <RootsCheck roots={[0, [3.5, '7/2']]} />
         <ProblemAnswer>
           <M>{math`x_1 = 0, \quad x_2 = \dfrac{7}{2}`}</M>
         </ProblemAnswer>
@@ -252,7 +250,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{2}{7}x - \frac{1}{35}x^2 = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} answers={[0, -10]} />
+        <RootsCheck roots={[0, -10]} />
         <ProblemAnswer>
           <M>{math`x_1 = 0, \quad x_2 = -10`}</M>
         </ProblemAnswer>
@@ -324,7 +322,7 @@ export default defineProse({
             base -->|Подуравнение 2| factor2[$$ Ax + B = 0 $$] --> solution2[$$ x = -\frac{B}{A} $$]
             class factor1,solution2 fill
         `}</Diagram>
-        <P>{QED}</P>
+        <QED />
       </StatementProof>
     </Statement>
 
@@ -353,9 +351,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>2x^2 - 18 = 0</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} yes>
-          <ProblemCheck label={rootsLabel} answers={[-3, 3]} />
-        </ProblemCheck>
+        <RootsCheck has roots={[-3, 3]} />
         <ProblemHint>
           Изолируйте <M>x^2</M> в левой части уравнения. Затем воспользуйтесь пониманием того, что такое квадратный
           корень.
@@ -386,7 +382,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`5=-\frac{1}{20}x^2`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} no />
+        <RootsCheck empty />
         <ProblemHint>
           Чтобы оставить <M>x^2</M> в одиночестве в правой части, умножим обе части уравнения на <M>-20</M>.
         </ProblemHint>
@@ -414,9 +410,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{x^2}{4} - 9 = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} yes>
-          <ProblemCheck label={rootsLabel} answers={[-6, 6]} />
-        </ProblemCheck>
+        <RootsCheck has roots={[-6, 6]} />
         <ProblemHint>
           Умножьте обе части уравнения на <M>4</M>, чтобы избавиться от дроби. Затем изолируйте <M>x^2</M> и извлеките
           квадратный корень.
@@ -448,7 +442,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`0 = - 3x^2 - 12`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} no />
+        <RootsCheck empty />
         <ProblemAnswer>
           <M>x_1 = -2, \quad x_2 = 2</M>
         </ProblemAnswer>
@@ -479,7 +473,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`x^2 = 3`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} yes />
+        <RootsCheck has roots={[`-sqrt(3)`, `sqrt(3)`]} />
         <ProblemHint>Не всегда ответ получается красивым...</ProblemHint>
         <ProblemAnswer>
           <M>{math`x_1 = -\sqrt{3}, \quad x_2 = \sqrt{3}`}</M>
@@ -524,7 +518,7 @@ export default defineProse({
           x = \pm \sqrt{-\frac{C}{A}}
         `}</BlockMath>
         <P>Если же извлечь квадратный корень нельзя, то и решений у этого уравнения нет.</P>
-        <P>{QED}</P>
+        <QED />
       </StatementProof>
     </Statement>
 

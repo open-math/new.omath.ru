@@ -1,6 +1,7 @@
-import { QED } from '#project/utils/qed';
+import { QED } from '@open-math/shared/utils';
+import { RootsCheck } from '#project/utils/roots';
 
-import article, { hasRootsLabel, rootsLabel } from './article';
+import article from './article';
 import summary from './summary';
 
 // #region Links
@@ -117,7 +118,7 @@ export default defineProse()(() => (
         <ProblemDescription>
           <BlockMath>x^2 + x = 0</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} answers={[0, -1]} />
+        <RootsCheck roots={[0, -1]} />
         <ProblemAnswer>
           Корни уравнения: <M>0</M> и <M>-1</M>.
         </ProblemAnswer>
@@ -143,7 +144,7 @@ export default defineProse()(() => (
         <ProblemDescription>
           <BlockMath>3y=7y^2</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} answers={[0, '3/7']} />
+        <RootsCheck roots={[0, '3/7']} />
         <ProblemAnswer>
           Корни уравнения: <M>0</M> и <M>{math`\dfrac{3}{7}`}</M>.
         </ProblemAnswer>
@@ -171,7 +172,7 @@ export default defineProse()(() => (
         <ProblemDescription>
           <BlockMath>{math`0=-\frac{18}{\sqrt{3}}z^2 -\frac{9}{\sqrt{3}}z`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} answers={[0, ['-1/2', -0.5]]} />
+        <RootsCheck roots={[0, ['-1/2', -0.5]]} />
         <ProblemAnswer>
           Корни уравнения: <M>0</M> и <M>{math`-\dfrac{1}{2}`}</M>.
         </ProblemAnswer>
@@ -207,7 +208,7 @@ export default defineProse()(() => (
         <ProblemDescription>
           <BlockMath>{math`\frac{1}{2}t + t^2 = -9t^2 - \frac{2}{4}t`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} answers={[0, ['-1/10', -0.1]]} />
+        <RootsCheck roots={[0, ['-1/10', -0.1]]} />
         <ProblemAnswer>
           Корни уравнения: <M>0</M> и <M>{math`-\dfrac{1}{10}`}</M>.
         </ProblemAnswer>
@@ -234,7 +235,7 @@ export default defineProse()(() => (
         <ProblemDescription>
           <BlockMath>{math`0=\frac{\sqrt{2}}{999}x^2`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={rootsLabel} answer={0} />
+        <RootsCheck roots={0} />
         <ProblemAnswer>
           Корень у уравнения один: <M>0</M>.
         </ProblemAnswer>
@@ -248,9 +249,7 @@ export default defineProse()(() => (
         <ProblemDescription>
           <BlockMath>x^2 - 100 = 0</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} yes>
-          <ProblemCheck label={rootsLabel} answers={[10, -10]} />
-        </ProblemCheck>
+        <RootsCheck has roots={[10, -10]} />
         <ProblemAnswer>
           Корни уравнения: <M>10</M> и <M>-10</M>.
         </ProblemAnswer>
@@ -274,9 +273,7 @@ export default defineProse()(() => (
         <ProblemDescription>
           <BlockMath>0 = 9r^2 - 16</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} yes>
-          <ProblemCheck label={rootsLabel} answers={['-4/3', '4/3']} />
-        </ProblemCheck>
+        <RootsCheck has roots={['-4/3', '4/3']} />
         <ProblemAnswer>
           Корни уравнения: <M>{math`\dfrac{4}{3}`}</M> и <M>{math`-\dfrac{4}{3}`}</M>.
         </ProblemAnswer>
@@ -306,7 +303,7 @@ export default defineProse()(() => (
         <ProblemDescription>
           <BlockMath>{math`\frac{64}{\sqrt{111}} + \frac{16}{\sqrt{111}}j^2 = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} no />
+        <RootsCheck empty />
         <ProblemAnswer>Уравнение не имеет корней.</ProblemAnswer>
         <ProblemSolution>
           <P>С помощью правила одинакового действия избавляемся от слагаемого без переменной:</P>
@@ -342,9 +339,7 @@ export default defineProse()(() => (
         <ProblemDescription>
           <BlockMath>{math`\frac{21}{4}m^2 - 10 = 6 - 7m^2`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} yes>
-          <ProblemCheck label={rootsLabel} answers={['8/7', '-8/7']} />
-        </ProblemCheck>
+        <RootsCheck has roots={['8/7', '-8/7']} />
         <ProblemAnswer>
           Корни уравнения: <M>{math`\dfrac{8}{7}`}</M> и <M>{math`-\dfrac{8}{7}`}</M>.
         </ProblemAnswer>
@@ -377,9 +372,7 @@ export default defineProse()(() => (
         <ProblemDescription>
           <BlockMath>(30k + 2)k + 42k^2 = 72 + 2k</BlockMath>
         </ProblemDescription>
-        <ProblemCheck label={hasRootsLabel} yes>
-          <ProblemCheck label={rootsLabel} answers={[1, -1]} />
-        </ProblemCheck>
+        <RootsCheck has roots={[1, -1]} />
         <ProblemAnswer>
           Корни уравнения: <M>1</M> и <M>-1</M>.
         </ProblemAnswer>
@@ -448,7 +441,7 @@ export default defineProse()(() => (
           <P>
             Рассмотрим все возможные варианты знаков <M>C</M> и <M>A</M>.
           </P>
-          <List type="ul">
+          <List unordered>
             <Li>
               <P>
                 <M>C</M> и <M>A</M> оба положительные числа. Тогда их деление это тоже положительное число. При
@@ -481,10 +474,10 @@ export default defineProse()(() => (
             Вот мы и доказали, что корни у таких неполных квадратных уравнений будут только в том случае, если
             оставшиеся два коэффициента имеют разные знаки.
           </P>
-          <P>{QED}</P>
+          <QED />
         </ProblemSection>
         <ProblemSection title="Проверка наличия решений">
-          <List type="ol">
+          <List ordered>
             <Li>
               Коэффициенты <M>3</M> и <M>5</M>. Знаки одинаковые. Решений нет.
             </Li>
@@ -512,7 +505,7 @@ export default defineProse()(() => (
         деформация балки. Какое максимальное расстояние от центральной оси может быть у точки на балке, чтобы она не
         деформировалась?
       </ProblemDescription>
-      <ProblemCheck label={rootsLabel} answer={4} />
+      <RootsCheck root={4} />
       <ProblemHint>Запишите уравнение для нахождения критического отклонения балки и решите его.</ProblemHint>
       <ProblemAnswer>
         Максимальное должно быть не более <M>4</M>.

@@ -1,4 +1,4 @@
-// #region Media
+// #region Assets
 //
 
 import gardenProblem from './assets/garden-problem.webp';
@@ -32,17 +32,25 @@ export function quadraticOrNot(
   B?: CoefficientAnswer,
   C?: CoefficientAnswer,
 ): AnyProseElement {
-  if (quadratic) {
-    return (
-      <ProblemCheck label="Квадратное?" yes>
-        <ProblemCheck label="Коэффициент A" answers={Array.isArray(A) ? A : [A!]} />
-        <ProblemCheck label="Коэффициент B" answers={Array.isArray(B) ? B : [B!]} />
-        <ProblemCheck label="Коэффициент C" answers={Array.isArray(C) ? C : [C!]} />
-      </ProblemCheck>
-    );
-  } else {
-    return <ProblemCheck label="Квадратное?" no />;
-  }
+  return (
+    <>
+      <ProblemCheck
+        label="Квадратное?"
+        boolean={Boolean(quadratic)}
+        children={
+          quadratic ? (
+            <>
+              <ProblemCheck label="Коэффициент A" answer={Array.isArray(A) ? A : [A!]} />
+              <ProblemCheck label="Коэффициент B" answer={Array.isArray(B) ? B : [B!]} />
+              <ProblemCheck label="Коэффициент C" answer={Array.isArray(C) ? C : [C!]} />
+            </>
+          ) : (
+            []
+          )
+        }
+      />
+    </>
+  );
 }
 
 export default defineProse({
@@ -73,7 +81,7 @@ export default defineProse({
       applied
       snippet={{
         search: true,
-        quick: true,
+        key: true,
         title: 'Квадратные уравнения в жизни',
         description: `
           Примеры разнообразных жизненных ситуаций, которые сводятся к квадратным уравнениям.
@@ -175,7 +183,7 @@ export default defineProse({
           <P>
             Мастеру заказали изготовить красивую деревянную рамку для красивого семейного портрета размерами{' '}
             <M>8 \times 10</M> дюймов. Чтобы картина вместе с рамкой красиво смотрелась в шкафу с другими дорогими
-            сердцу вещами, нужно чтобы общая ее площадь была ровно <M>160</M> квадратных дюймов. Какой должна быть
+            сердцу вещами, нужно чтобы общая ее площадь была ровно <M>168</M> квадратных дюймов. Какой должна быть
             ширина рамки?
           </P>
           <Image src={framingPhoto} width="600px">
@@ -188,11 +196,11 @@ export default defineProse({
             <M>8 + 2w</M> и <M>10 + 2w</M> (<M>2w</M>, потому что рамка есть по обе стороны от картины). Площадь
             прямоугольника считается как произведение его сторон, то есть:
           </P>
-          <BlockMath>{math`(8 + 2w)(10 + 2w) = 160`}</BlockMath>
+          <BlockMath>{math`(8 + 2w)(10 + 2w) = 168`}</BlockMath>
           <P>Раскрываем скобки и приводим подобные слагаемые:</P>
           <BlockMath>{math`
-            80 + 16w + 20w + 4w^2 = 160 \\
-            4w^2 + 36w + 80 = 160
+            80 + 16w + 20w + 4w^2 = 168 \\
+            4w^2 + 36w + 80 = 168
           `}</BlockMath>
           <P>
             Ну и уже в третий раз мы приплыли. Снова переменная во второй степени, и снова непонятно, что делать дальше!
@@ -218,7 +226,7 @@ export default defineProse({
       такого подхода есть серьёзные недостатки:
     </P>
 
-    <List type="ol">
+    <List ordered>
       <Li>
         <P>
           <B>Квадрата может не быть, а уравнение всё равно квадратное!</B>
@@ -264,7 +272,7 @@ export default defineProse({
       $={uniques.quadraticPolynomial}
       title="Квадратный трёхчлен"
       snippet={{
-        quick: true,
+        key: true,
         search: true,
         description: `
           Многочлен с максимальной степенью неизвестной, равной двум.
@@ -287,7 +295,7 @@ export default defineProse({
       `}</BlockMath>
     </Term>
 
-    <List type="ul">
+    <List unordered>
       <Li>
         <P>
           <B>Почему квадратный?</B>
@@ -341,7 +349,7 @@ export default defineProse({
       $={uniques.quadraticEquation}
       title="Квадратное уравнение"
       snippet={{
-        quick: true,
+        key: true,
         search: true,
         description: `
           Любое уравнение, которое преобразованиями без потери корней можно привести к виду квадратного трёхчлена.
@@ -392,7 +400,7 @@ export default defineProse({
         <B accent>не имеют значения</B>!
       </P>
 
-      <List type="ol">
+      <List ordered>
         <Li>
           Коэффициент <M>A</M> <B accent>всегда стоит</B> рядом с <M>x^2</M>.
         </Li>
@@ -725,7 +733,7 @@ export default defineProse({
       странные вещи? Причины две:
     </P>
 
-    <List type="ol">
+    <List ordered>
       <Li>Теперь мы чётко научились определять, какие уравнения являются квадратными.</Li>
       <Li>
         Мы строго определили ключевые понятия. Уже с использованием этих понятий мы выведем формулы для решения

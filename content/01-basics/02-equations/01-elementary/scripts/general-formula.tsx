@@ -1,3 +1,5 @@
+import { RootsCheck } from '#project/utils/roots';
+
 export default defineProblemScript({
   isGenerator: true,
 })(({ random }) => {
@@ -54,15 +56,18 @@ export default defineProblemScript({
     };
 
     const divisor = gcd(Math.abs(numerator), Math.abs(denominator));
-    const simplifiedNum = numerator / divisor;
-    const simplifiedDen = denominator / divisor;
+    let simplifiedNum = numerator / divisor;
+    let simplifiedDen = denominator / divisor;
+
+    // Normalize sign: keep denominator positive.
+    // This prevents cases like -/- from being rendered as negative.
+    if (simplifiedDen < 0) {
+      simplifiedNum *= -1;
+      simplifiedDen *= -1;
+    }
 
     if (simplifiedDen === 1) {
       root = simplifiedNum.toString();
-    } else if (simplifiedDen === -1) {
-      root = (-simplifiedNum).toString();
-    } else if (simplifiedDen < 0) {
-      root = `-\\frac{${Math.abs(simplifiedNum)}}{${Math.abs(simplifiedDen)}}`;
     } else if (simplifiedNum < 0) {
       root = `-\\frac{${Math.abs(simplifiedNum)}}{${simplifiedDen}}`;
     } else {
@@ -77,9 +82,8 @@ export default defineProblemScript({
           <P>Решите уравнение, используя выведенную ранее общую формулу:</P>
           <BlockMath>{equation}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck
-          label="Корень уравнения"
-          answer={root
+        <RootsCheck
+          root={root
             .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '$1/$2')
             .replace(/^-?\\frac/, (m) => (m.includes('-') ? '-' : ''))}
         />

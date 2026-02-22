@@ -1,6 +1,6 @@
-import { QED } from '#project/utils/qed';
+import { QED } from '@open-math/shared/utils';
 
-// #region Media
+// #region Assets
 //
 
 import explainingMeme from './assets/explaining-meme.mp4';
@@ -102,7 +102,7 @@ export default defineProse({
       можно записать бесконечным количеством разных способов:
     </P>
 
-    <List type="ul">
+    <List unordered>
       <Li>
         <M>3</M>
       </Li>
@@ -133,7 +133,7 @@ export default defineProse({
       $={uniques.equality}
       title="Равенство"
       snippet={{
-        quick: true,
+        key: true,
         search: ['Равно'],
         seo: 'Что такое равенство?',
         description: `
@@ -164,7 +164,7 @@ export default defineProse({
       угодно. Поэтому равенства делятся на две категории: верные/истинные и неверные/ложные.
     </P>
 
-    <List type="ol">
+    <List ordered>
       <Li>
         <B>Верное</B> (или <B>истинное</B>) равенство — это равенство, в котором выражения слева и справа от знака равно
         обозначают один и тот же объект.
@@ -178,7 +178,7 @@ export default defineProse({
     <Diagram
       $={uniques.equalityFalseTrue}
       snippet={{
-        quick: true,
+        key: true,
         search: ['Истинное равенство', 'Ложное равенство'],
         title: 'Верное и ложное равенство',
         description: `
@@ -275,7 +275,7 @@ export default defineProse({
       $={uniques.equation}
       title="Уравнение"
       snippet={{
-        quick: true,
+        key: true,
         search: true,
         seo: 'Что такое уравнение?',
         description: `
@@ -342,7 +342,7 @@ export default defineProse({
       $={uniques.equationSolution}
       title="Решение уравнения"
       snippet={{
-        quick: true,
+        key: true,
         search: ['Корень уравнения'],
         seo: 'Что значит решить уравнение?',
         description: `
@@ -525,7 +525,7 @@ export default defineProse({
       $={uniques.sameActionRule}
       title="Правило одинакового действия"
       snippet={{
-        quick: true,
+        key: true,
         search: true,
         description: `
           Если над обеими частями истинного равенства совершить одно и то же действие, то полученное равенство тоже будет истинным.
@@ -615,7 +615,7 @@ export default defineProse({
           -- превратились в другую пару <B>тоже одинаковых</B> объектов. А значит, новое равенство тоже истинно!
         </P>
 
-        <P>{QED}</P>
+        <QED />
       </StatementSection>
     </Statement>
 
@@ -1159,7 +1159,7 @@ export default defineProse({
 
           <P> Итак, для решения этого уравнения нам понадобилось три последовательных действия:</P>
 
-          <List type="ol">
+          <List ordered>
             <Li>
               Вычитание <M>x</M>
             </Li>
@@ -1220,7 +1220,7 @@ export default defineProse({
 
           <P>Итак, для решения этого уравнения нам понадобилось два последовательных действия:</P>
 
-          <List type="ol">
+          <List ordered>
             <Li>
               Умножение на <M>8</M>
             </Li>
@@ -1498,10 +1498,10 @@ export default defineProse({
     </P>
 
     <List
-      type="ul"
+      unordered
       $={uniques.commonMistakes}
       snippet={{
-        quick: true,
+        key: true,
         search: true,
         title: 'Ошибки при решении уравнений',
         seo: 'Типовые ошибки при решении уравнений',
@@ -1633,7 +1633,7 @@ export default defineProse({
       Сравните два подхода при решении уравнения <M>x - 5 = 8</M>:
     </P>
 
-    <List type="ol">
+    <List ordered>
       <Li>
         Танцуем с бубном, три раза прыгаем через костёр и переносим <M>-5</M>
         направо с противоположным знаком. Получаем <M>x = 8 + 5</M>. Ответ
@@ -1669,7 +1669,7 @@ export default defineProse({
 
     <H1
       snippet={{
-        quick: true,
+        key: true,
         description: `
           Набор примеров, для работы с которыми требуется умение решать уравнения.
         `,
@@ -1687,7 +1687,7 @@ export default defineProse({
 
     <H2
       snippet={{
-        quick: true,
+        key: true,
         search: ['Магический треугольник'],
         title: 'Треугольник формул',
         seo: 'Магический треугольник формул',
@@ -1787,7 +1787,7 @@ export default defineProse({
     <H2
       snippet={{
         seo: 'Где используют уравнения в жизни?',
-        quick: true,
+        key: true,
         description: `
           Подборка проблем и ситуаций из реальной жизни, которые можно решить, если перевести их в уравнения.
         `,
@@ -2068,7 +2068,7 @@ export default defineProse({
       деление. Но в математике есть ещё огромное множество других действий:
     </P>
 
-    <List type="ul">
+    <List unordered>
       <Li>Возведение в степень</Li>
       <Li>Извлечение корня</Li>
       <Li>Логарифмирование</Li>

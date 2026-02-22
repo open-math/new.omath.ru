@@ -31,7 +31,7 @@ export default defineProse({
       toc
       snippet={{
         search: true,
-        quick: 'Общие формулы',
+        key: 'Общие формулы',
         seo: 'Общие формулы для решения неполных квадратных уравнений',
         title: 'Общие формулы неполных квадратных уравнений',
         description: `

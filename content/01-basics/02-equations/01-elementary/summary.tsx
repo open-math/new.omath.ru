@@ -31,7 +31,7 @@ export default defineProse()(() => (
       тривильному виду <M>{math`x = \ldots`}</M>
     </P>
 
-    <List type="ul">
+    <List unordered>
       <Li>
         <P>
           <B>Сложение</B> нейтрализуют <B>вычитанием</B> и наоборот, чтобы получился <M>0</M>:

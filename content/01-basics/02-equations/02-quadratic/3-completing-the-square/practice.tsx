@@ -329,12 +329,7 @@ export default defineProse()(() => (
               x^2 - 2\cdot x\cdot \frac{11}{2}
             `}</BlockMath>
             <P>
-              Для полного квадрата не хватает{' '}
-              <M>
-                \left(\frac{11}
-                {2}\right)^2
-              </M>
-              . Добавим и вычтем:
+              Для полного квадрата не хватает <M>{math`\left(\frac{11}{2}\right)^2`}</M>. Добавим и вычтем:
             </P>
             <BlockMath>{math`
               x^2 - 2\cdot x\cdot \frac{11}{2} + \yellow{\left(\frac{11}{2}\right)^2} - \yellow{\left(\frac{11}{2}\right)^2}
@@ -351,12 +346,7 @@ export default defineProse()(() => (
               t^2 + 2\cdot t\cdot \frac{5}{2} - 6
             `}</BlockMath>
             <P>
-              Для квадрата суммы не хватает{' '}
-              <M>
-                \left(\frac{5}
-                {2}\right)^2
-              </M>
-              . Добавим и вычтем:
+              Для квадрата суммы не хватает <M>{math`\left(\frac{5}{2}\right)^2`}</M>. Добавим и вычтем:
             </P>
             <BlockMath>{math`
               t^2 + 2\cdot t\cdot \frac{5}{2} + \yellow{\left(\frac{5}{2}\right)^2} - \yellow{\left(\frac{5}{2}\right)^2} - 6
@@ -378,12 +368,7 @@ export default defineProse()(() => (
               (3x)^2 - 2\cdot 3x\cdot \frac{5}{6} + 7
             `}</BlockMath>
             <P>
-              Для квадрата разности не хватает{' '}
-              <M>
-                \left(\frac{5}
-                {6}\right)^2
-              </M>
-              . Добавим и вычтем:
+              Для квадрата разности не хватает <M>{math`\left(\frac{5}{6}\right)^2`}</M>. Добавим и вычтем:
             </P>
             <BlockMath>{math`
               (3x)^2 - 2\cdot 3x\cdot \frac{5}{6} + \yellow{\left(\frac{5}{6}\right)^2} - \yellow{\left(\frac{5}{6}\right)^2} + 7
@@ -665,8 +650,8 @@ export default defineProse()(() => (
     <Problems title="Квадратные уравнения из жизни" level="easy">
       <P>
         Спустя такой долгий путь пришла наконец пора разобраться с{' '}
-        <Ref to={$CONTENT.basics.equations.quadratic.whatIsIt.article.$problematicEquations}>жизненными ситуациями</Ref>,
-        в которых возникают квадратные уравнения. Решите каждую из этих задач.
+        <Ref to={$CONTENT.basics.equations.quadratic.whatIsIt.article.$problematicEquations}>жизненными ситуациями</Ref>
+        , в которых возникают квадратные уравнения. Решите каждую из этих задач.
       </P>
       <SubProblem label="Непослушный сад">
         <ProblemDescription>

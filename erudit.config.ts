@@ -72,13 +72,9 @@ export default defineEruditConfig({
     branch: 'main',
   },
   analytics: {
-    yandex: {
-      verification: '986ee9663b1d366b',
-      metricsId: '70781320',
-    },
     google: {
       verification: 'hbTull_8pcvJm4alie8PVq6-f87heZXqSGp6DVFsJPk',
-      gtag: 'G-NE4S66HSF0',
+      gtag: 'G-3M1SH4QB7R',
     },
   },
   ads: {

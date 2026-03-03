@@ -1,7 +1,3 @@
-import { QED } from '@open-math/shared/utils';
-import { mathRegexp } from '@open-math/shared/utils';
-import { RootsCheck } from '#project/utils/roots';
-
 // #region Assets
 //
 
@@ -3394,7 +3390,7 @@ export default defineProse({
         <P>Решите уравнение:</P>
         <BlockMath>{math`\frac{3z + 9}{6} + \frac{8z - 2}{4} = \frac{5 + 4z}{3}`}</BlockMath>
       </ProblemDescription>
-      <ProblemCheck answer={mathRegexp('4/7')} />
+      <ProblemCheck answer={mValueCheck('4/7')} />
       <ProblemHint>
         Наименьший общий знаменатель у этих дроблей равен <M>12</M>. Умножив обще части на <M>12</M>, все знаменатели
         сократятся.

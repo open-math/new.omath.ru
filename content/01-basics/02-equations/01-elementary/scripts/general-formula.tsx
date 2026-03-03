@@ -1,5 +1,3 @@
-import { RootsCheck } from '#project/utils/roots';
-
 export default defineProblemScript({
   isGenerator: true,
 })(({ random }) => {

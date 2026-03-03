@@ -49,7 +49,7 @@ export default defineProse()(() => (
     <Include toc>{article.uniques.completeSimple}</Include>
     <P>
       Но бывает и так, что данных для выделения полного квадрата недостаточно. Тогда приходится их добавлять и не
-      забывать <Ref to={article.uniques._compensate}>компенсировать</Ref>:
+      забывать <Ref to={article.uniques.compensate}>компенсировать</Ref>:
     </P>
     <Include toc>{article.uniques.completeHard}</Include>
     <P>Выделение полного квадрата позволяет решать любые квадратные уравнения:</P>

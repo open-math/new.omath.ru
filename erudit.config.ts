@@ -4,6 +4,7 @@ import {
   defaultElements,
   defaultCountElements,
   sharedPublicAugmentation,
+  openMathDependencies,
 } from '@open-math/shared/config';
 
 export default defineEruditConfig({
@@ -35,6 +36,8 @@ export default defineEruditConfig({
     useBookSiteTitle: true,
     image: defaultAssets.ogImage,
   },
+  problemChecks: ['@open-math/shared/checks/mValueCheck', '@open-math/shared/checks/mExprCheck'],
+  autoImports: ['./globals'],
   indexPage: {
     title: 'Открытая Математика',
     short: 'Теория, конспекты и задачник в одном флаконе',
@@ -77,17 +80,10 @@ export default defineEruditConfig({
       gtag: 'G-3M1SH4QB7R',
     },
   },
-  ads: {
-    aside: {
-      provider: 'yandex',
-      blockId: 'R-A-2185026-3',
-    },
-    bottom: {
-      provider: 'yandex',
-      blockId: 'R-A-2185026-1',
-    },
-  },
   elements: defaultElements,
   countElements: defaultCountElements,
   nuxtAugmentations: [sharedPublicAugmentation],
+  dependencies: {
+    ...openMathDependencies,
+  },
 });

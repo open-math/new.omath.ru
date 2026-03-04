@@ -1,4 +1,4 @@
-var { B, P, ProblemDescription, ProblemHint, ProblemSolution, ProblemAnswer, BlockMath, M, math, jsx, jsxs, Fragment, defineProblemScript, RootsCheck } = globalThis.ERUDIT_GLOBAL;
+var { B, P, ProblemDescription, ProblemHint, ProblemSolution, ProblemAnswer, ProblemNote, BlockMath, M, math, jsx, jsxs, Fragment, defineProblemScript, RootsCheck } = globalThis.ERUDIT_GLOBAL;
 // node_modules/@open-math/shared/dist/utils/letter.js
 var DEFAULT_SKIP = ["i", "f", "g", "e", "z"];
 function getRandomLatinLetter(random, options) {
@@ -245,7 +245,8 @@ var david_goliath_default = defineProblemScript('__auto_generated__',{
         /* @__PURE__ */ jsx(P, { children: "После сокращения получается уравнение:" }),
         /* @__PURE__ */ jsx(BlockMath, { children: smallEquation }),
         /* @__PURE__ */ jsx(P, { children: "Далее решаем полученное квадратное уравнение обычным способом." })
-      ] })
+      ] }),
+      /* @__PURE__ */ jsx(ProblemNote, { children: 'Название задачи отсылает к библейской истории о том, как юный пастух Давид победил гиганта Голиафа с помощью пращи. Здесь якобы непобедимый "гигант" -- это уравнение с огромными коэффициентами, а "праща" - это процесс последовательного деления на общие делители, который позволяет "победить" уравнение и найти его корни.' })
     ] })
   };
 });

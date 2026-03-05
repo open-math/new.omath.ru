@@ -1115,7 +1115,7 @@ export default defineProse({
             "центра" уравнения:
           </P>
           <Image src={palindromial} width="500px" invert="dark" />
-          <P>Придумайте способ такие уравнения решать и опробуйте его на уравнении выше.</P>
+          <P>Придумайте способ решать такие уравнения и опробуйте его на уравнении выше.</P>
         </ProblemDescription>
         <RootsCheck has roots={[2, ['1/2', 0.5]]} />
         <ProblemHint>

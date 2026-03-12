@@ -668,6 +668,7 @@ export default defineProse({
       $={uniques.quadraticInF}
       title="Трёхчленные уравнения"
       level="hard"
+      method
       snippet={{
         title: 'Трёхчленное уравнение',
         description: `
@@ -1105,6 +1106,7 @@ export default defineProse({
         },
       }}
       pretty
+      method
     >
       <P>Решите уравнение:</P>
       <SubProblem label="Образец" standalone>

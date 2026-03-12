@@ -138,7 +138,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`-x = -666`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={666} />
+        <MathValueCheck answer={666} />
         <ProblemAnswer>
           <M>666</M>
         </ProblemAnswer>
@@ -160,7 +160,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`40 = 10 - x`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={-30} />
+        <MathValueCheck answer={-30} />
         <ProblemAnswer>
           <M>-30</M>
         </ProblemAnswer>
@@ -193,7 +193,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`8x = 80`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={10} />
+        <MathValueCheck answer={10} />
         <ProblemAnswer>
           <M>10</M>
         </ProblemAnswer>
@@ -215,7 +215,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`100 = \frac{x}{20}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={2000} />
+        <MathValueCheck answer={2000} />
         <ProblemAnswer>
           <M>2000</M>
         </ProblemAnswer>
@@ -237,7 +237,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`x+3 = -9x`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={['-0.3', '-3/10']} />
+        <MathValueCheck answer="-3/10" />
         <ProblemAnswer>
           <M>{math`-\frac{3}{10}`}</M>
         </ProblemAnswer>
@@ -308,7 +308,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{2}{7}x = 6\frac{2}{7}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={22} />
+        <MathValueCheck answer={22} />
         <ProblemHint>В правой части уравнения смешанную дробь превратите в неправильную.</ProblemHint>
         <ProblemAnswer>
           <M>22</M>
@@ -346,7 +346,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`2 + 3x = -7x - 5`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={['-0.7', '-7/10']} />
+        <MathValueCheck answer="-7/10" />
         <ProblemAnswer>
           <M>{math`-\frac{7}{10}`}</M>
         </ProblemAnswer>
@@ -429,7 +429,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`10(x+2) = -7`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={['-2.7', '-27/10']} />
+        <MathValueCheck answer="-27/10" />
         <ProblemAnswer>
           <M>{math`-\frac{27}{10}`}</M>
         </ProblemAnswer>
@@ -464,7 +464,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`8 -5(2x-3) = 13 - 6x`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={['2.5', '5/2']} />
+        <MathValueCheck answer="5/2" />
         <ProblemAnswer>
           <M>{math`\frac{5}{2}`}</M>
         </ProblemAnswer>
@@ -520,7 +520,7 @@ export default defineProse({
 
         <BlockMath>{math`14x + 15 = 71`}</BlockMath>
       </ProblemDescription>
-      <ProblemCheck answer={4} />
+      <MathValueCheck answer={4} />
       <ProblemAnswer>
         <M>4</M>
       </ProblemAnswer>
@@ -561,7 +561,7 @@ export default defineProse({
           Сколько весит топор?
         </P>
       </ProblemDescription>
-      <ProblemCheck answer={2} />
+      <MathValueCheck answer={2} />
       <ProblemAnswer>
         Топор весит <M>2</M> килограмма.
       </ProblemAnswer>
@@ -679,7 +679,7 @@ export default defineProse({
         Обозначьте высоту дерева за 🌲, а высоту кота за 🐱. С использованием этих переменных посмотрите на каждую
         картинку и запишите изображенное на ней в виде уравнения.
       </ProblemHint>
-      <ProblemCheck answer={50} />
+      <MathValueCheck answer={50} />
       <ProblemAnswer>
         <M>50</M>
       </ProblemAnswer>
@@ -767,7 +767,7 @@ export default defineProse({
           Некое число умножили на <M>2</M>, прибавили <M>10</M> и получили <M>100</M>. Что это было за число?
         </P>
       </ProblemDescription>
-      <ProblemCheck answer={45} />
+      <MathValueCheck answer={45} />
       <ProblemHint>
         Обозначьте это число за <M>x</M> и математически запишите все произведённые над ним действия в виде уравнения.
       </ProblemHint>
@@ -813,7 +813,7 @@ export default defineProse({
         </P>
         <P>Сначала попытайтесь быстро решить задачу устно. Затем решите её через уравнение и сравните результаты.</P>
       </ProblemDescription>
-      <ProblemCheck answer={5} />
+      <MathValueCheck answer={5} />
       <ProblemHint>
         Обозначьте стоимость мяча за <M>x</M> рублей.
       </ProblemHint>
@@ -875,8 +875,8 @@ export default defineProse({
           вам нужно, если вы хотите замешать <M>100</M> кг бетона?
         </P>
       </ProblemDescription>
-      <ProblemCheck answer={25} label="Цемента" />
-      <ProblemCheck answer={75} label="Песка" />
+      <MathValueCheck answer={25} label="Цемента" />
+      <MathValueCheck answer={75} label="Песка" />
       <ProblemHint>
         Обозначьте за <M>x</M> массу цемента. Тогда масса песка будет <M>3x</M>.
       </ProblemHint>
@@ -1152,8 +1152,8 @@ export default defineProse({
             Лизе?
           </P>
         </ProblemDescription>
-        <ProblemCheck label="Возраст Лизы" answer={8} />
-        <ProblemCheck label="Возраст Вани" answer={16} />
+        <MathValueCheck label="Возраст Лизы" answer={8} />
+        <MathValueCheck label="Возраст Вани" answer={16} />
         <ProblemAnswer>
           Лизе <M>8</M> лет, а Ване <M>16</M> лет.
         </ProblemAnswer>
@@ -1191,8 +1191,8 @@ export default defineProse({
             лет. Сколько лет сейчас Петру и Марии?
           </P>
         </ProblemDescription>
-        <ProblemCheck label="Возраст Марии" answer={15} />
-        <ProblemCheck label="Возраст Петра" answer={21} />
+        <MathValueCheck label="Возраст Марии" answer={15} />
+        <MathValueCheck label="Возраст Петра" answer={21} />
         <ProblemAnswer>Марии 15 лет, а Петру 21 год.</ProblemAnswer>
         <ProblemSolution>
           <P>
@@ -1241,7 +1241,7 @@ export default defineProse({
           лет?
         </P>
       </ProblemDescription>
-      <ProblemCheck answer={28} />
+      <MathValueCheck answer={28} />
       <ProblemHint>Вычислите разницу в возрасте между вами и вашим отцом, используя данные прошлого.</ProblemHint>
       <ProblemHint>Используйте эту разницу для построения уравнения, связывающего ваши возрасты сейчас.</ProblemHint>
       <ProblemAnswer>
@@ -1311,7 +1311,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`x^2 - 121 = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answers={[11, -11]} />
+        <MathValueCheck answers={[11, -11]} />
         <ProblemHint>Это уравнение имеет два решения.</ProblemHint>
         <ProblemAnswer>
           Уравнение имеет два корня: <M>11</M> и <M>-11</M>.
@@ -1340,7 +1340,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`-x - 4 + 5(x+3) = 5(-1 -x) - 2`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={-2} />
+        <MathValueCheck answer={-2} />
         <ProblemHint>Перед решением уравнения раскройте скобки и приведите подобные.</ProblemHint>
         <ProblemAnswer>
           <M>-2</M>
@@ -1386,7 +1386,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`x - \frac{x}{11} = \frac{50}{11}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={5} />
+        <MathValueCheck answer={5} />
         <ProblemHint>
           Подумайте, как одним действием избавиться от <M>11</M> в знаменателях.
         </ProblemHint>
@@ -1494,7 +1494,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{9x+6}{7} + 3 = \frac{7x}{6}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={[-32.4, '-324/10']} />
+        <MathValueCheck answer="-324/10" />
         <ProblemHint>
           Подумайте, как одним действием избавиться от <M>7</M> и <M>6</M> в знаменателях.
         </ProblemHint>
@@ -1592,7 +1592,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{12}{x+5} = -\frac{12}{5}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={-10} />
+        <MathValueCheck answer={-10} />
         <ProblemHint>У дробей одинаковые числители. От них можно избавиться одним действием.</ProblemHint>
         <ProblemAnswer>
           <M>-10</M>
@@ -1835,9 +1835,9 @@ export default defineProse({
             километров меньше, чем за второй. Сколько километров прошла Алина за каждый день?
           </P>
         </ProblemDescription>
-        <ProblemCheck label="Первый день" answer={37} />
-        <ProblemCheck label="Второй день" answer={42} />
-        <ProblemCheck label="Третий день" answer={32} />
+        <MathValueCheck label="Первый день" answer={37} />
+        <MathValueCheck label="Второй день" answer={42} />
+        <MathValueCheck label="Третий день" answer={32} />
         <ProblemHint>
           Обозначьте за <M>x</M> количество километров, которые Алина прошла за первый день.
         </ProblemHint>
@@ -1894,9 +1894,9 @@ export default defineProse({
             километров больше, чем за второй. Сколько километров прошел Павел за каждый день?
           </P>
         </ProblemDescription>
-        <ProblemCheck label="Первый день" answer={14} />
-        <ProblemCheck label="Второй день" answer={11} />
-        <ProblemCheck label="Третий день" answer={17} />
+        <MathValueCheck label="Первый день" answer={14} />
+        <MathValueCheck label="Второй день" answer={11} />
+        <MathValueCheck label="Третий день" answer={17} />
         <ProblemHint>
           Обозначьте за <M>x</M> количество километров, которые Павел прошел за второй день.
         </ProblemHint>
@@ -1965,7 +1965,20 @@ export default defineProse({
       </SubProblem>
     </Problems>
 
-    <Problems $={uniques.zeroFactors} title="Нулевые множители" level="medium" method>
+    <Problems
+      $={uniques.zeroFactors}
+      title="Нулевые множители"
+      level="medium"
+      method
+      snippet={{
+        key: true,
+        search: true,
+        title: 'Нулевые множители',
+        description: `
+          Элементарно решаемые уравнения, которые целиком сводятся к произведению множителей, равному нулю.
+        `,
+      }}
+    >
       <SubProblem label="Образец">
         <ProblemDescription>
           <P>
@@ -2317,7 +2330,7 @@ export default defineProse({
           <BlockMath>{math`\frac{3}{x+2} = \frac{2}{4} \quad \Rightarrow \quad \frac{x+2}{3} = \frac{4}{2}`}</BlockMath>
           <P>Решите это уравнение до конца и подстановкой убедитесь, что полученный корень действительно верный.</P>
         </ProblemDescription>
-        <ProblemCheck answer={4} />
+        <MathValueCheck answer={4} />
         <ProblemSolution>
           <BlockMath>{math`\frac{x+2}{3} = \frac{4}{2}`}</BlockMath>
           <P>
@@ -2363,7 +2376,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`\frac{1}{x+1} = \frac{2}{3}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={['0.5', '1/2']} />
+        <MathValueCheck answer="1/2" />
         <ProblemAnswer>
           <M>{math`\frac{1}{2}`}</M>
         </ProblemAnswer>
@@ -2434,7 +2447,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`-\frac{3}{10-x} = \frac{4}{-8}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={4} />
+        <MathValueCheck answer={4} />
         <ProblemSolution>
           <P>
             <B>Решение элементарными действиями:</B>
@@ -2524,7 +2537,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`\frac{1}{x-1} = \frac{2}{x + 2}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={4} />
+        <MathValueCheck answer={4} />
         <ProblemSolution>
           <P>
             <B>Решение элементарными действиями:</B>
@@ -2754,7 +2767,7 @@ export default defineProse({
           эти противоположные числа.
         </P>
       </ProblemDescription>
-      <ProblemCheck label="Все три числа" answers={['-3', '-10', '10']} />
+      <MathValueCheck label="Все три числа" answers={['-3', '-10', '10']} />
       <ProblemHint>
         Противоположные числа -- числа, отличающиеся только знаком. Значит из одного можно получить другое, просто
         умножив его на <M>-1</M>.
@@ -2824,7 +2837,7 @@ export default defineProse({
         </P>
         <BlockMath>{math`\frac{x + 743 \ 639}{28} - 18x = 2025x`}</BlockMath>
       </ProblemDescription>
-      <ProblemCheck answer={13} />
+      <MathValueCheck answer={13} />
       <ProblemSolution>
         <P>
           Сначала избавимся от дроби. Для этого по <Dep on={sameActionRule}>правилу</Dep> одинакового действия умножим
@@ -3065,7 +3078,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`-4x^2 + 2x + 6 = -2x^2 + 3x -(-3 + 2x^2)`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={3} />
+        <MathValueCheck answer={3} />
         <ProblemHint>Раскройте скобки и приведите подобные в правой части уравнения.</ProblemHint>
         <ProblemSolution>
           <P>В правой части раскроем скобки и приведём подобные слагаемые:</P>
@@ -3115,7 +3128,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`-\frac{5}{7}x^2 + 35 = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answers={[7, -7]} />
+        <MathValueCheck answers={[7, -7]} />
         <ProblemHint>
           Изолируйте (оставьте в одиночестве) <M>x^2</M>.
         </ProblemHint>
@@ -3167,7 +3180,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`(x+11)^2 = (x-9)^2`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={-1} />
+        <MathValueCheck answer={-1} />
         <ProblemHint>Раскройте скобки и приведите подобные слагаемые в обеих частях уравнения.</ProblemHint>
         <ProblemHint>Слева используйте формулу квадрата суммы, а справа -- формулу квадрата разности.</ProblemHint>
         <ProblemSolution>
@@ -3224,7 +3237,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{7}{3x + 8} - \frac{2}{4x - 1} = 0`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={'23/22'} />
+        <MathValueCheck answer={'23/22'} />
         <ProblemHint>
           Одним действием сделайте так, чтобы дроби были по обе части уравнения. Затем используйте{' '}
           <Dep on={uniques.fractionsFlip}>переворот дробей</Dep>.
@@ -3289,7 +3302,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`(2x-5)^2 = 4x^2`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={['5/4', '1.25']} />
+        <MathValueCheck answer="5/4" />
         <ProblemHint>В левой части раскройте скобки по формуле квадрата разности.</ProblemHint>
         <ProblemAnswer>
           <M>{math`x = \frac{5}{4}`}</M>
@@ -3333,7 +3346,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{x^2}{x-3} = 4x`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answers={[0, 4]} />
+        <MathValueCheck answers={[0, 4]} />
         <ProblemHint>
           Сгруппируйте все <M>x</M> в одной части уравнения и вынесите общие множители за скобки.
         </ProblemHint>
@@ -3390,7 +3403,7 @@ export default defineProse({
         <P>Решите уравнение:</P>
         <BlockMath>{math`\frac{3z + 9}{6} + \frac{8z - 2}{4} = \frac{5 + 4z}{3}`}</BlockMath>
       </ProblemDescription>
-      <ProblemCheck answer={mValueCheck('4/7')} />
+      <MathValueCheck answer="4/7" />
       <ProblemHint>
         Наименьший общий знаменатель у этих дроблей равен <M>12</M>. Умножив обще части на <M>12</M>, все знаменатели
         сократятся.

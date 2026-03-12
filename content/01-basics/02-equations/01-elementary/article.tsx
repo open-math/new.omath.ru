@@ -374,7 +374,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`x + 3 = 5`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={2} />
+        <MathValueCheck answer={2} />
         <ProblemHint>
           К чему надо прибавить <M>3</M>, чтобы получить <M>5</M>?
         </ProblemHint>
@@ -399,7 +399,7 @@ export default defineProse({
         <ProblemHint>
           Какое число при умножении на само себя даёт <M>16</M>?
         </ProblemHint>
-        <ProblemCheck answer={4} />
+        <MathValueCheck answer={4} />
         <ProblemAnswer>
           <M>4</M>
         </ProblemAnswer>
@@ -841,7 +841,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`100 + x = 2025`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={1925} />
+        <MathValueCheck answer={1925} />
         <ProblemHint>
           Переменной <M>x</M> мешает остаться в одиночестве сложение с числом <M>100</M>. Как бы от него избавиться?
         </ProblemHint>
@@ -869,7 +869,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`-8 = -8 + t`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={0} />
+        <MathValueCheck answer={0} />
         <ProblemHint>
           Переменной <M>t</M> мешает остаться в одиночестве сложение с числом <M>-8</M>. Как бы от него избавиться?
         </ProblemHint>
@@ -917,7 +917,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`5 + y = 2y`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={5} />
+        <MathValueCheck answer={5} />
         <ProblemHint>
           Переменная <M>y</M> имеется с обеих сторон уравнения. Какое-бы действие применить к обеим сторонам равенства,
           чтобы уничтожить <M>y</M>, скажем, в левой части уравнения?
@@ -1011,7 +1011,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`20x = 500`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={25} />
+        <MathValueCheck answer={25} />
         <ProblemHint>
           Переменной <M>x</M> мешает остаться в одиночестве умножение на число <M>20</M>. Как бы от него избавиться?
         </ProblemHint>
@@ -1040,7 +1040,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`-5 = \frac{y}{3}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={-15} />
+        <MathValueCheck answer={-15} />
         <ProblemHint>
           Переменной <M>y</M> мешает остаться в одиночестве деление на число <M>3</M>. Как бы от него избавиться?
         </ProblemHint>
@@ -1104,7 +1104,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`4x - 4 = 5 + x`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={3} />
+        <MathValueCheck answer={3} />
         <ProblemHint>
           Здесь надо сначала совершить какое-то действие, чтобы переменная <M>x</M> осталась только в какой-то одной
           части уравнения. А потом уже надо будет избавиться от мешающих чисел. Используйте правило одинакового действия
@@ -1182,7 +1182,7 @@ export default defineProse({
         <ProblemDescription>
           <BlockMath>{math`\frac{x + 10}{8} = -\frac{1}{8}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={-11} />
+        <MathValueCheck answer={-11} />
         <ProblemHint>
           Сначала избавьтесь от деления на <M>8</M>. Потом "освободите" переменную <M>x</M> от сложения с <M>10</M>.
         </ProblemHint>
@@ -1267,7 +1267,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`4x - 4 = 5 + x`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={3} />
+        <MathValueCheck answer={3} />
         <ProblemAnswer>
           <M>3</M>
         </ProblemAnswer>
@@ -1327,7 +1327,7 @@ export default defineProse({
 
           <BlockMath>{math`\frac{x + 10}{8} = -\frac{1}{8}`}</BlockMath>
         </ProblemDescription>
-        <ProblemCheck answer={-11} />
+        <MathValueCheck answer={-11} />
         <ProblemAnswer>
           <M>-11</M>
         </ProblemAnswer>
@@ -1815,7 +1815,7 @@ export default defineProse({
             откладывать деньги, чтобы накопить нужную сумму?
           </P>
         </ProblemDescription>
-        <ProblemCheck answer={125} />
+        <MathValueCheck answer={125} />
         <ProblemHint>
           Представьте, что вам уже известно точное количество дней, которые придется откладывать деньги. Обозначьте это
           количество дней буквой <M>t</M>. Как из этой <M>t</M> получить количество накопленных денег?
@@ -1880,7 +1880,7 @@ export default defineProse({
             скорость первого. Какова скорость каждого из велосипедистов?
           </P>
         </ProblemDescription>
-        <ProblemCheck label="Скорость велосипедистов" answers={[19, 21]} />
+        <MathValueCheck label="Скорость велосипедистов" answers={[19, 21]} />
         <ProblemHint>
           Обозначьте скорость первого велосипедиста буквой <M>x</M>. Раз скорость второго на <M>2</M> км/ч больше, то
           его скорость можно записать через скорость первого как <M>x + 2</M>. Дальше составьте уравнение на основе
@@ -1965,7 +1965,7 @@ export default defineProse({
             заказе. Сколько машин согласно заказу должен был выпустить завод?
           </P>
         </ProblemDescription>
-        <ProblemCheck answer={480} />
+        <MathValueCheck answer={480} />
         <ProblemHint>
           Обозначьте стандартную скорость изготовления машин в день за <M>v</M>.
         </ProblemHint>

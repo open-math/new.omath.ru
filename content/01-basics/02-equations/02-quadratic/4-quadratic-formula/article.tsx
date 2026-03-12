@@ -172,9 +172,9 @@ export default defineProse({
             Найдите решения уравнений при значениях <M>(A, C) = (1, 2); (-5, 3); (-3, -10)</M>.
           </P>
         </ProblemDescription>
-        <ProblemCheck label="Корни при (A, C) = (1, 2)" answers={[-3, 2]} />
-        <ProblemCheck label="Корни при (A, C) = (-5, 3)" answers={[15, 3]} />
-        <ProblemCheck label="Корни при (A, C) = (-3, -10)" answers={[9, -10]} />
+        <MathValueCheck label="Корни при (A, C) = (1, 2)" answers={[-3, 2]} />
+        <MathValueCheck label="Корни при (A, C) = (-5, 3)" answers={[15, 3]} />
+        <MathValueCheck label="Корни при (A, C) = (-3, -10)" answers={[9, -10]} />
         <ProblemHint>
           Изучите решения задачи <Dep on={zeroFactors}>Нулевые множители</Dep>.
         </ProblemHint>

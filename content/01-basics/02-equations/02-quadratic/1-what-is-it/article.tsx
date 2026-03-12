@@ -4,6 +4,7 @@
 import gardenProblem from './assets/garden-problem.webp';
 import impatientCyclist from './assets/impatient-cyclist.webp';
 import framingPhoto from './assets/framing-photo.webp';
+import patrickBateman from './assets/patrick-bateman.gif';
 import quadraticPolynomialMeme from './assets/quadratic-polynomial-meme.webp';
 
 //
@@ -40,9 +41,9 @@ export function quadraticOrNot(
         children={
           quadratic ? (
             <>
-              <ProblemCheck label="Коэффициент A" answer={Array.isArray(A) ? A : [A!]} />
-              <ProblemCheck label="Коэффициент B" answer={Array.isArray(B) ? B : [B!]} />
-              <ProblemCheck label="Коэффициент C" answer={Array.isArray(C) ? C : [C!]} />
+              <MathValueCheck label="Коэффициент A" answer={Array.isArray(A) ? A : [A!]} />
+              <MathValueCheck label="Коэффициент B" answer={Array.isArray(B) ? B : [B!]} />
+              <MathValueCheck label="Коэффициент C" answer={Array.isArray(C) ? C : [C!]} />
             </>
           ) : (
             []
@@ -323,6 +324,11 @@ export default defineProse({
         </P>
       </Li>
     </List>
+
+    <Callout icon={patrickBateman} title="Предварительное окончание">
+      Нужна такая проверка: если человек в школе смеется с слова "трех<B>член</B>", то его с этого класса и надо
+      выпускать.
+    </Callout>
 
     <P>
       Вполне естественно, что все эти многочисленные упоминания "членов" вызывают смешки, особенно у скучающих на уроках

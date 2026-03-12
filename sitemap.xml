@@ -82,6 +82,9 @@
         <loc>https://ru.omath.net/practice/basics/equations/elementary/?element=linear-root</loc>
     </url>
     <url>
+        <loc>https://ru.omath.net/practice/basics/equations/elementary/?element=zero-factors</loc>
+    </url>
+    <url>
         <loc>https://ru.omath.net/practice/basics/equations/elementary/?element=logika-resheniya-uravneniy</loc>
     </url>
     <url>
@@ -110,6 +113,36 @@
     </url>
     <url>
         <loc>https://ru.omath.net/summary/basics/equations/quadratic/completing-the-square/?element=vizualizatsiya-protsessa</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/basics/equations/quadratic/factoring/</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/summary/basics/equations/quadratic/factoring/</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/practice/basics/equations/quadratic/factoring/</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/basics/equations/quadratic/factoring/?element=i-plyus-i-umnozhenie-vazhny</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/basics/equations/quadratic/factoring/?element=why-factoring</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/basics/equations/quadratic/factoring/?element=razlozhenie-vruchnuyu</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/basics/equations/quadratic/factoring/?element=general-factoring</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/summary/basics/equations/quadratic/factoring/?element=varianty-razlozheniya</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/practice/basics/equations/quadratic/factoring/?element=razlozhenie-na-mnozhiteli</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/practice/basics/equations/quadratic/factoring/?element=razlozhenie-bikvadratnykh-trekhchlenov</loc>
     </url>
     <url>
         <loc>https://ru.omath.net/article/basics/equations/quadratic/incomplete/</loc>

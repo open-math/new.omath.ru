@@ -65,7 +65,7 @@ export default defineProse({
       toc
     >
       <Tr>
-        <Td center> </Td>
+        <Td> </Td>
         <Td>
           <B>Действие</B>
         </Td>
@@ -151,7 +151,7 @@ export default defineProse({
           <B>8</B>
         </Td>
         <Td>
-          Вводим понятие <B>дискриминанта</B>.
+          Вводим понятие <Dep on={article.uniques.discriminant}>дискриминанта</Dep>.
         </Td>
         <Td center freeze>
           <M currentColor>{math`\displaystyle \left( x + \frac{B}{2A} \right)^2 = \frac{\brand{D}}{4A^2}`}</M>
@@ -165,7 +165,7 @@ export default defineProse({
           Берём квадратный корень из обеих частей (если <M>D \ge 0</M>).
         </Td>
         <Td center freeze>
-          <M currentColor>{math`\displaystyle x + \frac{B}{2A} = \pm \frac{\sqrt{D}}{2A}`}</M>
+          <M currentColor>{math`\displaystyle x_{1,2} + \frac{B}{2A} = \pm \frac{\sqrt{D}}{2A}`}</M>
         </Td>
       </Tr>
       <Tr>
@@ -176,12 +176,14 @@ export default defineProse({
           Изолируем <M>x</M> и получаем готовую формулу.
         </Td>
         <Td center freeze>
-          <M currentColor>{math`\displaystyle x = \frac{-B \pm \sqrt{D}}{2A}`}</M>
+          <M currentColor>{math`\displaystyle x_{1,2} = \frac{-B \pm \sqrt{D}}{2A}`}</M>
         </Td>
       </Tr>
     </Table>
 
-    <Hr />
+    <Include toc>{article.uniques.discriminant}</Include>
+
+    <Include toc>{article.uniques.formula}</Include>
 
     <Include toc>{article.uniques.examples}</Include>
 

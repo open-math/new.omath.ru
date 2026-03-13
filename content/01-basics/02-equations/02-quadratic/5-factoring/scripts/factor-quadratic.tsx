@@ -52,13 +52,38 @@ export default defineProblemScript({
   let factoredLatex: string;
   let factoredPlain: string;
   let roots: [number | string, ...(number | string)[]];
+  const quadraticFormula = $CONTENT.basics.equations.quadratic.quadraticFormula.article.$formula;
+  const factoredFormula = $CONTENT.basics.equations.quadratic.factoring.article.$generalFactoring;
+  let hint = (
+    <ProblemHint>
+      Найдите корни через <Dep on={quadraticFormula}>формулу корней</Dep> квадратного уравнения. Используйте найденные
+      корни для разложения квадратного трехчлена через <Dep on={factoredFormula}>формулу разложения</Dep>.
+    </ProblemHint>
+  );
 
   if (type === 0) {
     // Integer roots
     const A = random.integer(1, 5);
-    let r1 = random.integer(-10, 10);
-    let r2 = random.integer(-10, 10);
-    while (r2 === r1) r2 = random.integer(-10, 10);
+    const subType = random.integer(0, 9); // 0-1: difference of squares, 2: factor out x, 3-9: general
+    let r1: number;
+    let r2: number;
+
+    if (subType <= 1) {
+      // Difference of squares: r2 = -r1, so B = 0
+      r1 = random.integer(1, 10);
+      r2 = -r1;
+    } else if (subType === 2) {
+      // Factor out x: one root is 0
+      r1 = 0;
+      r2 = random.integer(-10, 10);
+      while (r2 === 0) r2 = random.integer(-10, 10);
+    } else {
+      // General case
+      r1 = random.integer(-10, 10);
+      r2 = random.integer(-10, 10);
+      while (r2 === r1) r2 = random.integer(-10, 10);
+    }
+
     if (r1 > r2) [r1, r2] = [r2, r1];
 
     const B = -A * (r1 + r2);
@@ -75,6 +100,19 @@ export default defineProblemScript({
     factoredPlain = A === 1 ? `${f1p}${f2p}` : `${A}${f1p}${f2p}`;
 
     roots = [r1, r2];
+
+    // Detect special form for a helpful hint
+    if (r1 === 0 || r2 === 0) {
+      hint = (
+        <ProblemHint>
+          Вынесите <M>x</M> за скобки.
+        </ProblemHint>
+      );
+    } else if (r1 + r2 === 0 && A === 1) {
+      hint = <ProblemHint>Воспользуйтесь формулой разности квадратов.</ProblemHint>;
+    } else if (r1 + r2 === 0) {
+      hint = <ProblemHint>Вынесите общий множитель, а затем воспользуйтесь формулой разности квадратов.</ProblemHint>;
+    }
   } else if (type === 1) {
     // Fraction roots
     const denoms = [2, 3, 4, 5];
@@ -169,6 +207,7 @@ export default defineProblemScript({
         </ProblemDescription>
         <MathExpressionCheck label="Запись через множители" answer={factoredPlain} />
         <RootsCheck roots={roots} />
+        {hint}
         <ProblemAnswer>
           <BlockMath>{factoredLatex}</BlockMath>
         </ProblemAnswer>

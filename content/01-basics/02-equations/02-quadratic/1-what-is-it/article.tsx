@@ -4,7 +4,7 @@
 import gardenProblem from './assets/garden-problem.webp';
 import impatientCyclist from './assets/impatient-cyclist.webp';
 import framingPhoto from './assets/framing-photo.webp';
-import patrickBateman from './assets/patrick-bateman.gif';
+import patrickBateman from './assets/patrick-bateman.mp4';
 import quadraticPolynomialMeme from './assets/quadratic-polynomial-meme.webp';
 
 //

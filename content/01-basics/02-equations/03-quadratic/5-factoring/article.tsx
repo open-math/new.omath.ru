@@ -19,7 +19,7 @@ import quadraticTrinomialPlane from './assets/quadratic-trinomial-plane.svg';
 //
 //
 
-const zeroFactors = $CONTENT.basics.equations.zeroFactors;
+const zeroProductProperty = $CONTENT.basics.equations.zeroProductProperty;
 const quadraticPolynomial = $CONTENT.basics.equations.quadratic.whatIsIt.article.$quadraticPolynomial;
 const quadraticEquation = $CONTENT.basics.equations.quadratic.whatIsIt.article.$quadraticEquation;
 const incompleteQuadratic = $CONTENT.basics.equations.quadratic.incomplete.article.$quadraticMissingTerms;
@@ -207,8 +207,9 @@ export default defineProse({
         </P>
         <P>
           Запись квадратного трёхчлена через произведение множителей позволяет сразу видеть корни его "уравнения". Ведь
-          в таком виде он попадает под страницу <Dep on={zeroFactors}>Нулевые множители</Dep> -- достаточно по
-          отдельности приравнять каждый из двух множителей к нулю и получится верное равенство <M>0 = 0</M>:
+          в таком виде получается использовать <Dep on={zeroProductProperty}>метод нулевых множителей</Dep> --
+          достаточно по отдельности приравнять каждый из двух множителей к нулю и получится верное равенство{' '}
+          <M>0 = 0</M>:
         </P>
         <Diagram>{math`
           flowchart TD

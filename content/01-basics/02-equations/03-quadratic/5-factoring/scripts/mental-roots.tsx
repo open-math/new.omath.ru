@@ -89,7 +89,8 @@ export default defineProblemScript({
         <RootsCheck roots={[root1.checkValue, root2.checkValue]} />
         <ProblemHint>
           Корнями являются числа, противоположные тем, что стоят рядом с <M>x</M> в каждой скобке. Смотрите более
-          подробные объяснения на странице <Dep on={$CONTENT.basics.equations.zeroFactors}>Нулевые множители</Dep>.
+          подробные объяснения на странице{' '}
+          <Dep on={$CONTENT.basics.equations.zeroProductProperty}>Нулевые множители</Dep>.
         </ProblemHint>
         <ProblemAnswer>
           <BlockMath>{`x_1 = ${root1.answerLatex}, \\enspace x_2 = ${root2.answerLatex}`}</BlockMath>

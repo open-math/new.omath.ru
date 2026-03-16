@@ -2,9 +2,11 @@ import { authorContribution } from '#project/utils/contributions';
 
 // #region Problem Scripts
 //
+//
 
-import zeroFactors from './scripts/zero-factors';
+import zeroProductPropertyScript from './scripts/zero-product-property';
 
+//
 //
 // #endregion
 
@@ -42,8 +44,8 @@ export const page = definePage({
 
 export const content = defineProse({
   uniques: {
-    zeroFactorsMethod: Statement,
-    zeroFactorsExamples: Problems,
+    zeroProductPropertyMethod: Statement,
+    zeroProductPropertyExamples: Problems,
   },
 })(({ uniques }) => (
   <>
@@ -191,7 +193,7 @@ export const content = defineProse({
     </P>
 
     <Statement
-      $={uniques.zeroFactorsMethod}
+      $={uniques.zeroProductPropertyMethod}
       title="Метод нулевых множителей"
       snippet={{
         key: true,
@@ -223,7 +225,7 @@ export const content = defineProse({
     </Statement>
 
     <Problems
-      $={uniques.zeroFactorsExamples}
+      $={uniques.zeroProductPropertyExamples}
       title="Отработка метода нулевых множителей"
       level="easy"
       snippet={{
@@ -236,7 +238,7 @@ export const content = defineProse({
     >
       <P>Решите уравнение:</P>
 
-      <SubProblem script={zeroFactors()} />
+      <SubProblem script={zeroProductPropertyScript()} />
 
       <SubProblem>
         <ProblemDescription>

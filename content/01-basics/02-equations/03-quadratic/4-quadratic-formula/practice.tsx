@@ -33,7 +33,7 @@ import palindromial from './assets/palindromial.svg';
 //
 //
 
-const zeroFactors = $CONTENT.basics.equations.zeroFactors;
+const zeroProductProperty = $CONTENT.basics.equations.zeroProductProperty;
 
 //
 //
@@ -920,7 +920,7 @@ export default defineProse({
           `}</BlockMath>
           <P>
             Получаем типовую ситуацию произведения нескольких множителей, равных нулю (смотрите страницу{' '}
-            <Dep on={zeroFactors}>Нулевые множители</Dep>). Такое уравнение разделяется на два подуравнения:
+            <Dep on={zeroProductProperty}>Нулевые множители</Dep>). Такое уравнение разделяется на два подуравнения:
           </P>
           <BlockMath>{math`
             x^2 = 0 >> x^6 - 3x^4 + 2 = 0
@@ -1143,9 +1143,9 @@ export default defineProse({
             x^2\left[ 2x^2 - 3x - 1 - \frac{3}{x} + \frac{2}{x^2} \right] = 0
           `}</BlockMath>
           <P>
-            Получаем типичную ситуацию <Dep on={zeroFactors}>Нулевых множителей</Dep>. Как мы уже выше убедились, корень{' '}
-            <M>x = 0</M>, который даёт подуравнение <M>x^2</M>, не является решением уравнения. Поэтому можно смело не
-            обращать на него внимания и приравнять к нулю остальную часть в квадратных скобках:
+            Получаем типичную ситуацию <Dep on={zeroProductProperty}>Нулевых множителей</Dep>. Как мы уже выше
+            убедились, корень <M>x = 0</M>, который даёт подуравнение <M>x^2</M>, не является решением уравнения.
+            Поэтому можно смело не обращать на него внимания и приравнять к нулю остальную часть в квадратных скобках:
           </P>
           <BlockMath>{math`
             2x^2 - 3x - 1 - \frac{3}{x} + \frac{2}{x^2} = 0

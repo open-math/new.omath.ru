@@ -5,7 +5,7 @@ const whatIsQuadratic = $CONTENT.basics.equations.quadratic.whatIsIt;
 const quadraticEquation = $CONTENT.basics.equations.quadratic.whatIsIt.article.$quadraticEquation;
 const equationSolution = $CONTENT.basics.equations.elementary.article.$equationSolution;
 const sameActionRule = $CONTENT.basics.equations.elementary.article.$sameActionRule;
-const zeroFactors = $CONTENT.basics.equations.zeroFactors;
+const zeroProductProperty = $CONTENT.basics.equations.zeroProductProperty;
 
 //
 // #endregion
@@ -150,7 +150,7 @@ export default defineProse({
     <P>
       Следующий вид неполных квадратных уравнений -- когда коэффициент <M>C</M> равен нулю. Для их решения достаточно
       владения <Dep on={sameActionRule}>правилом одинакового действия</Dep> и умения решать уравнения из{' '}
-      <Dep on={zeroFactors}>набора множителей, равных нулю</Dep>.
+      <Dep on={zeroProductProperty}>набора множителей, равных нулю</Dep>.
     </P>
 
     <Problems title='Квадратные уравнения при "C" = 0' level="easy">
@@ -172,10 +172,10 @@ export default defineProse({
           </P>
           <BlockMath>x(x + 5) = 0</BlockMath>
           <P>
-            Подобные уравнения из набора множителей, равных нулю, мы уже <Dep on={zeroFactors}>решали ранее</Dep>.
-            Достаточно по отдельности найти, при каком <M>x</M> каждый из множителей станет равен нулю. Ведь если хотя
-            бы один из них станет таковым, то этот ноль умножится на все остальные множители, и вся левая часть станет
-            равна нулю.
+            Подобные уравнения из набора множителей, равных нулю, мы уже{' '}
+            <Dep on={zeroProductProperty}>решали ранее</Dep>. Достаточно по отдельности найти, при каком <M>x</M> каждый
+            из множителей станет равен нулю. Ведь если хотя бы один из них станет таковым, то этот ноль умножится на все
+            остальные множители, и вся левая часть станет равна нулю.
           </P>
           <Diagram>{math`
             flowchart TD
@@ -308,8 +308,8 @@ export default defineProse({
           x(Ax + B) = 0
         `}</BlockMath>
         <P>
-          Получаем <Dep on={zeroFactors}>типовой вид уравнения</Dep> с набором множителей с одной стороны и нулем с
-          другой. Такое уравнение можно разбить на два подуравнения и решить их по отдельности. В первом случае
+          Получаем <Dep on={zeroProductProperty}>типовой вид уравнения</Dep> с набором множителей с одной стороны и
+          нулем с другой. Такое уравнение можно разбить на два подуравнения и решить их по отдельности. В первом случае
           получается очевидный корень <M>x = 0</M>. Во втором случае получаем элементарное уравнение <M>Ax + B</M> к
           нулю и решаем его относительно <M>x</M> (ведь коэффициенты <M>A</M> и <M>B</M> нам известны).
         </P>

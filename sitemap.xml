@@ -82,9 +82,6 @@
         <loc>https://ru.omath.net/practice/basics/equations/elementary/?element=linear-root</loc>
     </url>
     <url>
-        <loc>https://ru.omath.net/practice/basics/equations/elementary/?element=zero-factors</loc>
-    </url>
-    <url>
         <loc>https://ru.omath.net/practice/basics/equations/elementary/?element=logika-resheniya-uravneniy</loc>
     </url>
     <url>
@@ -242,6 +239,15 @@
     </url>
     <url>
         <loc>https://ru.omath.net/article/basics/equations/quadratic/what-is-it/?element=quadratic-or-not</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/page/basics/equations/zero-factors/</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/page/basics/equations/zero-factors/?element=zero-factors-method</loc>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/page/basics/equations/zero-factors/?element=zero-factors-examples</loc>
     </url>
     <url>
         <loc>https://ru.omath.net/page/faq/</loc>

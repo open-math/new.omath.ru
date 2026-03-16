@@ -111,8 +111,9 @@ var mental_roots_default = defineProblemScript('__auto_generated__',{
       /* @__PURE__ */ jsxs(ProblemHint, { children: [
         "Корнями являются числа, противоположные тем, что стоят рядом с ",
         /* @__PURE__ */ jsx(M, { children: "x" }),
-        " в каждой скобке. Смотрите более подробные объяснения на странице ",
-        /* @__PURE__ */ jsx(Dep, { on: {"__ERUDIT_globalContentItem":true,"__path":"basics/equations/zero-factors"}, children: "Нулевые множители" }),
+        " в каждой скобке. Смотрите более подробные объяснения на странице",
+        " ",
+        /* @__PURE__ */ jsx(Dep, { on: {"__ERUDIT_globalContentItem":true,"__path":"basics/equations/zero-product-property"}, children: "Нулевые множители" }),
         "."
       ] }),
       /* @__PURE__ */ jsx(ProblemAnswer, { children: /* @__PURE__ */ jsx(BlockMath, { children: `x_1 = ${root1.answerLatex}, \\enspace x_2 = ${root2.answerLatex}` }) })

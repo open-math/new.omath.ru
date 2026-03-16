@@ -18,8 +18,8 @@ function getRandomLatinLetter(random, options) {
 // node_modules/@open-math/shared/dist/utils/math.js
 
 
-// content/01-basics/02-equations/02-zero-factors/scripts/zero-factors.tsx
-var zero_factors_default = defineProblemScript('__auto_generated__',{
+// content/01-basics/02-equations/02-zero-product-property/scripts/zero-product-property.tsx
+var zero_product_property_default = defineProblemScript('__auto_generated__',{
   isGenerator: true
 })(({ random }) => {
   const v = getRandomLatinLetter(random, { casing: "lower" });
@@ -114,5 +114,5 @@ var zero_factors_default = defineProblemScript('__auto_generated__',{
   };
 });
 export {
-  zero_factors_default as default
+  zero_product_property_default as default
 };

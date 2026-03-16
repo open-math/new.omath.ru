@@ -5,7 +5,7 @@ const whatIsQuadratic = $CONTENT.basics.equations.quadratic.whatIsIt;
 const quadraticEquation = $CONTENT.basics.equations.quadratic.whatIsIt.article.$quadraticEquation;
 const equationSolution = $CONTENT.basics.equations.elementary.article.$equationSolution;
 const sameActionRule = $CONTENT.basics.equations.elementary.article.$sameActionRule;
-const zeroFactors = $CONTENT.basics.equations.elementary.practice.$zeroFactors;
+const zeroFactors = $CONTENT.basics.equations.zeroFactors;
 
 //
 // #endregion

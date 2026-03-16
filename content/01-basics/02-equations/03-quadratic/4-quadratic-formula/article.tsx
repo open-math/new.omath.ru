@@ -3,7 +3,7 @@
 
 const sameActionRule = $CONTENT.basics.equations.elementary.article.$sameActionRule;
 const linearFormula = $CONTENT.basics.equations.elementary.practice.$linearRoot;
-const zeroFactors = $CONTENT.basics.equations.elementary.practice.$zeroFactors;
+const zeroFactors = $CONTENT.basics.equations.zeroFactors;
 const whatIsQuadratic = $CONTENT.basics.equations.quadratic.whatIsIt.article.$quadraticEquation;
 const completingTheSquare = $CONTENT.basics.equations.quadratic.completingTheSquare;
 const compensate = $CONTENT.basics.equations.quadratic.completingTheSquare.article.$compensate;
@@ -176,7 +176,7 @@ export default defineProse({
         <MathValueCheck label="Корни при (A, C) = (-5, 3)" answers={[15, 3]} />
         <MathValueCheck label="Корни при (A, C) = (-3, -10)" answers={[9, -10]} />
         <ProblemHint>
-          Изучите решения задачи <Dep on={zeroFactors}>Нулевые множители</Dep>.
+          Изучите решения на странице <Dep on={zeroFactors}>Нулевые множители</Dep>.
         </ProblemHint>
         <ProblemAnswer>
           <P>Общие формулы решений:</P>

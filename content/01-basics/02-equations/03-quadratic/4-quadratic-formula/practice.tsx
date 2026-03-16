@@ -33,7 +33,7 @@ import palindromial from './assets/palindromial.svg';
 //
 //
 
-const zeroFactors = $CONTENT.basics.equations.elementary.practice.$zeroFactors;
+const zeroFactors = $CONTENT.basics.equations.zeroFactors;
 
 //
 //
@@ -919,7 +919,7 @@ export default defineProse({
             x^2(x^6 - 3x^4 + 2) = 0
           `}</BlockMath>
           <P>
-            Получаем типовую ситуацию произведения нескольких множителей, равных нулю (смотрите задачу{' '}
+            Получаем типовую ситуацию произведения нескольких множителей, равных нулю (смотрите страницу{' '}
             <Dep on={zeroFactors}>Нулевые множители</Dep>). Такое уравнение разделяется на два подуравнения:
           </P>
           <BlockMath>{math`

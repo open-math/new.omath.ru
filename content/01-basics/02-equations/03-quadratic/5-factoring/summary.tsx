@@ -61,7 +61,7 @@ export default defineProse()(() => (
 
     <Image src={factoringAlgorithm} invert="dark" />
 
-    <Include toc>{article.uniques.manualFactoring}</Include>
+    <Include toc>{article.uniques.manualFactoringExamples}</Include>
 
     <H1>Разложение в общем виде</H1>
 

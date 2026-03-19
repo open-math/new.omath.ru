@@ -51,7 +51,8 @@ export default defineProblemScript({
         <MathExpressionCheck label="2) Раскрытые скобки" answer={trinomial2} />
         <ProblemHint>
           Для разложения на множители изучите{' '}
-          <Dep on={$CONTENT.basics.equations.quadratic.factoring.article.$manualFactoring}>примеры</Dep> из статьи.
+          <Dep on={$CONTENT.basics.equations.quadratic.factoring.article.$manualFactoringExamples}>примеры</Dep> из
+          статьи.
         </ProblemHint>
         <ProblemAnswer>
           <BlockMath>{math`1) \enspace ${factored1} >>{big} 2) \enspace ${trinomial2}`}</BlockMath>

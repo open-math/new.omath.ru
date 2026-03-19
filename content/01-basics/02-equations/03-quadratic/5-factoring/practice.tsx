@@ -18,6 +18,7 @@ import planeSymmetry from './assets/plane-symmetry.svg';
 import mentalRoots from './scripts/mental-roots';
 import thereAndBack from './scripts/there-and-back';
 import factoring from './scripts/factor-quadratic';
+import zeroSum from './scripts/zero-sum';
 
 //
 //
@@ -27,6 +28,7 @@ import factoring from './scripts/factor-quadratic';
 //
 //
 
+const zeroProductProperty = $CONTENT.basics.equations.zeroProductProperty.$zeroProductPropertyMethod;
 const biquadraticEquation = $CONTENT.basics.equations.quadratic.quadraticFormula.article.$biquadratic;
 
 //
@@ -50,6 +52,70 @@ export default defineProse()(() => (
       }}
       script={factoring()}
     />
+
+    <Problems title="Игра с нулевой суммой" level="easy" pretty method>
+      <SubProblem label="Значения корней" standalone>
+        <ProblemDescription>
+          <P>
+            Какие корни будут у квадратного уравнения, если сумма его коэффициентов равна <M>0</M>?
+          </P>
+          <BlockMath>A + B + C = 0</BlockMath>
+        </ProblemDescription>
+        <MathExpressionCheck label="Корни уравнения" answers={[1, 'C/A']} />
+        <ProblemHint>
+          Из равенства суммы коэффициентов нулю выразите какой-нибудь один коэффициент и подставьте его в стандартный
+          вид квадратного уравнения.
+        </ProblemHint>
+        <ProblemHint>
+          Пробуйте что-нибудь выносить за скобки. Не сразу из всех слагаемых, а может только из двух...
+        </ProblemHint>
+        <ProblemAnswer>
+          <BlockMath>{math`x_1 = 1 >>{big} x_2 = \frac{C}{A}`}</BlockMath>
+        </ProblemAnswer>
+        <ProblemSolution>
+          <P>
+            Выразим какой-нибудь коэффициент, например <M>B</M>, через другие, используя равенство суммы нулю:
+          </P>
+          <BlockMath>{math`
+            A + B + C = 0 \\
+            B = - A - C
+          `}</BlockMath>
+          <P>
+            Подставим разницу справа вместо <M>B</M> в стандартном виде квадратного уравнения:
+          </P>
+          <BlockMath>{math`
+            Ax^2 + Bx + C = 0 \\
+            Ax^2 + (-A - C)x + C = 0 \\
+            Ax^2 - Ax - Cx + C = 0
+          `}</BlockMath>
+          <P>
+            Из первых двух слагаемых вынесем за скобки <M>Ax</M>, а из последних двух <M>-C</M>:
+          </P>
+          <BlockMath>{math`
+            Ax(x - 1) - C(x - 1) = 0 \\
+            (Ax - C)(x - 1) = 0
+          `}</BlockMath>
+          <P>
+            Получили уравнение из множителей, произведение которых равно нулю. По{' '}
+            <Dep on={zeroProductProperty}>методу нулевых множителей</Dep> его можно решить, по отдельности приравняв
+            каждый множитель к нулю:
+          </P>
+          <BlockMath>{math`
+            Ax - C = 0 \\
+            Ax = C \\
+            \boxed{x = \frac{C}{A}}
+            >>{big}{top}
+            x - 1 = 0 \\
+            \boxed{x = 1}
+          `}</BlockMath>
+          <P>
+            Замечательный результат -- если сумма коэффициентов квадратного уравнения равна нулю, то один корень
+            обязательно будет равен <M>1</M>, а второй <M>C/A</M>!
+          </P>
+        </ProblemSolution>
+      </SubProblem>
+      <SubProblem label="Отработка" script={zeroSum()} />
+    </Problems>
 
     <Problems title="Скобочный беспредел" level="medium">
       <P>Упростите уравнение до набора множителей и найдите корни:</P>

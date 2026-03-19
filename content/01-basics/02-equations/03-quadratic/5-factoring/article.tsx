@@ -58,7 +58,8 @@ export const RootsFactoringCheck = (
 export default defineProse({
   uniques: {
     whyFactoring: List,
-    manualFactoring: Problems,
+    manualFactoring: H1,
+    manualFactoringExamples: Problems,
     generalFactoring: Statement,
     generalFactoringExamples: Problems,
     trinomialsPlane: H1,
@@ -279,6 +280,7 @@ export default defineProse({
     </P>
 
     <H1
+      $={uniques.manualFactoring}
       snippet={{ key: true, description: 'Методика разложения "простых" квадратных трёхчленов на множители вручную.' }}
     >
       Разложение "вручную"
@@ -329,7 +331,7 @@ export default defineProse({
       Обязательно попытайтесь самостоятельно решить каждый из них!
     </P>
 
-    <Problems $={uniques.manualFactoring} title="Примеры ручного разложения на множители" level="example">
+    <Problems $={uniques.manualFactoringExamples} title="Примеры ручного разложения на множители" level="example">
       <P>Разложите квадратный трёхчлен на множители и найдите корни соответствующего ему квадратного уравнения:</P>
       <SubProblem>
         <ProblemDescription>

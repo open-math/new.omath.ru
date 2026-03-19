@@ -47,7 +47,7 @@ var there_and_back_default = defineProblemScript('__auto_generated__',{
       /* @__PURE__ */ jsxs(ProblemHint, { children: [
         "Для разложения на множители изучите",
         " ",
-        /* @__PURE__ */ jsx(Dep, { on: {"__ERUDIT_globalContentItem":true,"__path":"basics/equations/quadratic/factoring/article/$manualFactoring"}, children: "примеры" }),
+        /* @__PURE__ */ jsx(Dep, { on: {"__ERUDIT_globalContentItem":true,"__path":"basics/equations/quadratic/factoring/article/$manualFactoringExamples"}, children: "примеры" }),
         " из статьи."
       ] }),
       /* @__PURE__ */ jsx(ProblemAnswer, { children: /* @__PURE__ */ jsx(BlockMath, { children: math`1) \enspace ${factored1} >>{big} 2) \enspace ${trinomial2}` }) })

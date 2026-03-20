@@ -4,8 +4,8 @@ import article from './article';
 //
 //
 
-import interestingDots from './assets/plane-interesting-dots.svg';
-import planeSymmetry from './assets/plane-symmetry.svg';
+import interestingDots from './assets/roots-plane-interesting-dots.svg';
+import planeSymmetry from './assets/roots-plane-symmetry.svg';
 
 //
 //
@@ -35,7 +35,11 @@ const biquadraticEquation = $CONTENT.basics.equations.quadratic.quadraticFormula
 //
 // #endregion
 
-export default defineProse()(() => (
+export default defineProse({
+  uniques: {
+    zeroSum: Problems,
+  },
+})(({ uniques }) => (
   <>
     <Problem title="К гадалке не ходи" level="easy" script={mentalRoots()} />
 
@@ -53,7 +57,7 @@ export default defineProse()(() => (
       script={factoring()}
     />
 
-    <Problems title="Игра с нулевой суммой" level="easy" pretty method>
+    <Problems $={uniques.zeroSum} title="Игра с нулевой суммой" level="easy" pretty method>
       <SubProblem label="Значения корней" standalone>
         <ProblemDescription>
           <P>
@@ -114,7 +118,221 @@ export default defineProse()(() => (
           </P>
         </ProblemSolution>
       </SubProblem>
+
+      <SubProblem label="Не только сумма">
+        <ProblemDescription>
+          <P>А какие корни у квадратных уравнений, коэффициенты которых удовлетворяют следующему равенству:</P>
+          <BlockMath>A - B + C = 0</BlockMath>
+        </ProblemDescription>
+        <MathExpressionCheck label="Корни уравнения" answers={[-1, '-C/A']} />
+        <ProblemAnswer>
+          <BlockMath>{math`x_1 = -1 >>{big} x_2 = -\frac{C}{A}`}</BlockMath>
+        </ProblemAnswer>
+      </SubProblem>
+
       <SubProblem label="Отработка" script={zeroSum()} />
+    </Problems>
+
+    <Problems title="Архитектор уравнений" level="easy" method>
+      <P>Составьте квадратное уравнение с заданными корнями.</P>
+
+      <SubProblem>
+        <ProblemDescription>
+          Корни <M>2</M> и <M>3</M>. Коэффициент <M>A = 1</M>.
+        </ProblemDescription>
+        <MathExpressionCheck label="Квадратное уравнение" answer="x^2-5x+6" />
+        <ProblemHint>
+          Воспользуйтесь тем фактом, что из любых двух чисел{' '}
+          <Dep on={article.uniques.quadraticFromAny}>можно составить</Dep> квадратный трёхчлен.
+        </ProblemHint>
+        <ProblemAnswer>
+          <BlockMath>{math`x^2 - 5x + 6 = 0`}</BlockMath>
+        </ProblemAnswer>
+        <ProblemSolution>
+          <P>Подставляем данные в формулу разложения:</P>
+          <BlockMath>{math`
+            A(x - x_1)(x - x_2) = 0 \\
+            1 \cdot (x - 2)(x - 3) = 0
+          `}</BlockMath>
+          <P>Раскрываем скобки:</P>
+          <BlockMath>{math`
+            (x - 2)(x - 3) = x^2 - 3x - 2x + 6 = x^2 - 5x + 6
+          `}</BlockMath>
+          <P>Получаем квадратное уравнение:</P>
+          <BlockMath>{math`x^2 - 5x + 6 = 0`}</BlockMath>
+        </ProblemSolution>
+      </SubProblem>
+
+      <SubProblem>
+        <ProblemDescription>
+          Корни <M>{math`1\frac{1}{3}`}</M> и <M>2</M>. Коэффициент <M>A = 3</M>.
+        </ProblemDescription>
+        <MathExpressionCheck label="Квадратное уравнение" answer="3x^2-10x+8" />
+        <ProblemAnswer>
+          <BlockMath>{math`3x^2 - 10x + 8 = 0`}</BlockMath>
+        </ProblemAnswer>
+        <ProblemSolution>
+          <P>
+            Переведём <M>{math`1\frac{1}{3}`}</M> в неправильную дробь:
+          </P>
+          <BlockMath>{math`1\frac{1}{3} = \frac{4}{3}`}</BlockMath>
+          <P>Подставляем в формулу разложения:</P>
+          <BlockMath>{math`
+            3\left(x - \frac{4}{3}\right)(x - 2) = 0
+          `}</BlockMath>
+          <P>
+            Число <M>3</M> можно внести в первую скобку, домножив каждое слагаемое на <M>3</M>:
+          </P>
+          <BlockMath>{math`
+            \left(3x - \frac{4}{\cancel{3}} \cdot \cancel{3}\right)(x - 2) = (3x - 4)(x - 2) = 0
+          `}</BlockMath>
+          <P>Раскрываем скобки:</P>
+          <BlockMath>{math`
+            (3x - 4)(x - 2) = 3x^2 - 6x - 4x + 8 = 3x^2 - 10x + 8
+          `}</BlockMath>
+          <P>Получаем квадратное уравнение:</P>
+          <BlockMath>{math`3x^2 - 10x + 8 = 0`}</BlockMath>
+        </ProblemSolution>
+      </SubProblem>
+
+      <SubProblem>
+        <ProblemDescription>
+          Оба корня равны <M>{math`-2\frac{2}{3}`}</M>. Коэффициент <M>A = 9</M>.
+        </ProblemDescription>
+        <MathExpressionCheck label="Квадратное уравнение" answer="9x^2+48x+64" />
+        <ProblemAnswer>
+          <BlockMath>{math`9x^2 + 48x + 64 = 0`}</BlockMath>
+        </ProblemAnswer>
+        <ProblemSolution>
+          <P>
+            Переведём <M>{math`-2\frac{2}{3}`}</M> в неправильную дробь:
+          </P>
+          <BlockMath>{math`
+            -2\frac{2}{3} = -\left(2 + \frac{2}{3}\right) = -\frac{8}{3}
+          `}</BlockMath>
+          <P>Подставляем в формулу разложения (оба корня одинаковые):</P>
+          <BlockMath>{math`
+            9\left(x + \frac{8}{3}\right)\left(x + \frac{8}{3}\right) = 9\left(x + \frac{8}{3}\right)^2 = 0
+          `}</BlockMath>
+          <P>
+            Заметим, что <M>9 = 3^2</M>. Внесём по тройке в каждую скобку:
+          </P>
+          <BlockMath>{math`
+            \left(3\left(x + \frac{8}{3}\right)\right)^2 = \left(3x + 8\right)^2 = 0
+          `}</BlockMath>
+          <P>Раскрываем квадрат суммы:</P>
+          <BlockMath>{math`
+            (3x + 8)^2 = 9x^2 + 48x + 64
+          `}</BlockMath>
+          <P>Получаем квадратное уравнение:</P>
+          <BlockMath>{math`9x^2 + 48x + 64 = 0`}</BlockMath>
+        </ProblemSolution>
+      </SubProblem>
+
+      <SubProblem>
+        <ProblemDescription>
+          Оба корня равны <M>{math`\sqrt{3}`}</M>. Коэффициент <M>A = 1</M>.
+        </ProblemDescription>
+        <MathExpressionCheck label="Квадратное уравнение" answer="x^2-2sqrt(3)x+3" />
+        <ProblemAnswer>
+          <BlockMath>{math`x^2 - 2\sqrt{3}x + 3 = 0`}</BlockMath>
+        </ProblemAnswer>
+        <ProblemSolution>
+          <P>Подставляем в формулу разложения (оба корня одинаковые):</P>
+          <BlockMath>{math`
+            1 \cdot (x - \sqrt{3})(x - \sqrt{3}) = (x - \sqrt{3})^2 = 0
+          `}</BlockMath>
+          <P>Раскрываем квадрат разности:</P>
+          <BlockMath>{math`
+            (x - \sqrt{3})^2 = x^2 - 2\sqrt{3} \cdot x + \left(\sqrt{3}\right)^2 = x^2 - 2\sqrt{3}x + 3
+          `}</BlockMath>
+          <P>Получаем квадратное уравнение:</P>
+          <BlockMath>{math`x^2 - 2\sqrt{3}x + 3 = 0`}</BlockMath>
+        </ProblemSolution>
+      </SubProblem>
+
+      <SubProblem>
+        <ProblemDescription>
+          Корни <M>{math`\sqrt{3}`}</M> и <M>{math`-\sqrt{5}`}</M>. Коэффициент <M>A = 1</M>.
+        </ProblemDescription>
+        <MathExpressionCheck label="Квадратное уравнение" answer="x^2-(sqrt(3)-sqrt(5))x-sqrt(15)" />
+        <ProblemAnswer>
+          <BlockMath>{math`x^2 - (\sqrt{3} - \sqrt{5})x - \sqrt{15} = 0`}</BlockMath>
+        </ProblemAnswer>
+        <ProblemSolution>
+          <P>Подставляем в формулу разложения:</P>
+          <BlockMath>{math`
+            1 \cdot (x - \sqrt{3})(x - (-\sqrt{5})) = (x - \sqrt{3})(x + \sqrt{5}) = 0
+          `}</BlockMath>
+          <P>Раскрываем скобки:</P>
+          <BlockMath>{math`
+            (x - \sqrt{3})(x + \sqrt{5}) = \\
+            = x^2 + \sqrt{5}x - \sqrt{3}x - \sqrt{3} \cdot \sqrt{5} = \\
+            = x^2 + (\sqrt{5} - \sqrt{3})x - \sqrt{15} = \\
+            = x^2 - (\sqrt{3} - \sqrt{5})x - \sqrt{15}
+          `}</BlockMath>
+          <P>Получаем квадратное уравнение:</P>
+          <BlockMath>{math`x^2 - (\sqrt{3} - \sqrt{5})x - \sqrt{15} = 0`}</BlockMath>
+        </ProblemSolution>
+      </SubProblem>
+
+      <SubProblem>
+        <ProblemDescription>
+          Корни <M>{math`3 - \sqrt{5}`}</M> и <M>{math`3 + \sqrt{5}`}</M>. Коэффициент <M>A = 2</M>.
+        </ProblemDescription>
+        <MathExpressionCheck label="Квадратное уравнение" answer="2x^2-12x+8" />
+        <ProblemAnswer>
+          <BlockMath>{math`2x^2 - 12x + 8 = 0`}</BlockMath>
+        </ProblemAnswer>
+        <ProblemSolution>
+          <P>Подставляем в формулу разложения:</P>
+          <BlockMath>{math`
+            2(x - (3 - \sqrt{5}))(x - (3 + \sqrt{5})) = 0
+          `}</BlockMath>
+          <P>Перегруппируем содержимое скобок:</P>
+          <BlockMath>{math`
+            2((x - 3) + \sqrt{5})((x - 3) - \sqrt{5}) = 0
+          `}</BlockMath>
+          <P>
+            Внутри скобок получилась разность квадратов <M>(a + b)(a - b) = a^2 - b^2</M>, где <M>a = x - 3</M> и{' '}
+            <M>{math`b = \sqrt{5}`}</M>:
+          </P>
+          <BlockMath>{math`
+            2\left((x - 3)^2 - (\sqrt{5})^2\right) = 2\left((x - 3)^2 - 5\right) = 0
+          `}</BlockMath>
+          <P>Раскрываем квадрат разности и упрощаем:</P>
+          <BlockMath>{math`
+            2(x^2 - 6x + 9 - 5) = 2(x^2 - 6x + 4) = 2x^2 - 12x + 8
+          `}</BlockMath>
+          <P>Получаем квадратное уравнение:</P>
+          <BlockMath>{math`2x^2 - 12x + 8 = 0`}</BlockMath>
+        </ProblemSolution>
+      </SubProblem>
+
+      <SubProblem>
+        <ProblemDescription>
+          Корни <M>{math`2 - \sqrt{7}`}</M> и <M>{math`\sqrt{7}`}</M>. Коэффициент <M>A = 1</M>.
+        </ProblemDescription>
+        <MathExpressionCheck label="Квадратное уравнение" answer="x^2-2x+2sqrt(7)-7" />
+        <ProblemAnswer>
+          <BlockMath>{math`x^2 - 2x + (2\sqrt{7} - 7) = 0`}</BlockMath>
+        </ProblemAnswer>
+        <ProblemSolution>
+          <P>Подставляем в формулу разложения:</P>
+          <BlockMath>{math`
+            1 \cdot (x - (2 - \sqrt{7}))(x - \sqrt{7}) = (x - 2 + \sqrt{7})(x - \sqrt{7}) = 0
+          `}</BlockMath>
+          <P>Раскрываем скобки:</P>
+          <BlockMath>{math`
+            (x - 2 + \sqrt{7})(x - \sqrt{7}) = \\
+            = x^2 - \sqrt{7}x - 2x + 2\sqrt{7} + \sqrt{7}x - (\sqrt{7})^2 = \\
+            = x^2 - \cancel{\sqrt{7}x} - 2x + 2\sqrt{7} + \cancel{\sqrt{7}x} - 7 = \\
+            = x^2 - 2x + 2\sqrt{7} - 7
+          `}</BlockMath>
+          <P>Получаем квадратное уравнение:</P>
+          <BlockMath>{math`x^2 - 2x + (2\sqrt{7} - 7) = 0`}</BlockMath>
+        </ProblemSolution>
+      </SubProblem>
     </Problems>
 
     <Problems title="Скобочный беспредел" level="medium">
@@ -495,10 +713,9 @@ export default defineProse()(() => (
       </SubProblem>
     </Problems>
 
-    <Problems title="Исследование плоскости трёхчленов" level="hard">
+    <Problems title="Исследование плоскости корней" level="hard">
       <P>
-        Давайте вместе поизучаем <Dep on={article.uniques.trinomialsPlane}>координатную плоскость</Dep> "прямоугольных"
-        квадратных трёхчленов:
+        Давайте вместе поизучаем <Dep on={article.uniques.rootsPlane}>плоскость корней</Dep> квадратных трёхчленов:
       </P>
       <SubProblem label="Особые виды">
         <ProblemDescription>
@@ -511,31 +728,31 @@ export default defineProse()(() => (
         <ProblemAnswer>
           <ProblemSection title="Центр координат">
             <P>
-              В центре координат обе переменные равны нулю <M>t = k = 0</M>. Получается вот такое разложение и
-              квадратный трёхчлен:
+              В центре координат оба корня равны нулю <M>x_1 = x_2 = 0</M>. Получается вот такое разложение и квадратный
+              трёхчлен:
             </P>
-            <BlockMath>(x+0)(x+0) = x \cdot x = x^2</BlockMath>
+            <BlockMath>(x-0)(x-0) = x \cdot x = x^2</BlockMath>
           </ProblemSection>
-          <ProblemSection title="Оси Ot и Ok">
+          <ProblemSection title="Оси корней">
             <P>
-              Что на оси <M>Ot</M>, что на <M>Ok</M>, какое-то из чисел окажется равным <M>0</M>. Поэтому точки,
-              расположенные на этих осях, будут иметь общий вид <M>(x+0)(x+k)</M> или <M>(x+t)(x+0)</M> и производить
-              квадратные трёхчлены без свободного члена <M>C</M>:
+              Что на оси <M>x_1</M>, что на <M>x_2</M>, какой-то из корней оказывается равным <M>0</M>. Поэтому точки,
+              расположенные на этих осях, будут иметь вид <M>(x-0)(x-t)</M> или <M>(x-t)(x-0)</M>, то есть общий вид{' '}
+              <M>x(x-t)</M> и производить квадратные трёхчлены без свободного члена <M>C</M>:
             </P>
             <BlockMath>{math`x(x-2) = x^2 - 2x >> (x+8)x = x^2 + 8x >> \left(x - \frac{\sqrt{2}}{2}\right)x = x^2 - \frac{\sqrt{2}}{2}x`}</BlockMath>
           </ProblemSection>
           <ProblemSection title="Диагональ под 45 градусов">
             <P>
-              На этой диагонали числа <M>t</M> и <M>k</M> одинаковые и по значению, и по знаку. Все точки на этой
-              диагонали образуют полные квадраты либо через квадрат суммы (положительные <M>t</M> и <M>k</M>), либо
-              через квадрат разности (отрицательные <M>t</M> и <M>k</M>):
+              На этой диагонали корни <M>x_1</M> и <M>x_2</M> одинаковые и по значению, и по знаку. Все точки на этой
+              диагонали образуют полные квадраты либо через квадрат суммы (отрицательные <M>x_1</M> и <M>x_2</M>), либо
+              через квадрат разности (положительные <M>x_1</M> и <M>x_2</M>):
             </P>
             <BlockMath>{math`(x+2)^2 = x^2 + 4x + 4 >> (x-1)^2 = x^2 - 2x + 1 >> \left(x + \frac{\sqrt{3}}{2}\right)^2 = x^2 + \sqrt{3}x + \frac{3}{4}`}</BlockMath>
           </ProblemSection>
           <ProblemSection title="Диагональ под -45 градусов">
             <P>
-              На этой диагонали числа <M>t</M> и <M>k</M> одинаковые по значению, но противоположные по знаку. Абсолютно
-              все точки на этой прямой образуют разность квадратов:
+              На этой диагонали корни <M>x_1</M> и <M>x_2</M> одинаковые по значению, но противоположные по знаку.
+              Абсолютно все точки на этой прямой образуют разность квадратов:
             </P>
             <BlockMath>{math`(x-2)(x+2) = x^2 - 4 >> (x+10)(x-10) = x^2 - 100`}</BlockMath>
           </ProblemSection>
@@ -553,14 +770,13 @@ export default defineProse()(() => (
         <ProblemAnswer>
           <ProblemSection title="Первая и третья четверти">
             <P>
-              Симметричные точки в первой и третьей четвертях координатной плоскости образуют пары чисел <M>t</M> и{' '}
-              <M>k</M> одинаковые по значению, но с противоположными знаками:
+              Симметричные точки в первой и третьей четвертях координатной плоскости образуют пары корней <M>x_1</M> и{' '}
+              <M>x_2</M> с одинаковыми по значению, но противоположными знаками:
             </P>
-            <BlockMath>(x+3)(x+10) = x^2 + 13x + 30 \quad | \quad (x-3)(x-10) = x^2 - 13x + 30</BlockMath>
+            <BlockMath>(x-3)(x-10) = x^2 + 13x + 30 \quad | \quad (x+3)(x+10) = x^2 - 13x + 30</BlockMath>
             <P>
               Получающиеся квадратные трёхчлены отличаются только знаком коэффициента <M>B</M>, при этом коэффициент{' '}
-              <M>C</M> всегда положительный. Корни соответствующих уравнений тоже одинаковые по значению, но с
-              противоположными знаками.
+              <M>C</M> всегда положительный.
             </P>
           </ProblemSection>
           <ProblemSection title="Вторая и четвёртая четверти">

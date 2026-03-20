@@ -2,8 +2,9 @@ import { gcd, simplifyFraction } from '@open-math/shared/utils';
 import { formatTrinomial, fractionLatex } from '../../4-quadratic-formula/scripts/quadratic-shared';
 
 //
-// Zero-sum quadratics: A + B + C = 0
-// Roots are always x₁ = 1 and x₂ = C/A
+// Zero-sum quadratics:
+//   50% → A + B + C = 0, roots: x₁ = 1, x₂ = C/A
+//   50% → A - B + C = 0, roots: x₁ = -1, x₂ = -C/A
 //
 
 export default defineProblemScript({
@@ -37,7 +38,10 @@ export default defineProblemScript({
     while (C === 0 || C === A || C === -A) C = random.integer(-15, 15);
   }
 
-  let B = -(A + C);
+  // 50/50: A + B + C = 0 vs A - B + C = 0
+  const minusVariant = random.boolean();
+
+  let B = minusVariant ? A + C : -(A + C);
 
   // Reduce by GCD, keep A > 0
   const g = gcd(gcd(Math.abs(A), Math.abs(B)), Math.abs(C));
@@ -52,9 +56,11 @@ export default defineProblemScript({
 
   const equation = formatTrinomial(A, B, C, 'x', 2, 1);
 
-  // Second root: C / A
-  const [rn, rd] = simplifyFraction(C, A);
-  const isDoubleRoot = rn === 1 && rd === 1; // C/A = 1 means both roots are 1
+  // Second root: C/A for sum variant, -C/A for minus variant
+  const [rn, rd] = simplifyFraction(minusVariant ? -C : C, A);
+
+  const root1 = minusVariant ? -1 : 1;
+  const isDoubleRoot = rn === root1 && rd === 1;
 
   // RootsCheck value for x₂
   const root2Check: number | string = rd === 1 ? rn : `${rn}/${rd}`;
@@ -62,7 +68,7 @@ export default defineProblemScript({
   // LaTeX for x₂
   const root2Latex = rd === 1 ? `${rn}` : fractionLatex(rn, rd);
 
-  const answerLatex = isDoubleRoot ? 'x = 1' : `x_1 = 1, \\enspace x_2 = ${root2Latex}`;
+  const answerLatex = isDoubleRoot ? `x = ${root1}` : `x_1 = ${root1}, \\enspace x_2 = ${root2Latex}`;
 
   return {
     problemContent: (
@@ -71,7 +77,7 @@ export default defineProblemScript({
           <P>Решите квадратное уравнение, используя выведенные формулы корней:</P>
           <BlockMath>{equation}</BlockMath>
         </ProblemDescription>
-        {isDoubleRoot ? <RootsCheck roots={1} /> : <RootsCheck roots={[1, root2Check]} />}
+        {isDoubleRoot ? <RootsCheck roots={root1} /> : <RootsCheck roots={[root1, root2Check]} />}
         <ProblemAnswer>
           <BlockMath>{answerLatex}</BlockMath>
         </ProblemAnswer>

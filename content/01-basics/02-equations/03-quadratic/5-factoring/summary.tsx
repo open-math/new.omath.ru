@@ -208,5 +208,7 @@ export default defineProse()(() => (
     <Include toc>{article.uniques.generalFactoring}</Include>
 
     <Include toc>{article.uniques.generalFactoringExamples}</Include>
+
+    <Include toc>{article.uniques.quadraticFromAny}</Include>
   </>
 ));

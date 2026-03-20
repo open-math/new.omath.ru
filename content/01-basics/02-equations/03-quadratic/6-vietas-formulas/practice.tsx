@@ -220,6 +220,8 @@ export default defineProse({
           <M>{math`\dfrac{q}{2}`}</M>?
         </P>
       </ProblemDescription>
+      <MathValueCheck label="p" answer={1} />
+      <MathValueCheck label="q" answer={-6} />
       <ProblemAnswer>
         <BlockMath>{math`p = 1, \enspace q = -6`}</BlockMath>
       </ProblemAnswer>
@@ -291,6 +293,7 @@ export default defineProse({
             В уравнении <M>{math`x^2-4x+a=0`}</M> сумма квадратов корней равна <M>16</M>. Найдите <M>a</M>.
           </P>
         </ProblemDescription>
+        <MathValueCheck label="a" answer={0} />
         <ProblemHint>Сумму квадратов можно дополнить до формулы сокращенного умножения "квадрат суммы".</ProblemHint>
         <ProblemAnswer>
           <M>a = 0</M>
@@ -346,6 +349,7 @@ export default defineProse({
             В уравнении <M>{math`x^2-2x+a=0`}</M> квадрат разности корней равен <M>16</M>. Найдите <M>a</M>.
           </P>
         </ProblemDescription>
+        <MathValueCheck label="a" answer={-3} />
         <ProblemHint>Квадрат разности можно дополнить до формулы сокращенного умножения "квадрат суммы".</ProblemHint>
         <ProblemAnswer>
           <M>a = -3</M>
@@ -419,6 +423,9 @@ export default defineProse({
           Применяя полученные формулы, запишите <M>3</M> новых уравнения из <M>{math`3x^2 - x - 1 = 0`}</M>.
         </P>
       </ProblemDescription>
+      <MathExpressionCheck label="Уравнение с противоположными корнями" answer="3x^2+x-1" />
+      <MathExpressionCheck label="Уравнение с обратными корнями" answer="-x^2-x+3" />
+      <MathExpressionCheck label="Уравнение с корнями в 5 раз больше" answer="3x^2-5x-25" />
       <ProblemHint>
         Введите новые корни <M>{math`x_1'`}</M> и <M>{math`x_2'`}</M> и свяжите их со старыми. Составьте новые{' '}
         <Dep on={article.uniques.vietasFormulas}>формулы Виета</Dep> из новых корней.
@@ -624,6 +631,7 @@ export default defineProse({
         <ProblemDescription>
           <M>{math`x_1 + \dfrac{1}{x_2}`}</M> и <M>{math`x_2 + \dfrac{1}{x_1}`}</M>
         </ProblemDescription>
+        <MathExpressionCheck label="Квадратное уравнение" answer="6x^2+7x-1" />
         <ProblemHint>
           Используйте приём с составлением новых <Dep on={article.uniques.vietasFormulas}>формул Виета</Dep> из новых
           корней из задачи <Ref to={uniques.rootFromRoot}>Корень от корня</Ref>.
@@ -697,6 +705,7 @@ export default defineProse({
         <ProblemDescription>
           <M>{math`x_1^2x_2`}</M> и <M>{math`x_1x_2^2`}</M>
         </ProblemDescription>
+        <MathExpressionCheck label="Квадратное уравнение" answer="8x^2+42x-27" />
         <ProblemHint>
           Используйте приём с составлением новых <Dep on={article.uniques.vietasFormulas}>формул Виета</Dep> из новых
           корней из задачи <Ref to={uniques.rootFromRoot}>Корень от корня</Ref>.
@@ -775,6 +784,7 @@ export default defineProse({
         <ProblemDescription>
           <M>{math`\dfrac{1}{x_1^2}`}</M> и <M>{math`\dfrac{1}{x_2^2}`}</M>
         </ProblemDescription>
+        <MathExpressionCheck label="Квадратное уравнение" answer="9x^2-61x+4" />
         <ProblemHint>
           Используйте приём с составлением новых <Dep on={article.uniques.vietasFormulas}>формул Виета</Dep> из новых
           корней из задачи <Ref to={uniques.rootFromRoot}>Корень от корня</Ref>.
@@ -854,6 +864,7 @@ export default defineProse({
         <ProblemDescription>
           <M>{math`\dfrac{x_1}{x_2} + 1`}</M> и <M>{math`\dfrac{x_2}{x_1} + 1`}</M>
         </ProblemDescription>
+        <MathExpressionCheck label="Квадратное уравнение" answer="6x^2+49x-49" />
         <ProblemHint>
           Используйте приём с составлением новых <Dep on={article.uniques.vietasFormulas}>формул Виета</Dep> из новых
           корней из задачи <Ref to={uniques.rootFromRoot}>Корень от корня</Ref>.
@@ -923,6 +934,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`x_1^2 + x_2^2`}</BlockMath>
         </ProblemDescription>
+        <MathValueCheck answer="70/9" />
         <ProblemHint>
           <P>Воспользуйтесь формулой квадрата суммы:</P>
           <BlockMath>{math`(a + b)^2 = a^2 + 2ab + b^2`}</BlockMath>
@@ -972,6 +984,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`x_1x_2^3 + x_2x_1^3`}</BlockMath>
         </ProblemDescription>
+        <MathValueCheck answer="-70/27" />
         <ProblemHint>Вынесите общий множитель.</ProblemHint>
         <ProblemAnswer>
           <M>{math`-\frac{70}{27}`}</M>
@@ -1001,6 +1014,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`\frac{x_1}{x_2^2} + \frac{x_2}{x_1^2}`}</BlockMath>
         </ProblemDescription>
+        <MathValueCheck answer="-584/3" />
         <ProblemHint>
           <P>Воспользуйтесь формулой куба суммы:</P>
           <BlockMath>{math`(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3`}</BlockMath>
@@ -1077,6 +1091,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`x_1^4 + x_2^4`}</BlockMath>
         </ProblemDescription>
+        <MathValueCheck answer="4882/81" />
         <ProblemHint>
           <P>
             Путь 1 -- собственноручно выведите формулу четвертой степени суммы <M>{math`(a + b)^4`}</M>, умножим эту
@@ -1136,6 +1151,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`\frac{1}{x_1^2} + \frac{1}{x_2^2}`}</BlockMath>
         </ProblemDescription>
+        <MathValueCheck answer="41/16" />
         <ProblemHint>
           Приведите дроби к общему знаменателю. Сумму квадратов в числителе мы уже выражали в первой подзадаче.
         </ProblemHint>
@@ -1185,6 +1201,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`x_1x_2^4 + x_2x_1^4`}</BlockMath>
         </ProblemDescription>
+        <MathValueCheck answer="-245/4" />
         <ProblemHint>Вынесите общий множитель. Cумму кубов мы уже выражали в третьей подзадаче.</ProblemHint>
         <ProblemAnswer>
           <M>{math`-\frac{245}{4}`}</M>
@@ -1223,6 +1240,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`\frac{x_1}{x_2^3} + \frac{x_2}{x_1^3}`}</BlockMath>
         </ProblemDescription>
+        <MathValueCheck answer="-2441/324" />
         <ProblemHint>
           Приведите дроби к общему знаменателю. Сумму четвёртых степеней в числителе мы уже выражали в четвёртой
           подзадаче.
@@ -1264,6 +1282,7 @@ export default defineProse({
           </P>
           <BlockMath>{math`x_1^6 + x_2^6`}</BlockMath>
         </ProblemDescription>
+        <MathValueCheck answer="61049/64" />
         <ProblemHint>
           <P>
             Произведите замену переменных: <M>{math`n = x_1^2`}</M> и <M>{math`m = x_2^2`}</M>. Воспользуйтесь формулами
@@ -1324,6 +1343,7 @@ export default defineProse({
             <M>{math`x^2 - 7x + 3a - 6 = 0`}</M>. Найдите <M>a</M> и корни каждого из уравнений.
           </P>
         </ProblemDescription>
+        <MathValueCheck label="a" answer={6} />
         <ProblemHint>
           Выпишите <Dep on={article.uniques.vietasFormulas}>формулы Виета</Dep> через произведение для обоих уравнений.
         </ProblemHint>
@@ -1405,6 +1425,8 @@ export default defineProse({
             уравнения <M>{math`x^2 + ax + 6 = 0`}</M>. Найдите <M>a</M> и <M>b</M> и корни каждого из уравнений.
           </P>
         </ProblemDescription>
+        <MathValueCheck label="a" answer={-5} />
+        <MathValueCheck label="b" answer={36} />
         <ProblemHint>
           Найдите сначала <M>b</M>, потом корни обоих уравнений, а затем <M>a</M>.
         </ProblemHint>
@@ -1632,6 +1654,7 @@ export default defineProse({
         </P>
         <BlockMath>{math`(a^2 - 5a + 3)x^2 + (3a-1)x + 2 = 0`}</BlockMath>
       </ProblemDescription>
+      <MathValueCheck label="a" answer="2/3" />
       <ProblemHint>
         Запишите <Dep on={article.uniques.vietasFormulas}>формулы Виета</Dep> для данного уравнения.
       </ProblemHint>

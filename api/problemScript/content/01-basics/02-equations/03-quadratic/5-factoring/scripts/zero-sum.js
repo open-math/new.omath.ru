@@ -78,7 +78,8 @@ var zero_sum_default = defineProblemScript('__auto_generated__',{
     C = random.integer(-15, 15);
     while (C === 0 || C === A || C === -A) C = random.integer(-15, 15);
   }
-  let B = -(A + C);
+  const minusVariant = random.boolean();
+  let B = minusVariant ? A + C : -(A + C);
   const g = gcd(gcd(Math.abs(A), Math.abs(B)), Math.abs(C));
   A /= g;
   B /= g;
@@ -89,18 +90,19 @@ var zero_sum_default = defineProblemScript('__auto_generated__',{
     C = -C;
   }
   const equation = formatTrinomial(A, B, C, "x", 2, 1);
-  const [rn, rd] = simplifyFraction(C, A);
-  const isDoubleRoot = rn === 1 && rd === 1;
+  const [rn, rd] = simplifyFraction(minusVariant ? -C : C, A);
+  const root1 = minusVariant ? -1 : 1;
+  const isDoubleRoot = rn === root1 && rd === 1;
   const root2Check = rd === 1 ? rn : `${rn}/${rd}`;
   const root2Latex = rd === 1 ? `${rn}` : fractionLatex(rn, rd);
-  const answerLatex = isDoubleRoot ? "x = 1" : `x_1 = 1, \\enspace x_2 = ${root2Latex}`;
+  const answerLatex = isDoubleRoot ? `x = ${root1}` : `x_1 = ${root1}, \\enspace x_2 = ${root2Latex}`;
   return {
     problemContent: /* @__PURE__ */ jsxs(Fragment, { children: [
       /* @__PURE__ */ jsxs(ProblemDescription, { children: [
         /* @__PURE__ */ jsx(P, { children: "Решите квадратное уравнение, используя выведенные формулы корней:" }),
         /* @__PURE__ */ jsx(BlockMath, { children: equation })
       ] }),
-      isDoubleRoot ? /* @__PURE__ */ jsx(RootsCheck, { roots: 1 }) : /* @__PURE__ */ jsx(RootsCheck, { roots: [1, root2Check] }),
+      isDoubleRoot ? /* @__PURE__ */ jsx(RootsCheck, { roots: root1 }) : /* @__PURE__ */ jsx(RootsCheck, { roots: [root1, root2Check] }),
       /* @__PURE__ */ jsx(ProblemAnswer, { children: /* @__PURE__ */ jsx(BlockMath, { children: answerLatex }) })
     ] })
   };

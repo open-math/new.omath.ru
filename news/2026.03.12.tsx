@@ -1,4 +1,4 @@
-const factoringQuadratics = $CONTENT.basics.equations.quadratic.factoring;
+const factoringQuadratics = $CONTENT.foundations.equations.quadratic.factoring;
 
 export default (
   <>

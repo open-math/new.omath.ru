@@ -1,4 +1,4 @@
-const completingTheSquare = $CONTENT.basics.equations.quadratic.completingTheSquare;
+const completingTheSquare = $CONTENT.foundations.equations.quadratic.completingTheSquare;
 
 export default (
   <>

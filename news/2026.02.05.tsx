@@ -1,4 +1,4 @@
-const quadraticMissingTerms = $CONTENT.basics.equations.quadratic.incomplete;
+const quadraticMissingTerms = $CONTENT.foundations.equations.quadratic.incomplete;
 
 export default (
   <>

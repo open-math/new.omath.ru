@@ -1,4 +1,4 @@
-const zeroProductProperty = $CONTENT.basics.equations.zeroProductProperty;
+const zeroProductProperty = $CONTENT.foundations.equations.zeroProductProperty;
 
 export default (
   <>

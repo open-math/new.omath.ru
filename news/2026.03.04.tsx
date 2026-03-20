@@ -1,4 +1,4 @@
-const quadraticFormula = $CONTENT.basics.equations.quadratic.quadraticFormula;
+const quadraticFormula = $CONTENT.foundations.equations.quadratic.quadraticFormula;
 
 export default (
   <>

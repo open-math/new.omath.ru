@@ -1,4 +1,4 @@
-const vietasFormulas = $CONTENT.basics.equations.quadratic.vietasFormulas;
+const vietasFormulas = $CONTENT.foundations.equations.quadratic.vietasFormulas;
 
 export default (
   <>

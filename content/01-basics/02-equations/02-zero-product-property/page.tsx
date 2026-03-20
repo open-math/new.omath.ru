@@ -392,7 +392,7 @@ export const content = defineProse({
         </ProblemAnswer>
         <ProblemSolution>
           <P>
-            Чтобы избавиться от знаменателя дроби, по <Dep on={sameActionRule}>правилу одинакового действия</Dep>
+            Чтобы избавиться от знаменателя дроби, по <Dep on={sameActionRule}>правилу одинакового действия</Dep>{' '}
             умножим обе части уравнения на <M>17</M>. Тогда в левой части <M>17</M> и <M>17</M> сократятся:
           </P>
           <BlockMath>{math`

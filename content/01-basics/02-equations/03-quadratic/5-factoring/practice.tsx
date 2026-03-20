@@ -119,7 +119,7 @@ export default defineProse({
         </ProblemSolution>
       </SubProblem>
 
-      <SubProblem label="Не только сумма">
+      <SubProblem label="Не только плюсы">
         <ProblemDescription>
           <P>А какие корни у квадратных уравнений, коэффициенты которых удовлетворяют следующему равенству:</P>
           <BlockMath>A - B + C = 0</BlockMath>

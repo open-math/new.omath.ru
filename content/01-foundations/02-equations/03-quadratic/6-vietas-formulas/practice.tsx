@@ -477,9 +477,9 @@ export default defineProse({
           Применяя полученные формулы, запишите <M>3</M> новых уравнения из <M>{math`3x^2 - x - 1 = 0`}</M>.
         </P>
       </ProblemDescription>
-      <MathExpressionCheck label="Уравнение с противоположными корнями" answer="3x^2+x-1" />
-      <MathExpressionCheck label="Уравнение с обратными корнями" answer="-x^2-x+3" />
-      <MathExpressionCheck label="Уравнение с корнями в 5 раз больше" answer="3x^2-5x-25" />
+      <MathEqualityCheck label="Уравнение с противоположными корнями" answer="3x^2+x-1=0" />
+      <MathEqualityCheck label="Уравнение с обратными корнями" answer="-x^2-x+3=0" />
+      <MathEqualityCheck label="Уравнение с корнями в 5 раз больше" answer="3x^2-5x-25=0" />
       <ProblemHint>
         Введите новые корни <M>{math`x_1'`}</M> и <M>{math`x_2'`}</M> и свяжите их со старыми. Составьте новые{' '}
         <Dep on={article.uniques.vietasFormulas}>формулы Виета</Dep> из новых корней.
@@ -680,18 +680,17 @@ export default defineProse({
         квадратное уравнение, корнями которого являются числа:
       </P>
 
-      {/* TODO: В решении получается 6x² - 7x - 1 = 0, а в ответе 6x² + 7x - 1 = 0. Проверить, что правильно. */}
       <SubProblem>
         <ProblemDescription>
           <M>{math`x_1 + \dfrac{1}{x_2}`}</M> и <M>{math`x_2 + \dfrac{1}{x_1}`}</M>
         </ProblemDescription>
-        <MathExpressionCheck label="Квадратное уравнение" answer="6x^2+7x-1" />
+        <MathEqualityCheck label="Квадратное уравнение" answer="6x^2-7x-1=0" />
         <ProblemHint>
           Используйте приём с составлением новых <Dep on={article.uniques.vietasFormulas}>формул Виета</Dep> из новых
           корней из задачи <Ref to={uniques.rootFromRoot}>Корень от корня</Ref>.
         </ProblemHint>
         <ProblemAnswer>
-          <BlockMath>{math`6x^2 + 7x - 1 = 0`}</BlockMath>
+          <BlockMath>{math`6x^2 - 7x - 1 = 0`}</BlockMath>
         </ProblemAnswer>
         <ProblemSolution>
           <P>
@@ -759,7 +758,7 @@ export default defineProse({
         <ProblemDescription>
           <M>{math`x_1^2x_2`}</M> и <M>{math`x_1x_2^2`}</M>
         </ProblemDescription>
-        <MathExpressionCheck label="Квадратное уравнение" answer="8x^2+42x-27" />
+        <MathEqualityCheck label="Квадратное уравнение" answer="8x^2+42x-27=0" />
         <ProblemHint>
           Используйте приём с составлением новых <Dep on={article.uniques.vietasFormulas}>формул Виета</Dep> из новых
           корней из задачи <Ref to={uniques.rootFromRoot}>Корень от корня</Ref>.
@@ -838,7 +837,7 @@ export default defineProse({
         <ProblemDescription>
           <M>{math`\dfrac{1}{x_1^2}`}</M> и <M>{math`\dfrac{1}{x_2^2}`}</M>
         </ProblemDescription>
-        <MathExpressionCheck label="Квадратное уравнение" answer="9x^2-61x+4" />
+        <MathEqualityCheck label="Квадратное уравнение" answer="9x^2-61x+4=0" />
         <ProblemHint>
           Используйте приём с составлением новых <Dep on={article.uniques.vietasFormulas}>формул Виета</Dep> из новых
           корней из задачи <Ref to={uniques.rootFromRoot}>Корень от корня</Ref>.
@@ -918,7 +917,7 @@ export default defineProse({
         <ProblemDescription>
           <M>{math`\dfrac{x_1}{x_2} + 1`}</M> и <M>{math`\dfrac{x_2}{x_1} + 1`}</M>
         </ProblemDescription>
-        <MathExpressionCheck label="Квадратное уравнение" answer="6x^2+49x-49" />
+        <MathEqualityCheck label="Квадратное уравнение" answer="6x^2+49x-49=0" />
         <ProblemHint>
           Используйте приём с составлением новых <Dep on={article.uniques.vietasFormulas}>формул Виета</Dep> из новых
           корней из задачи <Ref to={uniques.rootFromRoot}>Корень от корня</Ref>.
@@ -1882,6 +1881,7 @@ export default defineProse({
           \left( n - \frac{1}{n} \right)^2 \quad \text{и} \quad \left( m - \frac{1}{m} \right)^2
         `}</BlockMath>
       </ProblemDescription>
+      <MathEqualityCheck label="Квадратное уравнение" answer="9x^2-154x+81=0" />
       <ProblemHint>
         <P>
           Запишите <Dep on={article.uniques.vietasFormulas}>формулы Виета</Dep> для исходного уравнения и для нового

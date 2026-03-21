@@ -1,0 +1,1 @@
+import{_ as n}from"./cev4mids.js";import{v as t,l,D as m}from"./B_gROWRK.js";const s=t({__name:"SubProblem",props:{element:{}},setup(e){return(a,i)=>(l(),m(n,{element:e.element,initialElements:e.element.children},null,8,["element","initialElements"]))}});export{s as _};

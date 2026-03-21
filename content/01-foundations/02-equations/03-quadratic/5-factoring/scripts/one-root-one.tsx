@@ -74,7 +74,10 @@ export default defineProblemScript({
     problemContent: (
       <>
         <ProblemDescription>
-          <P>Решите квадратное уравнение, используя выведенные формулы корней:</P>
+          <P>
+            Решите квадратное уравнение в уме, пользуясь полученными соотношениями коэффициентов и формулами второго
+            корня:
+          </P>
           <BlockMath>{equation}</BlockMath>
         </ProblemDescription>
         {isDoubleRoot ? <RootsCheck roots={root1} /> : <RootsCheck roots={[root1, root2Check]} />}

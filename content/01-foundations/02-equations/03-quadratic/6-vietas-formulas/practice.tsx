@@ -4,7 +4,7 @@ import article from './article';
 //
 //
 
-const zeroSum = $CONTENT.foundations.equations.quadratic.factoring.practice.$zeroSum;
+const oneRootOne = $CONTENT.foundations.equations.quadratic.factoring.practice.$oneRootOne;
 const sameActionRule = $CONTENT.foundations.equations.elementary.article.$sameActionRule;
 
 //
@@ -1724,10 +1724,10 @@ export default defineProse({
       </ProblemSolution>
     </Problem>
 
-    <Problem title="Ещё игра с нулевой суммой" level="hard">
+    <Problem title="Игра с нулевой суммой" level="hard">
       <ProblemDescription>
-        Решите задачу <Ref to={zeroSum}>Игра с нулевой суммой</Ref> в варианте с суммой коэффициентов, используя только
-        формулы Виета.
+        Используя <B>только</B> формулы Виета выясните, какие корни будут у квадратного уравнения, если сумма его
+        коэффициентов равна нулю.
       </ProblemDescription>
       <MathExpressionCheck label="Корни уравнения" answers={[1, 'C/A']} />
       <ProblemHint>
@@ -1740,6 +1740,8 @@ export default defineProse({
         <BlockMath>{math`x_1 = 1 >>{big} x_2 = \frac{C}{A}`}</BlockMath>
       </ProblemAnswer>
       <ProblemSolution>
+        <P>По условию нам известно, что сумма коэффициентов равна нулю:</P>
+        <BlockMath>{math`A + B + C = 0`}</BlockMath>
         <P>Выразим какой-нибудь коэффициент через другие, используя равенство суммы нулю:</P>
         <BlockMath>-B = A + C</BlockMath>
         <P>
@@ -1828,6 +1830,10 @@ export default defineProse({
           обязательно будет равен <M>1</M>, а второй <M>C/A</M>!
         </P>
       </ProblemSolution>
+      <ProblemNote>
+        Эта задача полностью повторяет задачу <Ref to={oneRootOne}>Один корень один</Ref>, просто результат в ней
+        достигается другим способом. В той задаче мы использовали разложение на множители, а здесь -- формулы Виета.
+      </ProblemNote>
     </Problem>
   </>
 ));

@@ -18,7 +18,7 @@ import planeSymmetry from './assets/roots-plane-symmetry.svg';
 import mentalRoots from './scripts/mental-roots';
 import thereAndBack from './scripts/there-and-back';
 import factoring from './scripts/factor-quadratic';
-import zeroSum from './scripts/zero-sum';
+import oneRootOne from './scripts/one-root-one';
 
 //
 //
@@ -29,6 +29,7 @@ import zeroSum from './scripts/zero-sum';
 //
 
 const zeroProductProperty = $CONTENT.foundations.equations.zeroProductProperty.$zeroProductPropertyMethod;
+const quadraticEquation = $CONTENT.foundations.equations.quadratic.whatIsIt.article.$quadraticEquation;
 const biquadraticEquation = $CONTENT.foundations.equations.quadratic.quadraticFormula.article.$biquadratic;
 
 //
@@ -37,7 +38,7 @@ const biquadraticEquation = $CONTENT.foundations.equations.quadratic.quadraticFo
 
 export default defineProse({
   uniques: {
-    zeroSum: Problems,
+    oneRootOne: Problems,
   },
 })(({ uniques }) => (
   <>
@@ -56,82 +57,6 @@ export default defineProse({
       }}
       script={factoring()}
     />
-
-    <Problems $={uniques.zeroSum} title="Игра с нулевой суммой" level="easy" pretty method>
-      <SubProblem label="Значения корней" standalone>
-        <ProblemDescription>
-          <P>
-            Какие корни будут у квадратного уравнения, если сумма его коэффициентов равна <M>0</M>?
-          </P>
-          <BlockMath>A + B + C = 0</BlockMath>
-        </ProblemDescription>
-        <MathExpressionCheck label="Корни уравнения" answers={[1, 'C/A']} />
-        <ProblemHint>
-          Из равенства суммы коэффициентов нулю выразите какой-нибудь один коэффициент и подставьте его в стандартный
-          вид квадратного уравнения.
-        </ProblemHint>
-        <ProblemHint>
-          Пробуйте что-нибудь выносить за скобки. Не сразу из всех слагаемых, а может только из двух...
-        </ProblemHint>
-        <ProblemAnswer>
-          <BlockMath>{math`x_1 = 1 >>{big} x_2 = \frac{C}{A}`}</BlockMath>
-        </ProblemAnswer>
-        <ProblemSolution>
-          <P>
-            Выразим какой-нибудь коэффициент, например <M>B</M>, через другие, используя равенство суммы нулю:
-          </P>
-          <BlockMath>{math`
-            A + B + C = 0 \\
-            B = - A - C
-          `}</BlockMath>
-          <P>
-            Подставим разницу справа вместо <M>B</M> в стандартном виде квадратного уравнения:
-          </P>
-          <BlockMath>{math`
-            Ax^2 + Bx + C = 0 \\
-            Ax^2 + (-A - C)x + C = 0 \\
-            Ax^2 - Ax - Cx + C = 0
-          `}</BlockMath>
-          <P>
-            Из первых двух слагаемых вынесем за скобки <M>Ax</M>, а из последних двух <M>-C</M>:
-          </P>
-          <BlockMath>{math`
-            Ax(x - 1) - C(x - 1) = 0 \\
-            (Ax - C)(x - 1) = 0
-          `}</BlockMath>
-          <P>
-            Получили уравнение из множителей, произведение которых равно нулю. По{' '}
-            <Dep on={zeroProductProperty}>методу нулевых множителей</Dep> его можно решить, по отдельности приравняв
-            каждый множитель к нулю:
-          </P>
-          <BlockMath>{math`
-            Ax - C = 0 \\
-            Ax = C \\
-            \boxed{x = \frac{C}{A}}
-            >>{big}{top}
-            x - 1 = 0 \\
-            \boxed{x = 1}
-          `}</BlockMath>
-          <P>
-            Замечательный результат -- если сумма коэффициентов квадратного уравнения равна нулю, то один корень
-            обязательно будет равен <M>1</M>, а второй <M>C/A</M>!
-          </P>
-        </ProblemSolution>
-      </SubProblem>
-
-      <SubProblem label="Не только плюсы">
-        <ProblemDescription>
-          <P>А какие корни у квадратных уравнений, коэффициенты которых удовлетворяют следующему равенству:</P>
-          <BlockMath>A - B + C = 0</BlockMath>
-        </ProblemDescription>
-        <MathExpressionCheck label="Корни уравнения" answers={[-1, '-C/A']} />
-        <ProblemAnswer>
-          <BlockMath>{math`x_1 = -1 >>{big} x_2 = -\frac{C}{A}`}</BlockMath>
-        </ProblemAnswer>
-      </SubProblem>
-
-      <SubProblem label="Отработка" script={zeroSum()} />
-    </Problems>
 
     <Problems title="Архитектор уравнений" level="easy" method>
       <P>Составьте квадратное уравнение с заданными корнями.</P>
@@ -333,6 +258,99 @@ export default defineProse({
           <BlockMath>{math`x^2 - 2x + (2\sqrt{7} - 7) = 0`}</BlockMath>
         </ProblemSolution>
       </SubProblem>
+    </Problems>
+
+    <Problems $={uniques.oneRootOne} title="Один корень один" level="medium" pretty method>
+      <SubProblem label="Корень 1">
+        <ProblemDescription>
+          Как связаны коэффициенты квадратного уравнения, если один из его корней равен <M>1</M>? Чему равен второй
+          корень в этом случае?
+        </ProblemDescription>
+        <MathExpressionCheck label="Второй корень" answer="C/A" />
+        <ProblemHint>
+          Подставьте единицу в <Dep on={quadraticEquation}>стандартную форму</Dep> квадратного уравнения.
+        </ProblemHint>
+        <ProblemHint>
+          Из полученной формулы связи коэффициентов выразите какой-нибудь один коэффициент и подставьте его в{' '}
+          <Dep on={quadraticEquation}>стандартную форму</Dep> квадратного уравнения.
+        </ProblemHint>
+        <ProblemHint>
+          Выполните разложение на множители, несколько раз вынеся общий множитель. Общий множитель не нужно выносить
+          сразу из всех слагаемых, а может быть достаточно вынести его только из двух...
+        </ProblemHint>
+        <ProblemAnswer>
+          Если сумма коэффициентов квадратного уравнения равна нулю, то один из корней равен единице, а второй равен{' '}
+          <M>C/A</M>.
+        </ProblemAnswer>
+        <ProblemSolution>
+          <P>
+            Раз мы точно знаем, что число <M>1</M> является корнем, то мы можем спокойно подставить его в запись{' '}
+            <Dep on={quadraticEquation}>стандартного вида</Dep> квадратного уравнения:
+          </P>
+          <BlockMath>{math`
+            A \cdot 1^2 + B \cdot 1 + C = 0 \\
+            A + B + C = 0
+          `}</BlockMath>
+          <P>
+            Получается, что если один из корней равен единице, то сумма коэффициентов квадратного уравнения равна нулю!
+            Очень простой и удобный признак для решения простых квадратных уравнений в уме.
+          </P>
+          <P>
+            Для поиска второго корня выразим какой-нибудь один коэффициент из условия нулевой суммы, например <M>B</M>:
+          </P>
+          <BlockMath>{math`
+            A + B + C = 0 \\
+            B = - A - C
+          `}</BlockMath>
+          <P>
+            Подставим выражение справа вместо <M>B</M> в стандартный вид квадратного уравнения:
+          </P>
+          <BlockMath>{math`
+            Ax^2 + Bx + C = 0 \\
+            Ax^2 + (-A - C)x + C = 0 \\
+            Ax^2 - Ax - Cx + C = 0
+          `}</BlockMath>
+          <P>
+            Из первых двух слагаемых вынесем за скобки <M>Ax</M>, а из последних двух <M>-C</M>:
+          </P>
+          <BlockMath>{math`
+            Ax(x - 1) - C(x - 1) = 0 \\
+            (Ax - C)(x - 1) = 0
+          `}</BlockMath>
+          <P>
+            Получили уравнение из множителей, произведение которых равно нулю. По{' '}
+            <Dep on={zeroProductProperty}>методу нулевых множителей</Dep> его можно решить, по отдельности приравняв
+            каждый множитель к нулю:
+          </P>
+          <BlockMath>{math`
+            Ax - C = 0 \\
+            Ax = C \\
+            \boxed{x = \frac{C}{A}}
+            >>{big}{top}
+            x - 1 = 0 \\
+            \boxed{x = 1}
+          `}</BlockMath>
+          <P>
+            Мы пришли к замечательному результату -- если сумма коэффициентов квадратного уравнения равна нулю, то один
+            корень обязательно будет равен <M>1</M>, а второй <M>C/A</M>!
+          </P>
+        </ProblemSolution>
+      </SubProblem>
+
+      <SubProblem label="Корень -1">
+        <ProblemDescription>
+          Как связаны коэффициенты квадратного уравнения, если один из его корней равен <M>-1</M>? Чему равен второй
+          корень в этом случае?
+        </ProblemDescription>
+        <MathExpressionCheck label="Второй корень" answer="-C/A" />
+        <ProblemHint>Решается точно так же, как и предыдущая подзадача.</ProblemHint>
+        <ProblemAnswer>
+          Если коэффициенты квадратного уравнения удовлетворяют равенству <M>A - B + C = 0</M>, то один из корней равен{' '}
+          <M>-1</M>, а второй равен <M>-C/A</M>.
+        </ProblemAnswer>
+      </SubProblem>
+
+      <SubProblem label="Отработка" script={oneRootOne()} />
     </Problems>
 
     <Problems title="Скобочный беспредел" level="medium">

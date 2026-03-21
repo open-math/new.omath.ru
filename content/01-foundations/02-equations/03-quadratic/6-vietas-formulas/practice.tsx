@@ -6,6 +6,7 @@ import article from './article';
 
 const oneRootOne = $CONTENT.foundations.equations.quadratic.factoring.practice.$oneRootOne;
 const sameActionRule = $CONTENT.foundations.equations.elementary.article.$sameActionRule;
+const quadraticFormula = $CONTENT.foundations.equations.quadratic.quadraticFormula.article.$formula;
 
 //
 //
@@ -405,6 +406,59 @@ export default defineProse({
         </ProblemSolution>
       </SubProblem>
     </Problems>
+
+    <Problem title="Перекрученная сумма" level="medium">
+      <ProblemDescription>
+        <P>
+          Два разных числа <M>a</M> и <M>b</M> удовлетворяют следующей цепочке равенств:
+        </P>
+        <BlockMath>a^2 + 3a + 1 = b^2 + 3b + 1 = 0</BlockMath>
+        <P>Найдите значение следующего выражения:</P>
+        <BlockMath>{math`\frac{a}{b} + \frac{b}{a}`}</BlockMath>
+      </ProblemDescription>
+      <MathValueCheck label="Значение выражения" answer={7} />
+      <ProblemHint>
+        Числа <M>a</M> и <M>b</M> являются двумя корнями квадратного уравнения <M>x^2 + 3x + 1 = 0</M>. Значит для них
+        можно выписать <Dep on={article.uniques.vietasFormulas}>формулы Виета</Dep>.
+      </ProblemHint>
+      <ProblemHint>
+        Преобразуйте искомую сумму так, чтобы в числителе и знаменателе были выражения, похожие на формулы Виета.
+      </ProblemHint>
+      <ProblemAnswer>
+        <M>7</M>
+      </ProblemAnswer>
+      <ProblemSolution>
+        <P>Для удобства восприятия разобьём цепочку равенств на два отдельных верных равенства:</P>
+        <BlockMath>{math`a^2 + 3a + 1 = 0 >>{big} b^2 + 3b + 1 = 0`}</BlockMath>
+        <P>
+          Из условия нам сказано, что числа <M>a</M> и <M>b</M> разные. При подстановке в один и тот же квадратный
+          трёхчлен (в обоих случаях его коэффициенты одинаковые) получаются два верных равенства. Значит числа <M>a</M>{' '}
+          и <M>b</M> являются корнями квадратного уравнения <M>x^2 + 3x + 1 = 0</M>! Раз это корни, для них можно
+          выписать <Dep on={article.uniques.vietasFormulas}>формулы Виета</Dep>:
+        </P>
+        <BlockMath>{math`
+          \begin{cases}
+            a + b = -3 \\
+            ab = 1
+          \end{cases}
+        `}</BlockMath>
+        <P>Теперь преобразуем искомую сумму так, чтобы в неё можно было подставить значения из формул Виета:</P>
+        <BlockMath>{math`
+          \frac{a}{b} + \frac{b}{a} = \frac{a^2 + b^2}{ab} = \ldots
+        `}</BlockMath>
+        <P>
+          Сверху сумма квадратов. Мы можем добавить к ней удвоенное произведение и сразу же его вычесть, чтобы ничего не
+          поменялось. Тогда в числителе получится выделить полный квадрат:
+        </P>
+        <BlockMath>{math`
+          \ldots = \frac{\overbrace{a^2 + b^2 + \yellow{2ab}}^{\small (a + b)^2} - \yellow{2ab}}{ab} = \frac{(a + b)^2 - 2ab}{ab} = \ldots
+        `}</BlockMath>
+        <P>Подставляем данные из формул Виета:</P>
+        <BlockMath>{math`
+          \ldots = \frac{(-3)^2 - 2\cdot 1}{1} = \frac{9 - 2}{1} = 7
+        `}</BlockMath>
+      </ProblemSolution>
+    </Problem>
 
     <Problem $={uniques.rootFromRoot} title="Корень от корня" level="medium" method>
       <ProblemDescription>
@@ -1506,6 +1560,100 @@ export default defineProse({
       </SubProblem>
     </Problems>
 
+    <Problems title="Проверка формулы корней" level="hard">
+      <SubProblem label="Подготовка">
+        <ProblemDescription>
+          <P>
+            Обозначим корни квадратного уравнения буквами <M>n</M> и <M>m</M>. Выразите через эти корни следующее
+            выражение, которое состоит из коэффициентов этого же уравнения:
+          </P>
+          <BlockMath>{math`
+            \frac{B^2 - 4AC}{A^2}
+          `}</BlockMath>
+        </ProblemDescription>
+        <MathExpressionCheck label="Запись через корни" answer="(n-m)^2" />
+        <ProblemHint>
+          Преобразуйте это выражение так, чтобы в нём появились дроби <M>-B/A</M> и <M>C/A</M>. Затем подставьте вместо
+          этих дробей сумму и произведение корней из <Dep on={article.uniques.vietasFormulas}>формул Виета</Dep>.
+        </ProblemHint>
+        <ProblemAnswer>
+          <BlockMath>{math`\frac{B^2 - 4AC}{A^2} = (n - m)^2`}</BlockMath>
+        </ProblemAnswer>
+        <ProblemSolution>
+          <P>
+            Преобразуем выражение так, чтобы образовать дроби из{' '}
+            <Dep on={article.uniques.vietasFormulas}>формул Виета</Dep>:
+          </P>
+          <BlockMath>{math`
+            \frac{B^2 - 4AC}{A^2} =
+            \frac{B^2}{A^2} - \frac{4\cancel{A}C}{A^{\cancel{2}}} =
+            \left(\frac{B}{A}\right)^2 - 4\cdot\frac{C}{A} =
+            \left(-\frac{B}{A}\right)^2 - 4\cdot\frac{C}{A} = \ldots
+          `}</BlockMath>
+          <P>
+            Подставляем вместо дробей сумму и произведение корней из формул Виета, раскрываем скобки и проводим
+            упрощение:
+          </P>
+          <BlockMath>{math`
+            \ldots = \left(n + m\right)^2 - 4nm = \\
+            = n^2 + 2nm + m^2 - 4nm = \\
+            = n^2 - 2nm + m^2 = \\
+            = (n - m)^2
+          `}</BlockMath>
+          <P>Убираем все промежуточные шаги и получаем финальное равенство:</P>
+          <BlockMath>{math`
+            \frac{B^2 - 4AC}{A^2} = (n - m)^2
+          `}</BlockMath>
+        </ProblemSolution>
+      </SubProblem>
+
+      <SubProblem label="Проверка">
+        <ProblemDescription>
+          <P>
+            Пользуясь <Dep on={article.uniques.vietasFormulas}>формулами Виета</Dep> и результатом предыдущей подзадачи,
+            докажите, что <Dep on={quadraticFormula}>общая формула корней</Dep> квадратного уравнения действительно
+            верна:
+          </P>
+          <BlockMath>{math`
+            \frac{-B \pm \sqrt{B^2 - 4AC}}{2A}
+          `}</BlockMath>
+        </ProblemDescription>
+        <ProblemHint>
+          Вынесите <M>1/2</M> за скобки в формуле корней и разбейте большую дробь на две маленькие.
+        </ProblemHint>
+        <ProblemHint>
+          Дробь с корнем преобразуйте так, чтобы под корнем образовалось выражение из предыдущей подзадачи.
+        </ProblemHint>
+        <ProblemSolution>
+          <P>
+            Преобразуем формулу так, чтобы получить дробь из формул Виета, а также выражение из предыдущей подзадачи:
+          </P>
+          <BlockMath>{math`
+            \frac{-B \pm \sqrt{B^2 - 4AC}}{2A} = \frac{1}{2}\left[ \frac{-B \pm \sqrt{B^2 - 4AC}}{A} \right] = \\
+            = \frac{1}{2}\left[ -\frac{B}{A} \pm \frac{\sqrt{B^2 - 4AC}}{A} \right] =
+            \frac{1}{2}\left[ -\frac{B}{A} \pm \sqrt{\frac{B^2 - 4AC}{A^2}} \right] = \ldots
+          `}</BlockMath>
+          <P>
+            Подставляем сумму корней из формул Виета в левую дробь и полученное в предыдущей подзадаче выражение под
+            знак корня:
+          </P>
+          <BlockMath>{math`
+            \ldots = \frac{1}{2}\left[ (n + m) \pm \sqrt{(n - m)^2} \right]
+            = \frac{(n + m) \pm (n - m)}{2}
+          `}</BlockMath>
+          <P>
+            В зависимости от выбранного знака на месте <M>\pm</M> и получаются два корня уравнения:
+          </P>
+          <BlockMath>{math`
+            + : \frac{(n + m) + (n - m)}{2} = \frac{1}{2}\cdot 2n = n >>
+            - : \frac{(n + m) - (n - m)}{2} = \frac{1}{2}\cdot 2m = m
+          `}</BlockMath>
+          <P>Формула корней действительно работает!</P>
+          <QED />
+        </ProblemSolution>
+      </SubProblem>
+    </Problems>
+
     <Problem title="Корневая разность" level="hard">
       <ProblemDescription>
         <P>
@@ -1721,6 +1869,100 @@ export default defineProse({
         <P>
           Итак, при <M>{math`a = \frac{2}{3}`}</M> один из корней квадратного уравнения в два раза больше другого.
         </P>
+      </ProblemSolution>
+    </Problem>
+
+    <Problem title="Названия с корнями кончились" level="hard">
+      <ProblemDescription>
+        <P>
+          Числа <M>n</M> и <M>m</M> являются корнями квадратного уравнения <M>x^2 + 5x + 3 = 0</M>. Не вычисляя значений
+          этих корней, определите, как будет выглядеть квадратное уравнение со следующими корнями:
+        </P>
+        <BlockMath>{math`
+          \left( n - \frac{1}{n} \right)^2 \quad \text{и} \quad \left( m - \frac{1}{m} \right)^2
+        `}</BlockMath>
+      </ProblemDescription>
+      <ProblemHint>
+        <P>
+          Запишите <Dep on={article.uniques.vietasFormulas}>формулы Виета</Dep> для исходного уравнения и для нового
+          уравнения. В новых формулах выполните преобразования (довольно муторные), чтобы в них появились выражения из
+          старых формул Виета. Подставьте эти выражения и посчитайте.
+        </P>
+      </ProblemHint>
+      <ProblemAnswer>
+        <BlockMath>{math`
+          9x^2 - 154x + 81 = 0
+        `}</BlockMath>
+      </ProblemAnswer>
+      <ProblemSolution>
+        <P>
+          Выпишем <Dep on={article.uniques.vietasFormulas}>формулы Виета</Dep> для корней исходного уравнения:
+        </P>
+        <BlockMath>{math`
+          \begin{cases}
+          n + m = -5 \\
+          nm = 3
+          \end{cases}
+        `}</BlockMath>
+        <P>Выпишем формулы Виета для новых корней:</P>
+        <BlockMath>{math`
+          \begin{cases}
+          \left( n - \frac{1}{n} \right)^2 + \left( m - \frac{1}{m} \right)^2 = \text{?} \\
+          \left( n - \frac{1}{n} \right)^2 \cdot \left( m - \frac{1}{m} \right)^2 = \text{?}
+          \end{cases}
+        `}</BlockMath>
+        <P>
+          Наша задача каждую из новых формул Виета преобразовать так, чтобы в неё можно было вставить выражения из
+          старых формул Виета. Поехали!
+        </P>
+        <ProblemSection title="Сумма новых корней">
+          <P>
+            Преобразуем формулу для суммы новых корней. Запакуем её в квадрат суммы, добавив и компенсировав нужные
+            члены:
+          </P>
+          <BlockMath>{math`
+            \left( n - \frac{1}{n} \right)^2 + \left( m - \frac{1}{m} \right)^2 = \\
+            = \left( n - \frac{1}{n} \right)^2 + \yellow{ 2\left(n - \frac{1}{n}\right)\left(m - \frac{1}{m}\right)} + \left( m - \frac{1}{m} \right)^2 - \yellow{2\left(n - \frac{1}{n}\right)\left(m - \frac{1}{m}\right)} = \\
+            = \left( n - \frac{1}{n} + m - \frac{1}{m} \right)^2 - 2\left(n - \frac{1}{n}\right)\left(m - \frac{1}{m}\right) = \\
+            = \left[(n + m) - \frac{m + n}{nm}\right]^2 - 2\left(nm - n\cdot\frac{1}{m} - m\cdot\frac{1}{n} + \frac{1}{nm}\right) = \\
+            = \left[(n + m) - \frac{m + n}{nm}\right]^2 - 2\left(nm - \frac{n^2 + m^2}{nm} + \frac{1}{nm}\right) = \\
+            = \left[(n + m) - \frac{m + n}{nm}\right]^2 - 2\left(nm - \frac{(n^2 + \yellow{2nm} + m^2) - \yellow{2nm}}{nm} + \frac{1}{nm}\right) = \\
+            = \left[(n + m) - \frac{m + n}{nm}\right]^2 - 2\left(nm - \frac{(n + m)^2 - 2nm}{nm} + \frac{1}{nm}\right) = \ldots
+          `}</BlockMath>
+          <P>Подставляем числа и считаем:</P>
+          <BlockMath>{math`
+            \ldots = \left[(-5) - \frac{-5}{3}\right]^2 - 2\left(3 - \frac{(-5)^2 - 2\cdot 3}{3} + \frac{1}{3}\right) = \\
+            = \left(-\frac{10}{3}\right)^2 - 2\left(3 - \frac{25 - 6}{3} + \frac{1}{3}\right) = \frac{100}{9} - 2\left(3 - \frac{19}{3} + \frac{1}{3}\right) = \\
+              = \frac{100}{9} - 2\left(3 - \frac{18}{3}\right) = \frac{100}{9} - 2\cdot(-3) = \frac{100}{9} + 6 = \frac{100}{9} + \frac{54}{9} = \boxed{\frac{154}{9}}
+          `}</BlockMath>
+        </ProblemSection>
+        <ProblemSection title="Произведение новых корней">
+          <P>Преобразуем формулу для произведения новых корней:</P>
+          <BlockMath>{math`
+            \left( n - \frac{1}{n} \right)^2 \cdot \left( m - \frac{1}{m} \right)^2 = \left[ \left(n - \frac{1}{n}\right)\left(m - \frac{1}{m}\right) \right]^2 \\
+            = \left(nm - n\cdot\frac{1}{m} - m\cdot\frac{1}{n} + \frac{1}{nm}\right)^2 = \\
+            = \left(nm - \frac{n^2 + m^2}{nm} + \frac{1}{nm}\right)^2 = \\
+            = \left(nm - \frac{(n^2 + \yellow{2nm} + m^2) - \yellow{2nm}}{nm} + \frac{1}{nm}\right)^2 = \\
+            = \left(nm - \frac{(n + m)^2 - 2nm}{nm} + \frac{1}{nm}\right)^2 = \ldots
+          `}</BlockMath>
+          <P>Подставляем числа и считаем:</P>
+          <BlockMath>{math`
+            \ldots = \left(3 - \frac{(-5)^2 - 2\cdot 3}{3} + \frac{1}{3}\right)^2 = \left(3 - \frac{25 - 6}{3} + \frac{1}{3}\right)^2 = \\
+              = \left(3 - \frac{19}{3} + \frac{1}{3}\right)^2 = \left(3 - \frac{18}{3}\right)^2 = (-3)^2 = \boxed{9}
+          `}</BlockMath>
+        </ProblemSection>
+        <ProblemSection title="Итоговое уравнение">
+          <P>Разберёмся с формулой для суммы корней нового уравнения:</P>
+          <BlockMath>{math`
+              -\frac{B}{A} = \frac{154}{9} = -\frac{-154}{9}
+          `}</BlockMath>
+          <P>Разберёмся с формулой для произведения корней нового уравнения:</P>
+          <BlockMath>{math`
+              \frac{C}{A} = 9 = \frac{81}{9}
+          `}</BlockMath>
+          <P>Итоговый вид квадратного уравнения с новыми корнями:</P>
+          <BlockMath>9x^2 - 154x + 81 = 0</BlockMath>
+        </ProblemSection>
       </ProblemSolution>
     </Problem>
 

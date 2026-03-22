@@ -88,6 +88,10 @@ export default defineEruditConfig({
       verification: 'hbTull_8pcvJm4alie8PVq6-f87heZXqSGp6DVFsJPk',
       gtag: 'G-3M1SH4QB7R',
     },
+    yandex: {
+      verification: 'd371d2f1cb7cdbbc',
+      metricsId: '108185913',
+    },
   },
   elements: defaultElements,
   countElements: defaultCountElements,

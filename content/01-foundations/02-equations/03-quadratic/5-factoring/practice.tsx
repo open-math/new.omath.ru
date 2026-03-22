@@ -65,7 +65,7 @@ export default defineProse({
         <ProblemDescription>
           Корни <M>2</M> и <M>3</M>. Коэффициент <M>A = 1</M>.
         </ProblemDescription>
-        <MathExpressionCheck label="Квадратное уравнение" answer="x^2-5x+6" />
+        <MathEqualityCheck label="Квадратное уравнение" answer="x^2-5x+6=0" />
         <ProblemHint>
           Воспользуйтесь тем фактом, что из любых двух чисел{' '}
           <Dep on={article.uniques.quadraticFromAny}>можно составить</Dep> квадратный трёхчлен.
@@ -92,7 +92,7 @@ export default defineProse({
         <ProblemDescription>
           Корни <M>{math`1\frac{1}{3}`}</M> и <M>2</M>. Коэффициент <M>A = 3</M>.
         </ProblemDescription>
-        <MathExpressionCheck label="Квадратное уравнение" answer="3x^2-10x+8" />
+        <MathEqualityCheck label="Квадратное уравнение" answer="3x^2-10x+8=0" />
         <ProblemAnswer>
           <BlockMath>{math`3x^2 - 10x + 8 = 0`}</BlockMath>
         </ProblemAnswer>
@@ -124,7 +124,7 @@ export default defineProse({
         <ProblemDescription>
           Оба корня равны <M>{math`-2\frac{2}{3}`}</M>. Коэффициент <M>A = 9</M>.
         </ProblemDescription>
-        <MathExpressionCheck label="Квадратное уравнение" answer="9x^2+48x+64" />
+        <MathEqualityCheck label="Квадратное уравнение" answer="9x^2+48x+64=0" />
         <ProblemAnswer>
           <BlockMath>{math`9x^2 + 48x + 64 = 0`}</BlockMath>
         </ProblemAnswer>
@@ -158,7 +158,7 @@ export default defineProse({
         <ProblemDescription>
           Оба корня равны <M>{math`\sqrt{3}`}</M>. Коэффициент <M>A = 1</M>.
         </ProblemDescription>
-        <MathExpressionCheck label="Квадратное уравнение" answer="x^2-2sqrt(3)x+3" />
+        <MathEqualityCheck label="Квадратное уравнение" answer="x^2-2sqrt(3)x+3=0" />
         <ProblemAnswer>
           <BlockMath>{math`x^2 - 2\sqrt{3}x + 3 = 0`}</BlockMath>
         </ProblemAnswer>
@@ -180,7 +180,7 @@ export default defineProse({
         <ProblemDescription>
           Корни <M>{math`\sqrt{3}`}</M> и <M>{math`-\sqrt{5}`}</M>. Коэффициент <M>A = 1</M>.
         </ProblemDescription>
-        <MathExpressionCheck label="Квадратное уравнение" answer="x^2-(sqrt(3)-sqrt(5))x-sqrt(15)" />
+        <MathEqualityCheck label="Квадратное уравнение" answer="x^2-(sqrt(3)-sqrt(5))x-sqrt(15)=0" />
         <ProblemAnswer>
           <BlockMath>{math`x^2 - (\sqrt{3} - \sqrt{5})x - \sqrt{15} = 0`}</BlockMath>
         </ProblemAnswer>
@@ -205,7 +205,7 @@ export default defineProse({
         <ProblemDescription>
           Корни <M>{math`3 - \sqrt{5}`}</M> и <M>{math`3 + \sqrt{5}`}</M>. Коэффициент <M>A = 2</M>.
         </ProblemDescription>
-        <MathExpressionCheck label="Квадратное уравнение" answer="2x^2-12x+8" />
+        <MathEqualityCheck label="Квадратное уравнение" answer="2x^2-12x+8=0" />
         <ProblemAnswer>
           <BlockMath>{math`2x^2 - 12x + 8 = 0`}</BlockMath>
         </ProblemAnswer>
@@ -238,7 +238,7 @@ export default defineProse({
         <ProblemDescription>
           Корни <M>{math`2 - \sqrt{7}`}</M> и <M>{math`\sqrt{7}`}</M>. Коэффициент <M>A = 1</M>.
         </ProblemDescription>
-        <MathExpressionCheck label="Квадратное уравнение" answer="x^2-2x+2sqrt(7)-7" />
+        <MathEqualityCheck label="Квадратное уравнение" answer="x^2-2x+2sqrt(7)-7=0" />
         <ProblemAnswer>
           <BlockMath>{math`x^2 - 2x + (2\sqrt{7} - 7) = 0`}</BlockMath>
         </ProblemAnswer>

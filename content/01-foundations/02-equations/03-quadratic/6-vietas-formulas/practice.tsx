@@ -287,6 +287,40 @@ export default defineProse({
       </ProblemSolution>
     </Problem>
 
+    <Problem title="Другой вывод формул Виета" level="easy">
+      <ProblemDescription>
+        <P>
+          Выведите <Dep on={article.uniques.vietasFormulas}>формулы Виета</Dep> через{' '}
+          <Dep on={quadraticFormula}>общую формулу</Dep> корней квадратного уравнения:
+        </P>
+        <BlockMath>{math`x_{1,2} = \frac{-B \pm \sqrt{D}}{2A}`}</BlockMath>
+      </ProblemDescription>
+      <ProblemSolution>
+        <P>Формула суммы корней:</P>
+        <BlockMath>{math`
+          x_1 + x_2 =
+          \frac{-B + \sqrt{D}}{2A} + \frac{-B - \sqrt{D}}{2A} =
+          \frac{-2B + \cancel{\sqrt{D}} - \cancel{\sqrt{D}}}{2A} =
+          \frac{-2B}{2A} =
+          \boxed{-\frac{B}{A}}
+        `}</BlockMath>
+        <P>
+          Формула произведения корней, пользуясь формулой разности квадрата и подставив формулу дискриминанта вместо{' '}
+          <M>D</M>:
+        </P>
+        <BlockMath>{math`
+          x_1 \cdot x_2 =
+          \left(\frac{-B + \sqrt{D}}{2A}\right) \cdot \left(\frac{-B - \sqrt{D}}{2A}\right) =
+          \frac{(-B + \sqrt{D})(-B - \sqrt{D})}{4A^2} =
+          \frac{(-B)^2 - (\sqrt{D})^2}{4A^2} =
+          \frac{B^2 - D}{4A^2} =
+          \frac{B^2 - (B^2 - 4AC)}{4A^2} =
+          \frac{4AC}{4A^2} =
+          \boxed{\frac{C}{A}}
+        `}</BlockMath>
+      </ProblemSolution>
+    </Problem>
+
     <Problems title="Корневая эквилибристика" level="medium">
       <SubProblem>
         <ProblemDescription>

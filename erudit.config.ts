@@ -8,6 +8,7 @@ import {
   omathOgImage,
   omathStyle,
   omathChecks,
+  omathFavicons,
 } from '@open-math/shared/config';
 
 export default defineEruditConfig({
@@ -30,7 +31,9 @@ export default defineEruditConfig({
     ],
   },
   style: omathStyle,
-  favicon: defaultAssets.favicon,
+  favicon: {
+    ...omathFavicons,
+  },
   loadingSvg: defaultAssets.loadingSvg,
   seo: {
     siteTitle: 'Математика',
@@ -82,6 +85,10 @@ export default defineEruditConfig({
     type: 'github',
     name: 'open-math/new.omath.ru',
     branch: 'main',
+  },
+  lastmod: {
+    enabled: true,
+    type: 'git',
   },
   analytics: {
     google: {

@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@open-math/shared": "open-math/shared",
-    "erudit": "4.3.3"
+    "erudit": "4.3.3-dev.1"
   },
   "devDependencies": {
     "prettier": "^3.8.1"

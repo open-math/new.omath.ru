@@ -1,5 +1,3 @@
-import { authorContribution } from '#project/utils/contributions';
-
 // #region Assets
 //
 //
@@ -101,20 +99,20 @@ export default defineProse({
 
           methods --> methodB0["
             **B равен 0**
-            $$ Ax^2 + C = 0 $$
+            $$ \begin{aligned} Ax^2 + C = 0 \\ 5x^2 - 20 = 0 \end{aligned} $$
           "]
           methodB0 --> rootsB0["$$x_{1,2} = \pm\sqrt{-\frac{C}{A}}$$"]
 
           methods --> methodC0["
             **C равен 0**
-            $$ Ax^2 + Bx = 0 $$
+            $$ \begin{aligned} Ax^2 + Bx = 0 \\ 3x^2 + 12x = 0 \end{aligned} $$
           "]
           methodC0 --> root1C0["$$x_1 = 0$$"]
           methodC0 -->|1-я формула Виета| root2C0["$$x_2 = -\frac{B}{A}$$"]
 
           methods --> methodBC0["
             **B и C равны 0**
-            $$ Ax^2 = 0 $$
+            $$ \begin{aligned} Ax^2 = 0 \\ 4x^2 = 0 \end{aligned} $$
           "]
           methodBC0 --> rootBC0["$$x_1 = x_2 = 0$$"]
 
@@ -175,8 +173,8 @@ export default defineProse({
 
     <P>
       С корнями <M>1</M> и <M>-1</M> понятно, а как не забыть, чему равен второй корень? Можно и забыть, ничего
-      страшного. Для нахождения второго корня просто воспользуйтесь второй <Dep on={vietasFormulas}>формулой Виета</Dep>,
-      которая про умножение:
+      страшного. Для нахождения второго корня просто воспользуйтесь второй <Dep on={vietasFormulas}>формулой Виета</Dep>
+      , которая про умножение:
     </P>
 
     <BlockMath>{math`
@@ -314,10 +312,10 @@ export default defineProse({
     </Statement>
 
     <P>
-      Как запомнить, какое число в формуле корня находится в числителе, а какое в знаменателе? Элементарно! Во всех наших
-      действиях и формулах с квадратными трехчленами и уравнениями (<Ref to={quadraticFormula}>формула корней</Ref>,{' '}
-      <Ref to={vietasFormulas}>формулы Виета</Ref>, да даже описанный выше{' '}
-      <Ref to={uniques.methodZeroSum}>метод нулевой суммы</Ref>) всё время так получается, что коэффициент <M>A</M>{' '}
+      Как запомнить, какое число в формуле корня находится в числителе, а какое в знаменателе? Элементарно! Во всех
+      наших действиях и формулах с квадратными трехчленами и уравнениями (
+      <Ref to={quadraticFormula}>формула корней</Ref>, <Ref to={vietasFormulas}>формулы Виета</Ref>, да даже описанный
+      выше <Ref to={uniques.methodZeroSum}>метод нулевой суммы</Ref>) всё время так получается, что коэффициент <M>A</M>{' '}
       <B>всегда оказывается "внизу"</B>. Опущенный коэффициент какой-то.
     </P>
 
@@ -449,7 +447,7 @@ export default defineProse({
       x^2 + 8x + 15 = 0 >>{big}
       x^2 - 5x + 6 = 0 >>{big}
       x^2 - 6x - 16 = 0
-`}</BlockMath>
+    `}</BlockMath>
 
     <P>
       Для решения этих и многих похожих уравнений достаточно в уме разложить их на множители по методике{' '}
@@ -580,8 +578,8 @@ export default defineProse({
     <P>
       В большинстве ситуаций провала по уже перечисленным простым методам решения в уме достаточно, чтобы сдаться и с
       позором начать решать уравнение через <Ref to={quadraticFormula}>формулу корней</Ref>. Но есть ещё один бонусный
-      секретный и самый последний способ, при помощи которого можно избавиться от коэффициента <M>A</M> и
-      попытаться провести разложение на множители в уме.
+      секретный и самый последний способ, при помощи которого можно избавиться от коэффициента <M>A</M> и попытаться
+      провести разложение на множители в уме.
     </P>
 
     <Statement
@@ -769,27 +767,27 @@ export default defineProse({
 
           methods --> methodZeroSum["
             **1. Нулевая сумма**
-            $$ A \pm B + C = 0 $$
+            $$ \begin{aligned} A \pm B + C = 0 \\ 2x^2 + 3x - 5 = 0 \end{aligned} $$
           "]
           methodZeroSum --> methodZeroSumRoot1["$$ x_1 = \pm 1 $$"]
           methodZeroSum -->|2-я формула Виета| methodZeroSumRoot2["$$ x_2 = \pm \frac{C}{A} $$"]
 
           methods --> methodSquare["
             **2. Полный квадрат**
-            $$ (Kx)^2 \pm 2 \cdot Kx \cdot T + (T)^2 $$
+            $$ \begin{aligned} (Kx)^2 \pm 2 \cdot Kx \cdot T + (T)^2 \\ 4x^2 + 12x + 9 = 0 \end{aligned} $$
           "]
           methodSquare -->|$A$ всегда внизу<br /> $A \rightarrow K$ тоже внизу| methodSquareRoot["$$ x_1 = x_2 = \mp \frac{T}{K} $$"]
 
           methods --> methodFactoring["
             **3. Разложение на множители**
-            $$ x^2 + (t + k)x + tk = 0 $$
+            $$ \begin{aligned} x^2 + (t + k)x + tk = 0 \\ x^2 + 8x + 15 = 0 \end{aligned} $$
           "]
           methodFactoring -->|Минус перед $t$| methodFactoringRoot1["$$ x_1 = -t $$"]
           methodFactoring -->|Минус перед $k$| methodFactoringRoot2["$$ x_2 = -k $$"]
 
           methods --> methodAtoC["
             **4. Перенос A к C**
-            $$ x^2 + Bx + AC = 0 $$
+            $$ \begin{aligned} x^2 + Bx + AC = 0 \\ 3x^2 - 17x - 6 = 0 \end{aligned} $$
           "]
           methodAtoC -->|$A$ всегда внизу<br />Делим корни на $A$| methodAtoCRoots["$$ x_{1,2} = \frac{x'_{1,2}}{A} $$"]
 

@@ -224,5 +224,11 @@ export default defineProblemScript({
         </ProblemAnswer>
       </>
     ),
+    ensureStorage: [
+      <Dep on={methodZeroSum}>Нулевая сумма</Dep>,
+      <Dep on={methodSquare}>Полный квадрат</Dep>,
+      <Dep on={methodFactoring}>Разложение на множители</Dep>,
+      <Dep on={methodAtoC}>Перенос A к C</Dep>,
+    ],
   };
 });

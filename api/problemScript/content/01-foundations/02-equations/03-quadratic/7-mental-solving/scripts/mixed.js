@@ -274,7 +274,13 @@ var mixed_default = defineProblemScript('__auto_generated__',{
         ] }),
         /* @__PURE__ */ jsx(BlockMath, { children: result.answerLatex })
       ] })
-    ] })
+    ] }),
+    ensureStorage: [
+      /* @__PURE__ */ jsx(Dep, { on: methodZeroSum, children: "Нулевая сумма" }),
+      /* @__PURE__ */ jsx(Dep, { on: methodSquare, children: "Полный квадрат" }),
+      /* @__PURE__ */ jsx(Dep, { on: methodFactoring, children: "Разложение на множители" }),
+      /* @__PURE__ */ jsx(Dep, { on: methodAtoC, children: "Перенос A к C" })
+    ]
   };
 });
 export {

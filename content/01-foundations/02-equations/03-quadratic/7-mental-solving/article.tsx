@@ -787,7 +787,7 @@ export default defineProse({
 
           methods --> methodAtoC["
             **4. Перенос A к C**
-            $$ \begin{aligned} x^2 + Bx + AC = 0 \\ 3x^2 - 17x - 6 = 0 \end{aligned} $$
+            $$ \begin{aligned} x'^2 + Bx' + AC = 0 \\ 3x^2 - 17x - 6 = 0 \end{aligned} $$
           "]
           methodAtoC -->|$A$ всегда внизу<br />Делим корни на $A$| methodAtoCRoots["$$ x_{1,2} = \frac{x'_{1,2}}{A} $$"]
 

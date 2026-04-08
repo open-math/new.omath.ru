@@ -66,7 +66,7 @@ function formatTrinomial(A, B, C, v, highPow, lowPow) {
   return parts.join("") + " = 0";
 }
 
-// content/01-foundations/02-equations/03-quadratic/7-mental-solving/scripts/mental-shared.tsx
+// content/01-foundations/02-equations/03-quadratic/8-mental-solving/scripts/mental-shared.tsx
 function findIntegerFactors(B, C) {
   const absC = Math.abs(C);
   for (let i = 1; i * i <= absC; i++) {
@@ -93,7 +93,7 @@ function rootLatex(n, d) {
   return sd === 1 ? `${sn}` : fractionLatex(sn, sd);
 }
 
-// content/01-foundations/02-equations/03-quadratic/7-mental-solving/scripts/a-to-c.tsx
+// content/01-foundations/02-equations/03-quadratic/8-mental-solving/scripts/a-to-c.tsx
 function generateSolvable(random) {
   let A, r1, n;
   do {

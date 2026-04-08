@@ -66,7 +66,7 @@ function formatTrinomial(A, B, C, v, highPow, lowPow) {
   return parts.join("") + " = 0";
 }
 
-// content/01-foundations/02-equations/03-quadratic/7-mental-solving/scripts/mental-shared.tsx
+// content/01-foundations/02-equations/03-quadratic/8-mental-solving/scripts/mental-shared.tsx
 function reduceCoefficients(A, B, C) {
   const g = gcd(gcd(Math.abs(A), Math.abs(B)), Math.abs(C));
   A /= g;
@@ -93,7 +93,7 @@ function rootLatex(n, d) {
   return sd === 1 ? `${sn}` : fractionLatex(sn, sd);
 }
 
-// content/01-foundations/02-equations/03-quadratic/7-mental-solving/scripts/zero-sum.tsx
+// content/01-foundations/02-equations/03-quadratic/8-mental-solving/scripts/zero-sum.tsx
 function generateSolvable(random) {
   const roll = random.integer(0, 15);
   let A;

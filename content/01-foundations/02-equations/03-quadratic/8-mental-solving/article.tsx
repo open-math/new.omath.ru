@@ -36,6 +36,7 @@ const quadraticFormula = $CONTENT.foundations.equations.quadratic.quadraticFormu
 const oneRootOne = $CONTENT.foundations.equations.quadratic.factoring.practice.$oneRootOne;
 const vietasFormulas = $CONTENT.foundations.equations.quadratic.vietasFormulas.article.$vietasFormulas;
 const manualFactoring = $CONTENT.foundations.equations.quadratic.factoring.article.$manualFactoring;
+const factoringSigns = $CONTENT.foundations.equations.quadratic.factoring.practice.$factoringSigns;
 
 //
 //
@@ -50,6 +51,7 @@ export default defineProse({
     methodAtoC: Statement,
     methodsAll: Diagram,
     methodsAllPractice: Problem,
+    factorizationSigns: Statement,
   },
 })(({ uniques }) => (
   <>
@@ -510,6 +512,51 @@ export default defineProse({
       числа, которые дадут <M>B</M> и <M>C</M>, а потом у обоих найденных чисел меняем знаки. Вот это удобно!
     </P>
 
+    <P>
+      Разложение на множители в уме очень сильно упрощает понимание того, какие вообще знаки имеют числа, на которые
+      происходит разложение. Моментально понять это можно при помощи полезного приёма, который впервые был упомянут в
+      задаче <Ref to={factoringSigns}>Знаки разложения</Ref>. Задача, кстати, классная, решите её сейчас, если не решали
+      ранее. А сам приём в общем формулируется так:
+    </P>
+
+    <Statement $={uniques.factorizationSigns} title="Знаки при разложении на множители">
+      <StatementMain>
+        <P>
+          Знаки чисел <M>t</M> и <M>k</M> при разложении на множители квадратного трёхчлена можно узнать из знаков
+          коэффициентов <M>B</M> и <M>C</M>:
+        </P>
+        <BlockMath>{math`
+          +C \quad +B \\
+          \boxed{+t \quad +k} >>{big}{top}
+          +C \quad -B \\
+          \boxed{-t \quad -k} >>{big}{top}
+          -C \\
+          \boxed{\text{Знаки t и k разные}}
+        `}</BlockMath>
+      </StatementMain>
+      <StatementProof>
+        <P>
+          Если коэффициент <M>C</M> положительный, то числа <M>t</M> и <M>k</M> либо оба положительные, либо оба
+          отрицательные, потому что только два положительных или два отрицательных числа при перемножении дадут
+          положительное число. Положительный <M>B</M> означает, что числа <M>t</M> и <M>k</M> будут положительными
+          ("плюс + плюс = плюс"). Если коэффициент <M>B</M> отрицательный, то числа <M>t</M> и <M>k</M> будут
+          отрицательными ("минус + минус = минус").
+        </P>
+
+        <P>
+          Если же коэффициент <M>C</M> отрицательный, то числа <M>t</M> и <M>k</M> будут разных знаков ("минус умножить
+          на плюс равно минус").
+        </P>
+
+        <QED />
+      </StatementProof>
+    </Statement>
+
+    <P>
+      Теперь, умея определять нужные знаки, попробуйте порешать квадратные уравнения в уме через разложение их на
+      множители:
+    </P>
+
     <Problems title="Разложение на множители -- Практика" level="medium" method>
       <P>
         Если возможно, решите квадратное уравнение в уме по{' '}
@@ -528,8 +575,13 @@ export default defineProse({
         </ProblemAnswer>
         <ProblemSolution>
           <P>
-            Числа <M>3</M> и <M>5</M> при сложении дают <M>8</M>, а при умножении <M>15</M>. Значит противоположные им
-            числа <M>-3</M> и <M>-5</M> будут корнями уравнения! Вот и всё!
+            Видим положительные коэффициенты <M>B</M> и <M>C</M>. Значит мы ищем два{' '}
+            <Dep on={uniques.factorizationSigns}>положительных числа</Dep>, которые при сложении дают <M>B</M>, а при
+            умножении <M>C</M>.
+          </P>
+          <P>
+            Легко догадаться, что числа <M>3</M> и <M>5</M> при сложении дают <M>8</M>, а при умножении <M>15</M>.
+            Значит противоположные им числа <M>-3</M> и <M>-5</M> будут корнями уравнения! Вот и всё!
           </P>
         </ProblemSolution>
       </SubProblem>
@@ -546,8 +598,13 @@ export default defineProse({
         </ProblemAnswer>
         <ProblemSolution>
           <P>
-            Числа <M>-2</M> и <M>-3</M> при сложении дают <M>-5</M>, а при умножении <M>6</M>. Значит противоположные им
-            числа <M>2</M> и <M>3</M> будут корнями уравнения!
+            Видим отрицательный коэффициент <M>B</M> и положительный коэффициент <M>C</M>. Значит мы ищем два
+            <Dep on={uniques.factorizationSigns}>отрицательных числа</Dep>, которые при сложении дают <M>B</M>, а при
+            умножении <M>C</M>.
+          </P>
+          <P>
+            Легко догадаться, что числа <M>-2</M> и <M>-3</M> при сложении дают <M>-5</M>, а при умножении <M>6</M>.
+            Значит противоположные им числа <M>2</M> и <M>3</M> будут корнями уравнения! Вот и всё!
           </P>
         </ProblemSolution>
       </SubProblem>
@@ -564,8 +621,13 @@ export default defineProse({
         </ProblemAnswer>
         <ProblemSolution>
           <P>
-            Числа <M>2</M> и <M>-8</M> при сложении дают <M>-6</M>, а при умножении <M>-16</M>. Значит противоположные
-            им числа <M>-2</M> и <M>8</M> будут корнями уравнения!
+            Видим отрицательный коэффициент <M>B</M> и отрицательный коэффициент <M>C</M>. Значит мы ищем два{' '}
+            <Dep on={uniques.factorizationSigns}>числа разных знаков</Dep>, которые при сложении дают <M>B</M>, а при
+            умножении <M>C</M>.
+          </P>
+          <P>
+            Легко догадаться, что числа <M>2</M> и <M>-8</M> при сложении дают <M>-6</M>, а при умножении <M>-16</M>.
+            Значит противоположные им числа <M>-2</M> и <M>8</M> будут корнями уравнения!
           </P>
         </ProblemSolution>
       </SubProblem>

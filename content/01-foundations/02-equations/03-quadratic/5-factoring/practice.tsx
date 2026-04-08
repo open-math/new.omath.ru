@@ -6,6 +6,7 @@ import article from './article';
 
 import interestingDots from './assets/roots-plane-interesting-dots.svg';
 import planeSymmetry from './assets/roots-plane-symmetry.svg';
+import factoringStep1 from './assets/factoring-step-1.svg';
 
 //
 //
@@ -31,6 +32,7 @@ import oneRootOne from './scripts/one-root-one';
 const zeroProductProperty = $CONTENT.foundations.equations.zeroProductProperty.$zeroProductPropertyMethod;
 const quadraticEquation = $CONTENT.foundations.equations.quadratic.whatIsIt.article.$quadraticEquation;
 const biquadraticEquation = $CONTENT.foundations.equations.quadratic.quadraticFormula.article.$biquadratic;
+const mentalFactoring = $CONTENT.foundations.equations.quadratic.mentalSolving.article.$factorizationSigns;
 
 //
 //
@@ -38,11 +40,120 @@ const biquadraticEquation = $CONTENT.foundations.equations.quadratic.quadraticFo
 
 export default defineProse({
   uniques: {
+    factoringSigns: Problem,
     oneRootOne: Problems,
   },
 })(({ uniques }) => (
   <>
     <Problem title="К гадалке не ходи" level="easy" script={mentalRoots()} />
+
+    <Problem $={uniques.factoringSigns} title="Знаки разложения" level="easy" method>
+      <ProblemDescription>
+        <P>
+          Не находя корней квадратных уравнений, определите, какой знак будут иметь числа <M>t</M> и <M>k</M>, на
+          которые разложатся коэффициенты <M>B</M> и <M>C</M>:
+        </P>
+        <Image src={factoringStep1} invert="dark" width="400px" />
+        <BlockMath>{math`
+          1) \ x^2 + 80x + 3 >>{big}
+          2) \ y^2 - 2y + 18 >>{big}
+          3) \ z^2 - 5z - 14 >>{big}
+          4) \ w^2 + 4w - 5
+        `}</BlockMath>
+      </ProblemDescription>
+      <ProblemCheck
+        expand
+        label="Знаки в первом трёхчлене"
+        select={[
+          {
+            content: 'Оба положительные.',
+            answer: true,
+          },
+          { content: 'Оба отрицательные.' },
+          { content: 'Один положительный, другой отрицательный.' },
+        ]}
+      />
+      <ProblemCheck
+        expand
+        label="Знаки во втором трёхчлене"
+        select={[
+          { content: 'Оба положительные.' },
+          { content: 'Оба отрицательные.', answer: true },
+          { content: 'Один положительный, другой отрицательный.' },
+        ]}
+      />
+      <ProblemCheck
+        expand
+        label="Знаки в третьем трёхчлене"
+        select={[
+          { content: 'Оба положительные.' },
+          { content: 'Оба отрицательные.' },
+          { content: 'Один положительный, другой отрицательный.', answer: true },
+        ]}
+      />
+      <ProblemCheck
+        expand
+        label="Знаки в четвёртом трёхчлене"
+        select={[
+          { content: 'Оба положительные.' },
+          { content: 'Оба отрицательные.' },
+          { content: 'Один положительный, другой отрицательный.', answer: true },
+        ]}
+      />
+      <ProblemHint>
+        Вспомните, какой знак будет у результата умножения двух положительных, положительного и отрицательного, двух
+        отрицательных чисел.
+      </ProblemHint>
+      <ProblemAnswer>
+        <ProblemSection title="Первый трёхчлен">
+          Числа <M>t</M> и <M>k</M> положительные.
+        </ProblemSection>
+        <ProblemSection title="Второй трёхчлен">
+          Числа <M>t</M> и <M>k</M> отрицательные.
+        </ProblemSection>
+        <ProblemSection title="Третий трёхчлен">
+          Числа <M>t</M> и <M>k</M> разных знаков: одно положительное, а другое отрицательное, причём оно "больше" по
+          модулю, чем положительное.
+        </ProblemSection>
+        <ProblemSection title="Четвёртый трёхчлен">
+          Числа <M>t</M> и <M>k</M> разных знаков: одно положительное, а другое отрицательное, причём оно "меньше" по
+          модулю, чем положительное.
+        </ProblemSection>
+      </ProblemAnswer>
+      <ProblemSolution>
+        <ProblemSection title="Первый трёхчлен">
+          Видим, что коэффициент <M>C</M> положительный, значит числа <M>t</M> и <M>k</M> должны быть одного знака: оба
+          положительные или оба отрицательные. Но если бы они были отрицательными, то их сумма -- коэффициент <M>B</M>{' '}
+          -- была бы отрицательной, а она положительная. Значит оба числа <M>t</M> и <M>k</M> положительные!
+        </ProblemSection>
+        <ProblemSection title="Второй трёхчлен">
+          Коэффициент <M>C</M> положительный, значит числа <M>t</M> и <M>k</M> должны быть одного знака: оба
+          положительные или оба отрицательные. Но коэффициент <M>B</M> отрицательный, значит оба числа <M>t</M> и{' '}
+          <M>k</M> отрицательные, чтобы в сумме дать отрицательное число.
+        </ProblemSection>
+        <ProblemSection title="Третий трёхчлен">
+          Коэффициент <M>C</M> отрицательный, значит числа <M>t</M> и <M>k</M> должны быть разных знаков: одно
+          положительное, а другое отрицательное. Отрицательный коэффициент <M>B</M> говорит нам о том, что из двух чисел{' '}
+          <M>t</M> и <M>k</M> отрицательным будет большее по модулю из них. Например: <M>t = -10</M> и <M>k = 5</M> в
+          сумме дадут отрицательный коэффициент <M>B = -5</M>.
+        </ProblemSection>
+        <ProblemSection title="Четвёртый трёхчлен">
+          Коэффициент <M>C</M> отрицательный, значит числа <M>t</M> и <M>k</M> должны быть разных знаков: одно
+          положительное, а другое отрицательное. Положительный коэффициент <M>B</M> говорит нам о том, что из двух чисел{' '}
+          <M>t</M> и <M>k</M> отрицательным будет меньшее по модулю из них. Например: <M>t = -2</M> и <M>k = 5</M> в
+          сумме дадут положительный коэффициент <M>B = 3</M>.
+        </ProblemSection>
+      </ProblemSolution>
+      <ProblemNote>
+        <P>
+          Это очень полезный приём, который сильно упрощает <Ref to={mentalFactoring}>решение в уме</Ref> простых
+          квадратных уравнений. Если у коэффициентов <M>B</M> и <M>C</M> знаки <M>++</M>, то разложится на два
+          положительных числа, если <M>-+</M>, то на два отрицательных. Если же <M>C</M> отрицательное, то знаки будут
+          разные. Только будьте внимательны, когда применяете этот приём -- он работает только при положительном{' '}
+          <M>A</M>! Если же <M>A</M> отрицательное, то всё будет наоборот!
+        </P>
+      </ProblemNote>
+    </Problem>
 
     <Problem title="Туда и обратно" level="easy" script={thereAndBack()} />
 
@@ -140,7 +251,7 @@ export default defineProse({
             9\left(x + \frac{8}{3}\right)\left(x + \frac{8}{3}\right) = 9\left(x + \frac{8}{3}\right)^2 = 0
           `}</BlockMath>
           <P>
-            Заметим, что <M>9 = 3^2</M>. Внесём по тройке в каждую скобку:
+            Заметим, что <M>9 = 3^2</M>. Внесём множитель <M>3</M> в каждую скобку:
           </P>
           <BlockMath>{math`
             \left(3\left(x + \frac{8}{3}\right)\right)^2 = \left(3x + 8\right)^2 = 0

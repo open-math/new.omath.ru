@@ -60,75 +60,147 @@
     </url>
     <url>
         <loc>https://ru.omath.net/book/foundations/</loc>
-        <lastmod>2026-04-12T17:07:35+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/group/foundations/polynomials/</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/foundations/polynomials/special-products/</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/summary/foundations/polynomials/special-products/</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/practice/foundations/polynomials/special-products/</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/foundations/polynomials/special-products/?element=chto-takoe-fsu</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/foundations/polynomials/special-products/?element=what-are-special-products</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/foundations/polynomials/special-products/?element=square-sum</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/foundations/polynomials/special-products/?element=square-diff</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/foundations/polynomials/special-products/?element=primenenie-kvadrata-summy-ili-raznosti</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/foundations/polynomials/special-products/?element=fast-square</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/foundations/polynomials/special-products/?element=diff-of-squares</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/foundations/polynomials/special-products/?element=cube-sum</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/foundations/polynomials/special-products/?element=cube-diff</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/article/foundations/polynomials/special-products/?element=memorization-tips</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/summary/foundations/polynomials/special-products/?element=special-products-table</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/practice/foundations/polynomials/special-products/?element=otrabotka-kvadrata-summy-i-raznosti</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/practice/foundations/polynomials/special-products/?element=otrabotka-raznosti-kvadratov</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://ru.omath.net/practice/foundations/polynomials/special-products/?element=otrabotka-kuba-summy-i-raznosti</loc>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/group/foundations/equations/</loc>
-        <lastmod>2026-04-12T17:07:35+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/elementary/</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/summary/foundations/equations/elementary/</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/practice/foundations/equations/elementary/</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/elementary/?element=equality</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/elementary/?element=equality-false-true</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/elementary/?element=ravenstva-v-realnoy-zhizni</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/elementary/?element=equation</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/elementary/?element=equation-solution</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/elementary/?element=same-action-rule</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/elementary/?element=elementarnye-uravneniya</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/elementary/?element=common-mistakes</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/elementary/?element=zachem-reshat-uravneniya</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/elementary/?element=treugolnik-idiota</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/elementary/?element=uravneniya-v-zhizni</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/practice/foundations/equations/elementary/?element=linear-root</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/practice/foundations/equations/elementary/?element=logika-resheniya-uravneniy</loc>
-        <lastmod>2026-04-12T16:49:40+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/page/foundations/equations/zero-product-property/</loc>
@@ -144,7 +216,7 @@
     </url>
     <url>
         <loc>https://ru.omath.net/group/foundations/equations/quadratic/</loc>
-        <lastmod>2026-04-12T17:07:35+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/what-is-it/</loc>
@@ -176,63 +248,63 @@
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/incomplete/</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/summary/foundations/equations/quadratic/incomplete/</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/practice/foundations/equations/quadratic/incomplete/</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/incomplete/?element=quadratic-missing-terms</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/incomplete/?element=reshenie-nepolnykh-kvadratnykh-uravneniy</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/summary/foundations/equations/quadratic/incomplete/?element=all-formulas</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/practice/foundations/equations/quadratic/incomplete/?element=reshenie-nepolnykh-uravneniy</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/completing-the-square/</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/summary/foundations/equations/quadratic/completing-the-square/</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/practice/foundations/equations/quadratic/completing-the-square/</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/completing-the-square/?element=what-is-it</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/completing-the-square/?element=zachem-etim-zanimatsya</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/completing-the-square/?element=vydelenie-s-nepolnymi-dannymi</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/completing-the-square/?element=reshenie-kvadratnykh-uravneniy</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/summary/foundations/equations/quadratic/completing-the-square/?element=vizualizatsiya-protsessa</loc>
-        <lastmod>2026-04-04T10:42:24+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/quadratic-formula/</loc>
@@ -388,39 +460,39 @@
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/vietas-formulas/</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/summary/foundations/equations/quadratic/vietas-formulas/</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/practice/foundations/equations/quadratic/vietas-formulas/</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/vietas-formulas/?element=vietas-formulas</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/vietas-formulas/?element=eto-formuly-ili-teorema</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/vietas-formulas/?element=pryamaya-i-obratnaya-teoremy</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/vietas-formulas/?element=kak-zapomnit-naizust</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/vietas-formulas/?element=primenenie-formul-vieta</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/summary/foundations/equations/quadratic/vietas-formulas/?element=algoritm-vyvoda</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/article/foundations/equations/quadratic/mental-solving/</loc>
@@ -460,22 +532,22 @@
     </url>
     <url>
         <loc>https://ru.omath.net/summary/foundations/equations/quadratic/formulas/</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/practice/foundations/equations/quadratic/formulas/</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/summary/foundations/equations/quadratic/formulas/?element=formulas</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/summary/foundations/equations/quadratic/formulas/?element=methods</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
     <url>
         <loc>https://ru.omath.net/practice/foundations/equations/quadratic/formulas/?element=mixed-problems</loc>
-        <lastmod>2026-04-08T14:57:21+03:00</lastmod>
+        <lastmod>2026-05-01T18:59:52+03:00</lastmod>
     </url>
 </urlset>

@@ -11,6 +11,8 @@ import completingTheSquare3 from './assets/completing-the-square-3.svg';
 // #region Links
 //
 
+const squareSum = $CONTENT.foundations.polynomials.specialProducts.article.$squareSum;
+const squareDiff = $CONTENT.foundations.polynomials.specialProducts.article.$squareDiff;
 const elementaryEquations = $CONTENT.foundations.equations.elementary;
 const sameActionRule = $CONTENT.foundations.equations.elementary.article.$sameActionRule;
 const quadraticEquation = $CONTENT.foundations.equations.quadratic.whatIsIt.article.$quadraticEquation;
@@ -60,9 +62,10 @@ export default defineProse({
     <H1>Что за "выделение" такое?</H1>
 
     <P>
-      Есть две замечательные, очень полезные и часто применяемые формулы, которые называются "квадратом суммы" и
-      "квадратом разности" (не путать с "разностью квадратов"!). Их даже формулами назвать сложно, это просто две разные
-      записи одного и того же. Выглядят они вот так:
+      Есть две замечательные, очень полезные и часто применяемые формулы, которые называются{' '}
+      <Dep on={squareSum}>квадратом суммы</Dep> и<Dep on={squareDiff}>квадратом разности</Dep> (не путать с "разностью
+      квадратов"!). Их даже формулами назвать сложно, это просто две разные записи одного и того же. Выглядят они вот
+      так:
     </P>
 
     <BlockMath>{math`
@@ -71,7 +74,7 @@ export default defineProse({
     `}</BlockMath>
 
     <P>
-      Это две из трёх формул сокращённого умножения (ФСУ). В их верности вы можете убедиться, если просто{' '}
+      Это две из трёх основных формул сокращённого умножения (ФСУ). В их верности вы можете убедиться, если просто{' '}
       <Ref to={uniques._expandBrackets}>раскроете</Ref> скобки в левой части равенства и приведёте подобные слагаемые.
     </P>
 
@@ -550,7 +553,7 @@ export default defineProse({
 
     <P>
       У нас уже есть <M>a</M>, то есть <M>x</M>. Есть и <M>2ab</M>, то есть <M>{math`2 \cdot x \cdot \frac{5}{2}`}</M>.
-      Тогда <M>b</M> — это <M>5/2</M>. Чтобы получить "запаковываемую" форму квадрата суммы, осталось только прибавить{' '}
+      Тогда <M>b</M> -- это <M>5/2</M>. Чтобы получить "запаковываемую" форму квадрата суммы, осталось только прибавить{' '}
       <M>b^2</M>, то есть <M>25/4</M>, и сразу же его вычесть, чтобы финальное значение не изменилось:
     </P>
 

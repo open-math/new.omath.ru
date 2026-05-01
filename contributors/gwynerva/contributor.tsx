@@ -1,7 +1,7 @@
 export default defineContributor({
   editor: true,
   displayName: 'Пётр Радько',
-  short: 'Гениями не рождаются — ими становятся!',
+  short: 'Гениями не рождаются -- ими становятся!',
   links: {
     'Мой сайт': 'https://radkopeter.ru/',
     GitHub: 'https://github.com/Gwynerva',
